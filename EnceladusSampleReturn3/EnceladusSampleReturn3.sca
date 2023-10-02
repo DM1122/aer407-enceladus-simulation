@@ -1,0 +1,284 @@
+stk.v.12.0
+WrittenBy    STK_v12.6.0
+BEGIN Access
+    Scenario/EnceladusSampleReturn3/Place/Lander
+    Scenario/EnceladusSampleReturn3/Place/Sun
+
+    IsComputed		 Yes
+    SaveComputedData		 Yes
+    ComputationMode		 1
+    UpdateOnReference		 Yes
+    DupIsDifferent		 Yes
+    UIOrderReversed		 No
+    UITimePeriod		 Object
+    UseLightTimeDelay		 Yes
+    ClockHost		 Base
+    TimeSense		 Transmit
+    AberrationType		 Annual
+    TimeDelayConvergence		 5e-05
+    SetMaxStepFromInsts		 Yes
+    MaxTimeStep		 360
+    MinTimeStep		 0.01
+    TimeConvergence		 0.005
+    AbsValueConvergence		 1e-14
+    RelValueConvergence		 1e-08
+    DetectEventsUsingSamplesOnly		 No
+
+    BEGIN ConsideredIntervals
+
+        2055-01-01T16:00:00.000000000 2055-01-07T16:00:00.000000000
+
+    END ConsideredIntervals
+
+    BEGIN AccessIntervals
+
+        2055-01-01T16:00:00.000000000 2055-01-01T18:38:49.318578516
+        2055-01-02T10:27:43.320637354 2055-01-02T17:58:11.488945397
+        2055-01-02T20:38:28.553902366 2055-01-03T03:32:31.700603948
+        2055-01-03T19:20:43.933658015 2055-01-04T02:51:33.972747707
+        2055-01-04T05:31:48.538333092 2055-01-04T12:26:12.600510092
+        2055-01-05T04:13:44.838870636 2055-01-05T11:44:54.097046310
+        2055-01-05T14:25:06.719368621 2055-01-05T21:19:51.782490262
+        2055-01-06T13:06:46.118371275 2055-01-06T20:38:14.083291683
+        2055-01-06T23:18:24.860015285 2055-01-07T06:13:29.205626567
+
+    END AccessIntervals
+
+    BEGIN StageList
+
+        BEGIN Stage
+
+            MaxRelMotion		 0.34
+
+            BEGIN ConstraintList
+
+                BEGIN Constraint
+
+                    Name		 LineOfSight
+                    Instance		 Object1
+                    Action		 IncludeIntervals
+                    Type		 ZeroBound
+                    ComputationID		 1
+
+                    BEGIN ConstraintInputTimes
+
+                        2055-01-01T16:00:00.000000000 2055-01-07T16:00:00.000000000
+
+                    END ConstraintInputTimes
+
+                    StartConstrainedByAvailability		 No
+                    StopConstrainedByAvailability		 No
+
+                    BEGIN ConstraintSatisfaction
+
+                        2055-01-01T16:00:00.000000000 2055-01-01T18:38:49.318578516
+                        2055-01-02T10:27:43.320637354 2055-01-03T03:32:31.700603948
+                        2055-01-03T19:20:43.933658015 2055-01-04T12:26:12.600510092
+                        2055-01-05T04:13:44.838870636 2055-01-05T21:19:51.782490262
+                        2055-01-06T13:06:46.118371275 2055-01-07T06:13:29.205626567
+
+                    END ConstraintSatisfaction
+
+                END Constraint
+
+            END ConstraintList
+
+        END Stage
+
+
+        BEGIN Stage
+
+            MaxRelMotion		 0.34
+
+            BEGIN ConstraintList
+
+                BEGIN Constraint
+
+                    Name		 CbObstruction
+                    Instance		 Object2
+                    Action		 IncludeIntervals
+                    Type		 ZeroBound
+                    ConData		 Saturn
+                    ComputationID		 2
+
+                    BEGIN ConstraintInputTimes
+
+                        2055-01-01T16:00:00.000000000 2055-01-01T18:38:49.318578516
+                        2055-01-02T10:27:43.320637354 2055-01-03T03:32:31.700603948
+                        2055-01-03T19:20:43.933658015 2055-01-04T12:26:12.600510092
+                        2055-01-05T04:13:44.838870636 2055-01-05T21:19:51.782490262
+                        2055-01-06T13:06:46.118371275 2055-01-07T06:13:29.205626567
+
+                    END ConstraintInputTimes
+
+                    StartConstrainedByAvailability		 No
+                    StopConstrainedByAvailability		 No
+
+                    BEGIN ConstraintSatisfaction
+
+                        2055-01-01T16:00:00.000000000 2055-01-01T18:38:49.318578516
+                        2055-01-02T10:27:43.320637354 2055-01-02T17:58:11.488945397
+                        2055-01-02T20:38:28.553902366 2055-01-03T03:32:31.700603948
+                        2055-01-03T19:20:43.933658015 2055-01-04T02:51:33.972747707
+                        2055-01-04T05:31:48.538333092 2055-01-04T12:26:12.600510092
+                        2055-01-05T04:13:44.838870636 2055-01-05T11:44:54.097046310
+                        2055-01-05T14:25:06.719368621 2055-01-05T21:19:51.782490262
+                        2055-01-06T13:06:46.118371275 2055-01-06T20:38:14.083291683
+                        2055-01-06T23:18:24.860015285 2055-01-07T06:13:29.205626567
+
+                    END ConstraintSatisfaction
+
+                END Constraint
+
+            END ConstraintList
+
+        END Stage
+
+
+    END StageList
+
+    Show		 Yes
+    Inherit		 Yes
+    ShowIV		 Yes
+    ShowLineGfx		 Yes
+    ShowHiliteGfx		 Yes
+    LineWidth		 1
+
+    BEGIN Crdn
+    END Crdn
+
+END Access
+
+BEGIN Access
+    Scenario/EnceladusSampleReturn3/Satellite/Orbiter
+    Scenario/EnceladusSampleReturn3/Place/Sun
+
+    IsComputed		 Yes
+    SaveComputedData		 Yes
+    ComputationMode		 1
+    UpdateOnReference		 Yes
+    DupIsDifferent		 Yes
+    UIOrderReversed		 No
+    UITimePeriod		 Object
+    UseLightTimeDelay		 Yes
+    ClockHost		 Base
+    TimeSense		 Transmit
+    AberrationType		 Annual
+    TimeDelayConvergence		 5e-05
+    SetMaxStepFromInsts		 Yes
+    MaxTimeStep		 360
+    MinTimeStep		 0.01
+    TimeConvergence		 0.005
+    AbsValueConvergence		 1e-14
+    RelValueConvergence		 1e-08
+    DetectEventsUsingSamplesOnly		 No
+
+    BEGIN ConsideredIntervals
+
+        2055-01-01T16:00:00.000000000 2055-01-07T16:00:00.000000000
+
+    END ConsideredIntervals
+
+    BEGIN AccessIntervals
+
+        2055-01-01T16:00:00.000000000 2055-01-02T17:58:27.373188471
+        2055-01-02T20:38:13.902484055 2055-01-04T02:51:41.023561674
+        2055-01-04T05:32:13.533045011 2055-01-05T11:44:28.875905528
+        2055-01-05T14:24:54.412010802 2055-01-06T20:38:31.362866968
+        2055-01-06T23:18:12.281872840 2055-01-07T16:00:00.000000000
+
+    END AccessIntervals
+
+    BEGIN StageList
+
+        BEGIN Stage
+
+            MaxRelMotion		 0.34
+
+            BEGIN ConstraintList
+
+                BEGIN Constraint
+
+                    Name		 LineOfSight
+                    Instance		 Object1
+                    Action		 IncludeIntervals
+                    Type		 ZeroBound
+                    ComputationID		 1
+
+                    BEGIN ConstraintInputTimes
+
+                        2055-01-01T16:00:00.000000000 2055-01-07T16:00:00.000000000
+
+                    END ConstraintInputTimes
+
+                    StartConstrainedByAvailability		 No
+                    StopConstrainedByAvailability		 No
+
+                    BEGIN ConstraintSatisfaction
+
+                        2055-01-01T16:00:00.000000000 2055-01-07T16:00:00.000000000
+
+                    END ConstraintSatisfaction
+
+                END Constraint
+
+            END ConstraintList
+
+        END Stage
+
+
+        BEGIN Stage
+
+            MaxRelMotion		 0.34
+
+            BEGIN ConstraintList
+
+                BEGIN Constraint
+
+                    Name		 CbObstruction
+                    Instance		 Object2
+                    Action		 IncludeIntervals
+                    Type		 ZeroBound
+                    ConData		 Saturn
+                    ComputationID		 2
+
+                    BEGIN ConstraintInputTimes
+
+                        2055-01-01T16:00:00.000000000 2055-01-07T16:00:00.000000000
+
+                    END ConstraintInputTimes
+
+                    StartConstrainedByAvailability		 No
+                    StopConstrainedByAvailability		 No
+
+                    BEGIN ConstraintSatisfaction
+
+                        2055-01-01T16:00:00.000000000 2055-01-02T17:58:27.373188471
+                        2055-01-02T20:38:13.902484055 2055-01-04T02:51:41.023561674
+                        2055-01-04T05:32:13.533045011 2055-01-05T11:44:28.875905528
+                        2055-01-05T14:24:54.412010802 2055-01-06T20:38:31.362866968
+                        2055-01-06T23:18:12.281872840 2055-01-07T16:00:00.000000000
+
+                    END ConstraintSatisfaction
+
+                END Constraint
+
+            END ConstraintList
+
+        END Stage
+
+
+    END StageList
+
+    Show		 Yes
+    Inherit		 Yes
+    ShowIV		 Yes
+    ShowLineGfx		 Yes
+    ShowHiliteGfx		 Yes
+    LineWidth		 1
+
+    BEGIN Crdn
+    END Crdn
+
+END Access
+

@@ -1,0 +1,32 @@
+stk.v.12.0
+WrittenBy    STK_v12.6.0
+
+BEGIN Constellation
+
+    Name		 DSN
+    BEGIN Definition
+        Object		 Facility/DSS_14_Goldstone_STDN_DS14
+        Object		 Facility/DSS_33_Tidbinbilla
+        Object		 Facility/DSS_41_Island_Lagoon
+        Object		 Facility/DSS_44_Honeysuckle_Creek
+        Object		 Facility/Kourou_Station
+        Type		 Constellation
+        FromOperator		 Or
+        FromOrder		 1
+        ToOperator		 Or
+        ToOrder		 1
+        UseRoutingRulesFile		 No
+
+    END Definition
+
+    BEGIN Extensions
+
+        BEGIN ADFFileData
+        END ADFFileData
+
+        BEGIN Desc
+        END Desc
+
+    END Extensions
+
+END Constellation
