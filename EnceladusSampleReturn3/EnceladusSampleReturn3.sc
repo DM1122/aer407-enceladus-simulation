@@ -121,8 +121,8 @@ BEGIN Scenario
             LaunchWindowUseEntireTraj		 Yes
             LaunchWindowTrajMETStart		 0
             LaunchWindowTrajMETStop		 900
-            LaunchWindowStart		 0
-            LaunchWindowStop		 0
+            LaunchWindowStart		 -986256000
+            LaunchWindowStop		 -986169600
             LaunchMETOffset		 0
             LaunchWindowUseSecEphem		 No 
             LaunchWindowUseScenFolderForSecEphem		 Yes
@@ -323,6 +323,19 @@ BEGIN Scenario
         END ConnectReportUnits
 
         BEGIN ReportFavorites
+            BEGIN Class
+                Name		 Satellite
+                BEGIN Favorite
+                    Type		 Report
+                    BaseDir		 Install
+                    Style		 Classical Orbit Elements
+                END Favorite
+                BEGIN Favorite
+                    Type		 Graph
+                    BaseDir		 Install
+                    Style		 Classical Orbit Elements
+                END Favorite
+            END Class
         END ReportFavorites
 
         BEGIN ADFFileData
@@ -542,12 +555,6 @@ BEGIN Scenario
         END ExportDataFile
 
         BEGIN Desc
-            BEGIN ShortText
-
-            END ShortText
-            BEGIN LongText
-
-            END LongText
         END Desc
 
         BEGIN RfEnv
@@ -1541,9 +1548,9 @@ BEGIN Scenario
 
                 StartTime		 1 Jan 2055 16:00:00.000000000
                 EndTime		 7 Jan 2055 16:00:00.000000000
-                CurrentTime		 4 Jan 2055 01:49:38.166000000
+                CurrentTime		 1 Jan 2055 16:36:54.000000000
                 Direction		 Forward
-                UpdateDelta		 10
+                UpdateDelta		 3
                 RefreshDelta		 0.010000
                 XRealTimeMult		 1
                 RealTimeOffset		 0
@@ -2210,24 +2217,9 @@ BEGIN Scenario
 
     BEGIN SubObjects
 
-        Class Constellation
-
-            DSN		
-
-        END Class
-
-        Class Facility
-
-            DSS_14_Goldstone_STDN_DS14		
-            DSS_33_Tidbinbilla		
-            DSS_41_Island_Lagoon		
-            DSS_44_Honeysuckle_Creek		
-            Kourou_Station		
-
-        END Class
-
         Class Place
 
+            Earth		
             Lander		
             Sun		
 
@@ -2235,6 +2227,7 @@ BEGIN Scenario
 
         Class Satellite
 
+            Hopper		
             Orbiter		
 
         END Class
@@ -2244,29 +2237,9 @@ BEGIN Scenario
     BEGIN References
         Instance *
             *		
-            Constellation/DSN		
         END Instance
-        Instance Constellation/DSN
-        END Instance
-        Instance Facility/DSS_14_Goldstone_STDN_DS14
-            Constellation/DSN		
-            Facility/DSS_14_Goldstone_STDN_DS14		
-        END Instance
-        Instance Facility/DSS_33_Tidbinbilla
-            Constellation/DSN		
-            Facility/DSS_33_Tidbinbilla		
-        END Instance
-        Instance Facility/DSS_41_Island_Lagoon
-            Constellation/DSN		
-            Facility/DSS_41_Island_Lagoon		
-        END Instance
-        Instance Facility/DSS_44_Honeysuckle_Creek
-            Constellation/DSN		
-            Facility/DSS_44_Honeysuckle_Creek		
-        END Instance
-        Instance Facility/Kourou_Station
-            Constellation/DSN		
-            Facility/Kourou_Station		
+        Instance Place/Earth
+            Place/Earth		
         END Instance
         Instance Place/Lander
             Place/Lander		
@@ -2274,8 +2247,10 @@ BEGIN Scenario
         Instance Place/Sun
             Place/Sun		
         END Instance
+        Instance Satellite/Hopper
+            Satellite/Hopper		
+        END Instance
         Instance Satellite/Orbiter
-            *		
             Satellite/Orbiter		
         END Instance
     END References

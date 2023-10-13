@@ -3,15 +3,15 @@ WrittenBy    STK_v12.6.0
 
 BEGIN Place
 
-    Name		 Sun
+    Name		 Earth
 
     BEGIN CentroidPosition
 
-        CentralBody		 Sun
+        CentralBody		 Earth
         DisplayCoords		 Geodetic
         EcfLatitude		  4.0038609999999998e+01
         EcfLongitude		 -7.5596599999999995e+01
-        EcfAltitude		  0.0000000000000000e+00
+        EcfAltitude		  7.5996483443868939e+01
         HeightAboveGround		  0.0000000000000000e+00
         ComputeTrnMaskAsNeeded		 Off
         SaveTrnMaskDataInBinary		 Off
@@ -32,7 +32,7 @@ BEGIN Place
         END ADFFileData
 
         BEGIN AccessConstraints
-            CbObstruction Saturn IncludeIntervals
+            CbObstruction Sun,Enceladus,Moon,Saturn IncludeIntervals
 
             UsePreferredMaxStep No
             PreferredMaxStep 360
@@ -72,7 +72,7 @@ BEGIN Place
                                             <VAR name = "IdentifierInformation">
                                                 <SCOPE>
                                                     <VAR name = "Identifier">
-                                                        <STRING>&quot;{6C239F24-00C1-4931-954F-563B0B93BAE3}&quot;</STRING>
+                                                        <STRING>&quot;{3C750811-0C4A-4F20-9BC1-31F89BDEBAFE}&quot;</STRING>
                                                     </VAR>
                                                     <VAR name = "Version">
                                                         <STRING>&quot;1&quot;</STRING>
@@ -193,7 +193,7 @@ BEGIN Place
                                             <VAR name = "IdentifierInformation">
                                                 <SCOPE>
                                                     <VAR name = "Identifier">
-                                                        <STRING>&quot;{83999A80-9513-4048-AC18-25F3DFCC03FC}&quot;</STRING>
+                                                        <STRING>&quot;{535C1860-B3DF-4F89-9E87-46E4C9BEC5FF}&quot;</STRING>
                                                     </VAR>
                                                     <VAR name = "Version">
                                                         <STRING>&quot;1&quot;</STRING>
@@ -293,7 +293,7 @@ BEGIN Place
                                             <VAR name = "IdentifierInformation">
                                                 <SCOPE>
                                                     <VAR name = "Identifier">
-                                                        <STRING>&quot;{382EDB4F-7403-4FA5-A62B-9E22CE99D5CE}&quot;</STRING>
+                                                        <STRING>&quot;{33BB9081-49A3-4530-A23C-9B6CA5D27FE6}&quot;</STRING>
                                                     </VAR>
                                                     <VAR name = "Version">
                                                         <STRING>&quot;1&quot;</STRING>
@@ -384,7 +384,7 @@ BEGIN Place
                                             <VAR name = "IdentifierInformation">
                                                 <SCOPE>
                                                     <VAR name = "Identifier">
-                                                        <STRING>&quot;{4D2971F9-4358-4542-8C31-BFCA04D9921C}&quot;</STRING>
+                                                        <STRING>&quot;{8496DD9D-1B7C-4AB7-BD3D-A42CC6ED2ED3}&quot;</STRING>
                                                     </VAR>
                                                     <VAR name = "Version">
                                                         <STRING>&quot;1&quot;</STRING>
@@ -483,7 +483,7 @@ BEGIN Place
                                             <VAR name = "IdentifierInformation">
                                                 <SCOPE>
                                                     <VAR name = "Identifier">
-                                                        <STRING>&quot;{6927FBC6-DD95-43D4-AD19-FACD08A7410B}&quot;</STRING>
+                                                        <STRING>&quot;{DAC52B9C-36A3-4037-9112-0A2CF624C4EA}&quot;</STRING>
                                                     </VAR>
                                                     <VAR name = "Version">
                                                         <STRING>&quot;1&quot;</STRING>
@@ -571,7 +571,7 @@ BEGIN Place
                                             <VAR name = "IdentifierInformation">
                                                 <SCOPE>
                                                     <VAR name = "Identifier">
-                                                        <STRING>&quot;{3D00CD66-1477-4C8E-8FAF-E8B13CD54114}&quot;</STRING>
+                                                        <STRING>&quot;{BF591690-4E37-4529-A396-E47D66BA8123}&quot;</STRING>
                                                     </VAR>
                                                     <VAR name = "Version">
                                                         <STRING>&quot;1&quot;</STRING>
@@ -699,7 +699,7 @@ BEGIN Place
                                     <VAR name = "IdentifierInformation">
                                         <SCOPE>
                                             <VAR name = "Identifier">
-                                                <STRING>&quot;{F70F5C5F-AAA6-460E-A5B4-FF51E1F9AA34}&quot;</STRING>
+                                                <STRING>&quot;{F92C00EE-6796-4233-8F22-20C7C15C7DD6}&quot;</STRING>
                                             </VAR>
                                             <VAR name = "Version">
                                                 <STRING>&quot;1&quot;</STRING>
@@ -808,7 +808,7 @@ BEGIN Place
                                     <VAR name = "IdentifierInformation">
                                         <SCOPE>
                                             <VAR name = "Identifier">
-                                                <STRING>&quot;{6D0337CD-0A6B-4502-9C77-D1C47A735ADF}&quot;</STRING>
+                                                <STRING>&quot;{17830ED1-8BA8-4E98-A598-693928333404}&quot;</STRING>
                                             </VAR>
                                             <VAR name = "Version">
                                                 <STRING>&quot;1&quot;</STRING>
@@ -911,8 +911,8 @@ BEGIN Place
 
             BEGIN Attributes
 
-                MarkerColor		 #ff00ff
-                LabelColor		 #ff00ff
+                MarkerColor		 #ffff00
+                LabelColor		 #ffff00
                 LineStyle		 0
                 MarkerStyle		 22
                 FontStyle		 0
@@ -931,7 +931,7 @@ BEGIN Place
                 AzElFillAltTranslucency		 0.5
                 UseAzElColor		 Off
                 AzElColor		 #ffffff
-                MinDisplayAlt		 0
+                MinDisplayAlt		 75.99648344386894
                 MaxDisplayAlt		 10000000
                 NumAzElMaskSteps		 1
                 ShowAzElAtRangeMask		 Off

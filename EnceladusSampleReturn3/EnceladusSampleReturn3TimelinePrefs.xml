@@ -5,24 +5,6 @@
             <Row ClassName = "Scenario" ComponentName = "AvailabilityIntervals" DisplayName = "EnceladusSampleReturn3 AvailabilityIntervals" IsDefaultName = "True" IsExpanded = "False" IsGroup = "False" IsHidden = "False" Path = "/Application/STK/Scenario/EnceladusSampleReturn3" Type = "IntervalList">
                 <Interval Name = "EnceladusSampleReturn3 AvailabilityIntervals" StartTime = "1 Jan 2055 16:00:00.000" StopTime = "7 Jan 2055 16:00:00.000" />
             </Row>
-            <Row ClassName = "Access" ComponentName = "AccessIntervals" DisplayName = "Satellite-Orbiter-To-Place-Sun AccessIntervals" IsDefaultName = "True" IsExpanded = "False" IsGroup = "False" IsHidden = "False" Path = "Access:/Application/STK/Scenario/EnceladusSampleReturn3/Satellite/Orbiter;/Application/STK/Scenario/EnceladusSampleReturn3/Place/Sun" Type = "IntervalList">
-                <Interval Name = "Satellite-Orbiter-To-Place-Sun AccessIntervals" StartTime = "1 Jan 2055 16:00:00.000" StopTime = "2 Jan 2055 17:58:27.373" />
-                <Interval Name = "Satellite-Orbiter-To-Place-Sun AccessIntervals" StartTime = "2 Jan 2055 20:38:13.902" StopTime = "4 Jan 2055 02:51:41.024" />
-                <Interval Name = "Satellite-Orbiter-To-Place-Sun AccessIntervals" StartTime = "4 Jan 2055 05:32:13.533" StopTime = "5 Jan 2055 11:44:28.876" />
-                <Interval Name = "Satellite-Orbiter-To-Place-Sun AccessIntervals" StartTime = "5 Jan 2055 14:24:54.412" StopTime = "6 Jan 2055 20:38:31.363" />
-                <Interval Name = "Satellite-Orbiter-To-Place-Sun AccessIntervals" StartTime = "6 Jan 2055 23:18:12.282" StopTime = "7 Jan 2055 16:00:00.000" />
-            </Row>
-            <Row ClassName = "Access" ComponentName = "AccessIntervals" DisplayName = "Place-Lander-To-Place-Sun AccessIntervals" IsDefaultName = "True" IsExpanded = "False" IsGroup = "False" IsHidden = "False" Path = "Access:/Application/STK/Scenario/EnceladusSampleReturn3/Place/Lander;/Application/STK/Scenario/EnceladusSampleReturn3/Place/Sun" Type = "IntervalList">
-                <Interval Name = "Place-Lander-To-Place-Sun AccessIntervals" StartTime = "1 Jan 2055 16:00:00.000" StopTime = "1 Jan 2055 18:38:49.319" />
-                <Interval Name = "Place-Lander-To-Place-Sun AccessIntervals" StartTime = "2 Jan 2055 10:27:43.321" StopTime = "2 Jan 2055 17:58:11.489" />
-                <Interval Name = "Place-Lander-To-Place-Sun AccessIntervals" StartTime = "2 Jan 2055 20:38:28.554" StopTime = "3 Jan 2055 03:32:31.701" />
-                <Interval Name = "Place-Lander-To-Place-Sun AccessIntervals" StartTime = "3 Jan 2055 19:20:43.934" StopTime = "4 Jan 2055 02:51:33.973" />
-                <Interval Name = "Place-Lander-To-Place-Sun AccessIntervals" StartTime = "4 Jan 2055 05:31:48.538" StopTime = "4 Jan 2055 12:26:12.601" />
-                <Interval Name = "Place-Lander-To-Place-Sun AccessIntervals" StartTime = "5 Jan 2055 04:13:44.839" StopTime = "5 Jan 2055 11:44:54.097" />
-                <Interval Name = "Place-Lander-To-Place-Sun AccessIntervals" StartTime = "5 Jan 2055 14:25:06.719" StopTime = "5 Jan 2055 21:19:51.782" />
-                <Interval Name = "Place-Lander-To-Place-Sun AccessIntervals" StartTime = "6 Jan 2055 13:06:46.118" StopTime = "6 Jan 2055 20:38:14.083" />
-                <Interval Name = "Place-Lander-To-Place-Sun AccessIntervals" StartTime = "6 Jan 2055 23:18:24.860" StopTime = "7 Jan 2055 06:13:29.206" />
-            </Row>
         </ContentView>
     </Views>
     <Views Type = "Time">

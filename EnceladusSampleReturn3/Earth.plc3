@@ -19,7 +19,7 @@ Level3SwapDistance		 400000000
 Level4SwapDistance		 600000000
 ShowMarker		 Yes
 BEGIN Marker
-    Show		 No
+    Show		 Yes
     Type		 Texture
     Shape		 Point
     IsTransparent		 Yes
@@ -195,6 +195,32 @@ BEGIN VectorAxes
 END
 BEGIN VectorAxes
     BEGIN CrdnDef
+        IsVector		 Yes
+        IsCentralBodyFrame		 No
+        Name		 "Moon"
+        MagUnit		 m
+    END
+    BEGIN RefCrdn
+        IsVector		 No
+        IsCentralBodyFrame		 No
+        Name		 "Body"
+        Object		 _Default
+    END
+    Duration		 600
+    IsShowing		 No
+    IsPersistent		 No
+    IsTransparent		 No
+    UseTrueScale		 No
+    Label		 Name
+    DrawAtCentralBody		 No
+    ConnectType		 Sweep
+    ColorIndex		 #ffffff
+    IntervalType		 AlwaysOn
+    Thickness		 10
+    AngleUnit		 deg
+END
+BEGIN VectorAxes
+    BEGIN CrdnDef
         IsVector		 No
         IsCentralBodyFrame		 No
         Name		 "Body"
@@ -203,7 +229,7 @@ BEGIN VectorAxes
         IsVector		 No
         IsCentralBodyFrame		 Yes
         Name		 "Inertial"
-        CentralBody		 Enceladus
+        CentralBody		 Earth
     END
     Duration		 600
     IsShowing		 No
@@ -228,7 +254,7 @@ BEGIN VectorAxes
         IsVector		 No
         IsCentralBodyFrame		 Yes
         Name		 "Inertial"
-        CentralBody		 Enceladus
+        CentralBody		 Earth
     END
     Duration		 600
     IsShowing		 No
@@ -421,14 +447,14 @@ BEGIN AttitudeSphere
             BEGIN AXES
                 Type		 AXES_LINKTO
                 Name		 Body
-                RelativePath		 Place/Lander
+                RelativePath		 Place/Earth
             END AXES
         END
         BEGIN AttSphRefCrdnOrigin
             BEGIN POINT
                 Type		 POINT_LINKTO
                 Name		 Center
-                RelativePath		 Place/Lander
+                RelativePath		 Place/Earth
             END POINT
         END
     END

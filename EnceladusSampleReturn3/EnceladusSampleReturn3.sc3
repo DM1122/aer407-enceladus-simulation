@@ -207,7 +207,7 @@ BEGIN SceneWindow
                     BaseOn		 Yes
                 END
             EndCentralBody
-            BeginCentralBody "Iapetus"
+            BeginCentralBody "Hyperion"
                 Show		 Yes
                 Textured		 Yes
                 AltOffset		 0
@@ -227,34 +227,7 @@ BEGIN SceneWindow
                     BlendAltitudeLowerAltitude		 500000
                     BlendAltitudeUpperAltitude		 2500000
                     TextureRole		 Day
-                    URI		 "file:///Iapetus.jp2"
-                    BeginImageSetDefOn
-                    END
-                    InBase		 Yes
-                    BaseOn		 Yes
-                END
-            EndCentralBody
-            BeginCentralBody "Dione"
-                Show		 Yes
-                Textured		 Yes
-                AltOffset		 0
-                Color		 #ffffff
-                SpecularColor		 #545454
-                Shininess		 40
-                ShowWater		 No
-                ShowUmbraCone		 No
-                ShowPenumbraCone		 No
-                ShowPenumbraLimit		 No
-                ShowSubsolarPoint		 No
-                _AGI_PIBEGINTERRAINIMAGECALLDATA "SRC"
-                    BlendMode		 Value
-                    BlendFactor		 1
-                    BlendAltitudeLowerFactor		 1
-                    BlendAltitudeUpperFactor		 0
-                    BlendAltitudeLowerAltitude		 500000
-                    BlendAltitudeUpperAltitude		 2500000
-                    TextureRole		 Day
-                    URI		 "file:///Dione.jp2"
+                    URI		 "file:///Hyperion.jp2"
                     BeginImageSetDefOn
                     END
                     InBase		 Yes
@@ -288,7 +261,7 @@ BEGIN SceneWindow
                     BaseOn		 Yes
                 END
             EndCentralBody
-            BeginCentralBody "Titan"
+            BeginCentralBody "Saturn"
                 Show		 Yes
                 Textured		 Yes
                 AltOffset		 0
@@ -308,7 +281,7 @@ BEGIN SceneWindow
                     BlendAltitudeLowerAltitude		 500000
                     BlendAltitudeUpperAltitude		 2500000
                     TextureRole		 Day
-                    URI		 "file:///Titan.jp2"
+                    URI		 "file:///Saturn.jp2"
                     BeginImageSetDefOn
                     END
                     InBase		 Yes
@@ -342,33 +315,6 @@ BEGIN SceneWindow
                     BaseOn		 Yes
                 END
             EndCentralBody
-            BeginCentralBody "Mimas"
-                Show		 Yes
-                Textured		 Yes
-                AltOffset		 0
-                Color		 #ffffff
-                SpecularColor		 #545454
-                Shininess		 40
-                ShowWater		 No
-                ShowUmbraCone		 No
-                ShowPenumbraCone		 No
-                ShowPenumbraLimit		 No
-                ShowSubsolarPoint		 No
-                _AGI_PIBEGINTERRAINIMAGECALLDATA "SRC"
-                    BlendMode		 Value
-                    BlendFactor		 1
-                    BlendAltitudeLowerFactor		 1
-                    BlendAltitudeUpperFactor		 0
-                    BlendAltitudeLowerAltitude		 500000
-                    BlendAltitudeUpperAltitude		 2500000
-                    TextureRole		 Day
-                    URI		 "file:///Mimas.jp2"
-                    BeginImageSetDefOn
-                    END
-                    InBase		 Yes
-                    BaseOn		 Yes
-                END
-            EndCentralBody
             BeginCentralBody "Phoebe"
                 Show		 Yes
                 Textured		 Yes
@@ -396,7 +342,7 @@ BEGIN SceneWindow
                     BaseOn		 Yes
                 END
             EndCentralBody
-            BeginCentralBody "Hyperion"
+            BeginCentralBody "Mimas"
                 Show		 Yes
                 Textured		 Yes
                 AltOffset		 0
@@ -416,14 +362,14 @@ BEGIN SceneWindow
                     BlendAltitudeLowerAltitude		 500000
                     BlendAltitudeUpperAltitude		 2500000
                     TextureRole		 Day
-                    URI		 "file:///Hyperion.jp2"
+                    URI		 "file:///Mimas.jp2"
                     BeginImageSetDefOn
                     END
                     InBase		 Yes
                     BaseOn		 Yes
                 END
             EndCentralBody
-            BeginCentralBody "Saturn"
+            BeginCentralBody "Dione"
                 Show		 Yes
                 Textured		 Yes
                 AltOffset		 0
@@ -443,7 +389,61 @@ BEGIN SceneWindow
                     BlendAltitudeLowerAltitude		 500000
                     BlendAltitudeUpperAltitude		 2500000
                     TextureRole		 Day
-                    URI		 "file:///Saturn.jp2"
+                    URI		 "file:///Dione.jp2"
+                    BeginImageSetDefOn
+                    END
+                    InBase		 Yes
+                    BaseOn		 Yes
+                END
+            EndCentralBody
+            BeginCentralBody "Iapetus"
+                Show		 Yes
+                Textured		 Yes
+                AltOffset		 0
+                Color		 #ffffff
+                SpecularColor		 #545454
+                Shininess		 40
+                ShowWater		 No
+                ShowUmbraCone		 No
+                ShowPenumbraCone		 No
+                ShowPenumbraLimit		 No
+                ShowSubsolarPoint		 No
+                _AGI_PIBEGINTERRAINIMAGECALLDATA "SRC"
+                    BlendMode		 Value
+                    BlendFactor		 1
+                    BlendAltitudeLowerFactor		 1
+                    BlendAltitudeUpperFactor		 0
+                    BlendAltitudeLowerAltitude		 500000
+                    BlendAltitudeUpperAltitude		 2500000
+                    TextureRole		 Day
+                    URI		 "file:///Iapetus.jp2"
+                    BeginImageSetDefOn
+                    END
+                    InBase		 Yes
+                    BaseOn		 Yes
+                END
+            EndCentralBody
+            BeginCentralBody "Titan"
+                Show		 Yes
+                Textured		 Yes
+                AltOffset		 0
+                Color		 #ffffff
+                SpecularColor		 #545454
+                Shininess		 40
+                ShowWater		 No
+                ShowUmbraCone		 No
+                ShowPenumbraCone		 No
+                ShowPenumbraLimit		 No
+                ShowSubsolarPoint		 No
+                _AGI_PIBEGINTERRAINIMAGECALLDATA "SRC"
+                    BlendMode		 Value
+                    BlendFactor		 1
+                    BlendAltitudeLowerFactor		 1
+                    BlendAltitudeUpperFactor		 0
+                    BlendAltitudeLowerAltitude		 500000
+                    BlendAltitudeUpperAltitude		 2500000
+                    TextureRole		 Day
+                    URI		 "file:///Titan.jp2"
                     BeginImageSetDefOn
                     END
                     InBase		 Yes
@@ -562,11 +562,7 @@ BEGIN SceneWindow
                 ShowLabel		 No
             EndCentralBody
             BeginCentralBody
-                Name		 "Iapetus"
-                ShowLabel		 Yes
-            EndCentralBody
-            BeginCentralBody
-                Name		 "Dione"
+                Name		 "Hyperion"
                 ShowLabel		 Yes
             EndCentralBody
             BeginCentralBody
@@ -574,7 +570,7 @@ BEGIN SceneWindow
                 ShowLabel		 Yes
             EndCentralBody
             BeginCentralBody
-                Name		 "Titan"
+                Name		 "Saturn"
                 ShowLabel		 Yes
             EndCentralBody
             BeginCentralBody
@@ -582,19 +578,23 @@ BEGIN SceneWindow
                 ShowLabel		 Yes
             EndCentralBody
             BeginCentralBody
-                Name		 "Mimas"
-                ShowLabel		 Yes
-            EndCentralBody
-            BeginCentralBody
                 Name		 "Phoebe"
                 ShowLabel		 Yes
             EndCentralBody
             BeginCentralBody
-                Name		 "Hyperion"
+                Name		 "Mimas"
                 ShowLabel		 Yes
             EndCentralBody
             BeginCentralBody
-                Name		 "Saturn"
+                Name		 "Dione"
+                ShowLabel		 Yes
+            EndCentralBody
+            BeginCentralBody
+                Name		 "Iapetus"
+                ShowLabel		 Yes
+            EndCentralBody
+            BeginCentralBody
+                Name		 "Titan"
                 ShowLabel		 Yes
             EndCentralBody
             BeginCentralBody
@@ -660,7 +660,7 @@ BEGIN SceneWindow
         GridDisplayColor		 #00ff00
         GridVertTextAlign		 Border        IsShowingPickAnnotation		 Yes
         UsePickAnnoPosition		 No
-        PickAnnoPosition		 10 65
+        PickAnnoPosition		 0 0
         PickAttachX		 Min
         PickAttachY		 Min
         PickAnnoFontSize		 1
@@ -893,9 +893,9 @@ BEGIN SceneWindow
             UseLayer		 Yes
             FromName		 "Enceladus"
             FromRegPosAttView		 "Point"
-            FromPosition		  9.0600347259877727e+05  3.2604217840221082e+05 -1.0318051635564221e+06
-            FromOffset		  9.0600347259877727e+05  3.2604217840221082e+05 -1.0318051635564221e+06
-            FromOffsetLLR		 -8.1993670265815799e-01  3.4543922899276924e-01  1.4112999999999991e+06
+            FromPosition		  1.2589902202781758e+06 -1.2984349807799740e+05 -6.2438127874783345e+05
+            FromOffset		  1.2589902202781758e+06 -1.2984349807799740e+05 -6.2438127874783345e+05
+            FromOffsetLLR		 -4.5829054870095520e-01 -1.0276970773146434e-01  1.4113000000000002e+06
             ToName		 "Enceladus"
             ToRegPosAttView		 "Point"
             ToPosition		  0.0000000000000000e+00  0.0000000000000000e+00  0.0000000000000000e+00
@@ -903,9 +903,9 @@ BEGIN SceneWindow
             ToOffsetLLR		  0.0000000000000000e+00  0.0000000000000000e+00  0.0000000000000000e+00
             ConstantDistanceType		 None
             ConstantDistanceValue		 1
-            UpVector		  6.8791408440961810e-01  2.4755866110658981e-01  6.8226748550842542e-01
-            ViewRad		  1.4112999999999993e+06
-            ViewQuat		  1.5762050677773368e-01 -3.9264983054470382e-01 -6.8500859987322790e-02 -9.0348742027620033e-01
+            UpVector		  4.4008144482139411e-01 -4.5386940513488225e-02  8.9681009559144642e-01
+            ViewRad		  1.4113000000000000e+06
+            ViewQuat		  5.0019681102963565e-02  2.2684541120954502e-01 -1.1666688366849942e-02  9.7257548771192104e-01
             ViewCoordSystem		 From
             ViewFromToMode		 FromTo
             ViewToCBIMtx		  1.0000000000000000e+00  0.0000000000000000e+00  0.0000000000000000e+00  0.0000000000000000e+00  1.0000000000000000e+00  0.0000000000000000e+00  0.0000000000000000e+00  0.0000000000000000e+00  1.0000000000000000e+00
@@ -919,7 +919,7 @@ BEGIN SceneWindow
             MinAngleToUpAxis		  8.7266462599716477e-03
             InitUpAxisUp		 Yes
             TempUpAxisUp		 Yes
-            CrossAxis		  3.3860999223486143e-01 -9.4092681604825534e-01  0.0000000000000000e+00
+            CrossAxis		 -1.0258890092788227e-01 -9.9472383976981726e-01  0.0000000000000000e+00
             DefaultOffset		  1.4113000000000000e+06
             BaseDefaultOffset		  2.5660000000000000e+05
         END View

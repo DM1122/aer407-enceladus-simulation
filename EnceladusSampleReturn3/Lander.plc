@@ -10,7 +10,7 @@ BEGIN Place
         CentralBody		 Enceladus
         DisplayCoords		 Geodetic
         EcfLatitude		 -7.0000000000000000e+01
-        EcfLongitude		  0.0000000000000000e+00
+        EcfLongitude		 -1.4000000000000000e+02
         EcfAltitude		  0.0000000000000000e+00
         HeightAboveGround		  0.0000000000000000e+00
         ComputeTrnMaskAsNeeded		 Off
@@ -42,12 +42,6 @@ BEGIN Place
         END ObjectCoverage
 
         BEGIN Desc
-            BEGIN ShortText
-
-            END ShortText
-            BEGIN LongText
-
-            END LongText
         END Desc
 
         BEGIN Atmosphere
@@ -927,7 +921,7 @@ BEGIN Place
 
             BEGIN Graphics
 
-                Show		 On
+                Show		 Off
                 Inherit		 On
                 IsDynamic		 Off
                 ShowLabel		 On
