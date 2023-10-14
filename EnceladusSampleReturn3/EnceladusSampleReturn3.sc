@@ -324,14 +324,52 @@ BEGIN Scenario
 
         BEGIN ReportFavorites
             BEGIN Class
-                Name		 Satellite
+                Name		 FigureOfMerit
+                BEGIN Favorite
+                    Type		 Graph
+                    BaseDir		 User
+                    Style		 Accum Satisfied by Time
+                END Favorite
+                BEGIN Favorite
+                    Type		 Graph
+                    BaseDir		 Install
+                    Style		 GI Region FOM
+                END Favorite
+                BEGIN Favorite
+                    Type		 Graph
+                    BaseDir		 Install
+                    Style		 GI Point Satisfaction
+                END Favorite
+                BEGIN Favorite
+                    Type		 Graph
+                    BaseDir		 Install
+                    Style		 GI All DOP
+                END Favorite
+                BEGIN Favorite
+                    Type		 Graph
+                    BaseDir		 Install
+                    Style		 Grid Stats Over Time
+                END Favorite
+                BEGIN Favorite
+                    Type		 Graph
+                    BaseDir		 Install
+                    Style		 Satisfied By Time
+                END Favorite
                 BEGIN Favorite
                     Type		 Report
+                    BaseDir		 Install
+                    Style		 Percent Satisfied
+                END Favorite
+            END Class
+            BEGIN Class
+                Name		 Satellite
+                BEGIN Favorite
+                    Type		 Graph
                     BaseDir		 Install
                     Style		 Classical Orbit Elements
                 END Favorite
                 BEGIN Favorite
-                    Type		 Graph
+                    Type		 Report
                     BaseDir		 Install
                     Style		 Classical Orbit Elements
                 END Favorite
@@ -1548,7 +1586,7 @@ BEGIN Scenario
 
                 StartTime		 1 Jan 2055 16:00:00.000000000
                 EndTime		 7 Jan 2055 16:00:00.000000000
-                CurrentTime		 1 Jan 2055 16:36:54.000000000
+                CurrentTime		 1 Jan 2055 17:33:49.887000000
                 Direction		 Forward
                 UpdateDelta		 3
                 RefreshDelta		 0.010000
@@ -1634,7 +1672,7 @@ BEGIN Scenario
                         PrimaryBody		 Enceladus
                         SecondaryBody		 Sun
                         CenterLatitude		 0
-                        CenterLongitude		 0
+                        CenterLongitude		 -0.2690582959641006
                         ProjectionAltitude		 63621860
                         FieldOfView		 35
                         OrthoDisplayDistance		 20000000
@@ -1671,7 +1709,7 @@ BEGIN Scenario
                         BEGIN ZoomLocations
                             BEGIN ZoomLocation
                                 CenterLat		 0
-                                CenterLon		 0
+                                CenterLon		 -0.2690582959641006
                                 ZoomWidth		 360
                                 ZoomHeight		 180
                             END ZoomLocation
@@ -2217,6 +2255,18 @@ BEGIN Scenario
 
     BEGIN SubObjects
 
+        Class AreaTarget
+
+            LandingRegion		
+
+        END Class
+
+        Class CoverageDefinition
+
+            CoverageDefinition1		
+
+        END Class
+
         Class Place
 
             Earth		
@@ -2237,6 +2287,16 @@ BEGIN Scenario
     BEGIN References
         Instance *
             *		
+            CoverageDefinition/CoverageDefinition1		
+        END Instance
+        Instance AreaTarget/LandingRegion
+            AreaTarget/LandingRegion		
+        END Instance
+        Instance CoverageDefinition/CoverageDefinition1
+            CoverageDefinition/CoverageDefinition1		
+            CoverageDefinition/CoverageDefinition1/FigureOfMerit/FigureOfMerit1		
+        END Instance
+        Instance CoverageDefinition/CoverageDefinition1/FigureOfMerit/FigureOfMerit1
         END Instance
         Instance Place/Earth
             Place/Earth		
@@ -2252,6 +2312,11 @@ BEGIN Scenario
         END Instance
         Instance Satellite/Orbiter
             Satellite/Orbiter		
+            Satellite/Orbiter/Sensor/Sensor1		
+        END Instance
+        Instance Satellite/Orbiter/Sensor/Sensor1
+            CoverageDefinition/CoverageDefinition1		
+            Satellite/Orbiter/Sensor/Sensor1		
         END Instance
     END References
 

@@ -659,7 +659,7 @@ BEGIN Satellite
                                         <LIST />
                                     </VAR>
                                     <VAR name = "Epoch">
-                                        <DATE>1 Jan 2055 16:28:02.128042560</DATE>
+                                        <DATE>1 Jan 2055 16:28:02.128043000</DATE>
                                     </VAR>
                                 </SCOPE>
                             </VAR>
@@ -2044,7 +2044,7 @@ BEGIN Satellite
                                                         <LIST />
                                                     </VAR>
                                                     <VAR name = "Epoch">
-                                                        <DATE>1 Jan 2055 16:28:02.128042560</DATE>
+                                                        <DATE>1 Jan 2055 16:28:02.128043000</DATE>
                                                     </VAR>
                                                 </SCOPE>
                                             </VAR>
@@ -2203,7 +2203,7 @@ BEGIN Satellite
                                                         <LIST />
                                                     </VAR>
                                                     <VAR name = "Epoch">
-                                                        <DATE>1 Jan 2055 16:28:02.128042560</DATE>
+                                                        <DATE>1 Jan 2055 16:28:02.128043000</DATE>
                                                     </VAR>
                                                     <VAR name = "TriggerDescription">
                                                         <STRING>&quot;Altitude; Run Sequence STOP&quot;</STRING>
@@ -2741,7 +2741,7 @@ BEGIN Satellite
                                                         <LIST />
                                                     </VAR>
                                                     <VAR name = "Epoch">
-                                                        <DATE>1 Jan 2055 16:28:02.128042560</DATE>
+                                                        <DATE>1 Jan 2055 16:28:02.128043000</DATE>
                                                     </VAR>
                                                 </SCOPE>
                                             </VAR>
@@ -2970,7 +2970,7 @@ BEGIN Satellite
                                                         <LIST />
                                                     </VAR>
                                                     <VAR name = "Epoch">
-                                                        <DATE>1 Jan 2055 16:28:02.128042560</DATE>
+                                                        <DATE>1 Jan 2055 16:28:02.128043000</DATE>
                                                     </VAR>
                                                 </SCOPE>
                                             </VAR>
@@ -5386,12 +5386,6 @@ BEGIN Satellite
         END ObjectCoverage
 
         BEGIN Desc
-            BEGIN ShortText
-
-            END ShortText
-            BEGIN LongText
-
-            END LongText
         END Desc
 
         BEGIN RadarCrossSection

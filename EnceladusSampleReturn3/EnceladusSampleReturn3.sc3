@@ -112,6 +112,14 @@ BEGIN SceneWindow
         ProjectionDistance		 100000
         EyeSeparationFactor		 0.02
         WireframeMode		 No
+
+        BEGIN CameraLightSource
+            ColorRGB		 #ffffff
+            Intensity		 50
+            Show		 No
+            IlluminateGlobe		 Yes
+            IlluminateObjects		 Yes
+        END CameraLightSource
         CameraLightAntiSun		 No
 
         BEGIN Compass
@@ -180,33 +188,6 @@ BEGIN SceneWindow
 
         BEGIN Globe
             AA		 Yes
-            BeginCentralBody "Enceladus"
-                Show		 Yes
-                Textured		 Yes
-                AltOffset		 0
-                Color		 #e1e1e1
-                SpecularColor		 #545454
-                Shininess		 40
-                ShowWater		 No
-                ShowUmbraCone		 No
-                ShowPenumbraCone		 No
-                ShowPenumbraLimit		 No
-                ShowSubsolarPoint		 No
-                _AGI_PIBEGINTERRAINIMAGECALLDATA "SRC"
-                    BlendMode		 Value
-                    BlendFactor		 1
-                    BlendAltitudeLowerFactor		 1
-                    BlendAltitudeUpperFactor		 0
-                    BlendAltitudeLowerAltitude		 500000
-                    BlendAltitudeUpperAltitude		 2500000
-                    TextureRole		 Day
-                    URI		 "file:///Enceladus.jp2"
-                    BeginImageSetDefOn
-                    END
-                    InBase		 Yes
-                    BaseOn		 Yes
-                END
-            EndCentralBody
             BeginCentralBody "Hyperion"
                 Show		 Yes
                 Textured		 Yes
@@ -228,60 +209,6 @@ BEGIN SceneWindow
                     BlendAltitudeUpperAltitude		 2500000
                     TextureRole		 Day
                     URI		 "file:///Hyperion.jp2"
-                    BeginImageSetDefOn
-                    END
-                    InBase		 Yes
-                    BaseOn		 Yes
-                END
-            EndCentralBody
-            BeginCentralBody "Rhea"
-                Show		 Yes
-                Textured		 Yes
-                AltOffset		 0
-                Color		 #ffffff
-                SpecularColor		 #545454
-                Shininess		 40
-                ShowWater		 No
-                ShowUmbraCone		 No
-                ShowPenumbraCone		 No
-                ShowPenumbraLimit		 No
-                ShowSubsolarPoint		 No
-                _AGI_PIBEGINTERRAINIMAGECALLDATA "SRC"
-                    BlendMode		 Value
-                    BlendFactor		 1
-                    BlendAltitudeLowerFactor		 1
-                    BlendAltitudeUpperFactor		 0
-                    BlendAltitudeLowerAltitude		 500000
-                    BlendAltitudeUpperAltitude		 2500000
-                    TextureRole		 Day
-                    URI		 "file:///Rhea.jp2"
-                    BeginImageSetDefOn
-                    END
-                    InBase		 Yes
-                    BaseOn		 Yes
-                END
-            EndCentralBody
-            BeginCentralBody "Saturn"
-                Show		 Yes
-                Textured		 Yes
-                AltOffset		 0
-                Color		 #ffffff
-                SpecularColor		 #545454
-                Shininess		 40
-                ShowWater		 No
-                ShowUmbraCone		 No
-                ShowPenumbraCone		 No
-                ShowPenumbraLimit		 No
-                ShowSubsolarPoint		 No
-                _AGI_PIBEGINTERRAINIMAGECALLDATA "SRC"
-                    BlendMode		 Value
-                    BlendFactor		 1
-                    BlendAltitudeLowerFactor		 1
-                    BlendAltitudeUpperFactor		 0
-                    BlendAltitudeLowerAltitude		 500000
-                    BlendAltitudeUpperAltitude		 2500000
-                    TextureRole		 Day
-                    URI		 "file:///Saturn.jp2"
                     BeginImageSetDefOn
                     END
                     InBase		 Yes
@@ -315,33 +242,6 @@ BEGIN SceneWindow
                     BaseOn		 Yes
                 END
             EndCentralBody
-            BeginCentralBody "Phoebe"
-                Show		 Yes
-                Textured		 Yes
-                AltOffset		 0
-                Color		 #ffffff
-                SpecularColor		 #545454
-                Shininess		 40
-                ShowWater		 No
-                ShowUmbraCone		 No
-                ShowPenumbraCone		 No
-                ShowPenumbraLimit		 No
-                ShowSubsolarPoint		 No
-                _AGI_PIBEGINTERRAINIMAGECALLDATA "SRC"
-                    BlendMode		 Value
-                    BlendFactor		 1
-                    BlendAltitudeLowerFactor		 1
-                    BlendAltitudeUpperFactor		 0
-                    BlendAltitudeLowerAltitude		 500000
-                    BlendAltitudeUpperAltitude		 2500000
-                    TextureRole		 Day
-                    URI		 "file:///Phoebe.jp2"
-                    BeginImageSetDefOn
-                    END
-                    InBase		 Yes
-                    BaseOn		 Yes
-                END
-            EndCentralBody
             BeginCentralBody "Mimas"
                 Show		 Yes
                 Textured		 Yes
@@ -369,7 +269,7 @@ BEGIN SceneWindow
                     BaseOn		 Yes
                 END
             EndCentralBody
-            BeginCentralBody "Dione"
+            BeginCentralBody "Saturn"
                 Show		 Yes
                 Textured		 Yes
                 AltOffset		 0
@@ -389,7 +289,34 @@ BEGIN SceneWindow
                     BlendAltitudeLowerAltitude		 500000
                     BlendAltitudeUpperAltitude		 2500000
                     TextureRole		 Day
-                    URI		 "file:///Dione.jp2"
+                    URI		 "file:///Saturn.jp2"
+                    BeginImageSetDefOn
+                    END
+                    InBase		 Yes
+                    BaseOn		 Yes
+                END
+            EndCentralBody
+            BeginCentralBody "Phoebe"
+                Show		 Yes
+                Textured		 Yes
+                AltOffset		 0
+                Color		 #ffffff
+                SpecularColor		 #545454
+                Shininess		 40
+                ShowWater		 No
+                ShowUmbraCone		 No
+                ShowPenumbraCone		 No
+                ShowPenumbraLimit		 No
+                ShowSubsolarPoint		 No
+                _AGI_PIBEGINTERRAINIMAGECALLDATA "SRC"
+                    BlendMode		 Value
+                    BlendFactor		 1
+                    BlendAltitudeLowerFactor		 1
+                    BlendAltitudeUpperFactor		 0
+                    BlendAltitudeLowerAltitude		 500000
+                    BlendAltitudeUpperAltitude		 2500000
+                    TextureRole		 Day
+                    URI		 "file:///Phoebe.jp2"
                     BeginImageSetDefOn
                     END
                     InBase		 Yes
@@ -444,6 +371,87 @@ BEGIN SceneWindow
                     BlendAltitudeUpperAltitude		 2500000
                     TextureRole		 Day
                     URI		 "file:///Titan.jp2"
+                    BeginImageSetDefOn
+                    END
+                    InBase		 Yes
+                    BaseOn		 Yes
+                END
+            EndCentralBody
+            BeginCentralBody "Dione"
+                Show		 Yes
+                Textured		 Yes
+                AltOffset		 0
+                Color		 #ffffff
+                SpecularColor		 #545454
+                Shininess		 40
+                ShowWater		 No
+                ShowUmbraCone		 No
+                ShowPenumbraCone		 No
+                ShowPenumbraLimit		 No
+                ShowSubsolarPoint		 No
+                _AGI_PIBEGINTERRAINIMAGECALLDATA "SRC"
+                    BlendMode		 Value
+                    BlendFactor		 1
+                    BlendAltitudeLowerFactor		 1
+                    BlendAltitudeUpperFactor		 0
+                    BlendAltitudeLowerAltitude		 500000
+                    BlendAltitudeUpperAltitude		 2500000
+                    TextureRole		 Day
+                    URI		 "file:///Dione.jp2"
+                    BeginImageSetDefOn
+                    END
+                    InBase		 Yes
+                    BaseOn		 Yes
+                END
+            EndCentralBody
+            BeginCentralBody "Rhea"
+                Show		 Yes
+                Textured		 Yes
+                AltOffset		 0
+                Color		 #ffffff
+                SpecularColor		 #545454
+                Shininess		 40
+                ShowWater		 No
+                ShowUmbraCone		 No
+                ShowPenumbraCone		 No
+                ShowPenumbraLimit		 No
+                ShowSubsolarPoint		 No
+                _AGI_PIBEGINTERRAINIMAGECALLDATA "SRC"
+                    BlendMode		 Value
+                    BlendFactor		 1
+                    BlendAltitudeLowerFactor		 1
+                    BlendAltitudeUpperFactor		 0
+                    BlendAltitudeLowerAltitude		 500000
+                    BlendAltitudeUpperAltitude		 2500000
+                    TextureRole		 Day
+                    URI		 "file:///Rhea.jp2"
+                    BeginImageSetDefOn
+                    END
+                    InBase		 Yes
+                    BaseOn		 Yes
+                END
+            EndCentralBody
+            BeginCentralBody "Enceladus"
+                Show		 Yes
+                Textured		 Yes
+                AltOffset		 0
+                Color		 #e1e1e1
+                SpecularColor		 #545454
+                Shininess		 40
+                ShowWater		 No
+                ShowUmbraCone		 No
+                ShowPenumbraCone		 No
+                ShowPenumbraLimit		 No
+                ShowSubsolarPoint		 No
+                _AGI_PIBEGINTERRAINIMAGECALLDATA "SRC"
+                    BlendMode		 Value
+                    BlendFactor		 1
+                    BlendAltitudeLowerFactor		 1
+                    BlendAltitudeUpperFactor		 0
+                    BlendAltitudeLowerAltitude		 500000
+                    BlendAltitudeUpperAltitude		 2500000
+                    TextureRole		 Day
+                    URI		 "file:///Enceladus.jp2"
                     BeginImageSetDefOn
                     END
                     InBase		 Yes
@@ -558,19 +566,7 @@ BEGIN SceneWindow
         END
         BEGIN CentralBodyOpts
             BeginCentralBody
-                Name		 "Enceladus"
-                ShowLabel		 No
-            EndCentralBody
-            BeginCentralBody
                 Name		 "Hyperion"
-                ShowLabel		 Yes
-            EndCentralBody
-            BeginCentralBody
-                Name		 "Rhea"
-                ShowLabel		 Yes
-            EndCentralBody
-            BeginCentralBody
-                Name		 "Saturn"
                 ShowLabel		 Yes
             EndCentralBody
             BeginCentralBody
@@ -578,15 +574,15 @@ BEGIN SceneWindow
                 ShowLabel		 Yes
             EndCentralBody
             BeginCentralBody
-                Name		 "Phoebe"
-                ShowLabel		 Yes
-            EndCentralBody
-            BeginCentralBody
                 Name		 "Mimas"
                 ShowLabel		 Yes
             EndCentralBody
             BeginCentralBody
-                Name		 "Dione"
+                Name		 "Saturn"
+                ShowLabel		 Yes
+            EndCentralBody
+            BeginCentralBody
+                Name		 "Phoebe"
                 ShowLabel		 Yes
             EndCentralBody
             BeginCentralBody
@@ -596,6 +592,18 @@ BEGIN SceneWindow
             BeginCentralBody
                 Name		 "Titan"
                 ShowLabel		 Yes
+            EndCentralBody
+            BeginCentralBody
+                Name		 "Dione"
+                ShowLabel		 Yes
+            EndCentralBody
+            BeginCentralBody
+                Name		 "Rhea"
+                ShowLabel		 Yes
+            EndCentralBody
+            BeginCentralBody
+                Name		 "Enceladus"
+                ShowLabel		 No
             EndCentralBody
             BeginCentralBody
                 Name		 "Sun"
@@ -893,9 +901,9 @@ BEGIN SceneWindow
             UseLayer		 Yes
             FromName		 "Enceladus"
             FromRegPosAttView		 "Point"
-            FromPosition		  1.2589902202781758e+06 -1.2984349807799740e+05 -6.2438127874783345e+05
-            FromOffset		  1.2589902202781758e+06 -1.2984349807799740e+05 -6.2438127874783345e+05
-            FromOffsetLLR		 -4.5829054870095520e-01 -1.0276970773146434e-01  1.4113000000000002e+06
+            FromPosition		  5.6700652644566202e+05  1.4484698693988451e+06  4.8581069686002663e+05
+            FromOffset		  5.6700652644566202e+05  1.4484698693988451e+06  4.8581069686002663e+05
+            FromOffsetLLR		  3.0272019058890393e-01  1.1976805061653026e+00  1.6295930156857900e+06
             ToName		 "Enceladus"
             ToRegPosAttView		 "Point"
             ToPosition		  0.0000000000000000e+00  0.0000000000000000e+00  0.0000000000000000e+00
@@ -903,9 +911,9 @@ BEGIN SceneWindow
             ToOffsetLLR		  0.0000000000000000e+00  0.0000000000000000e+00  0.0000000000000000e+00
             ConstantDistanceType		 None
             ConstantDistanceValue		 1
-            UpVector		  4.4008144482139411e-01 -4.5386940513488225e-02  8.9681009559144642e-01
-            ViewRad		  1.4113000000000000e+06
-            ViewQuat		  5.0019681102963565e-02  2.2684541120954502e-01 -1.1666688366849942e-02  9.7257548771192104e-01
+            UpVector		 -1.0866949674512162e-01 -2.7760613752499563e-01  9.5452908435815376e-01
+            ViewRad		  1.6295930156857900e+06
+            ViewQuat		  5.5724025499250107e-01  1.2454508402696580e-01  8.4993998997806866e-02 -8.1654628796839757e-01
             ViewCoordSystem		 From
             ViewFromToMode		 FromTo
             ViewToCBIMtx		  1.0000000000000000e+00  0.0000000000000000e+00  0.0000000000000000e+00  0.0000000000000000e+00  1.0000000000000000e+00  0.0000000000000000e+00  0.0000000000000000e+00  0.0000000000000000e+00  1.0000000000000000e+00
@@ -919,7 +927,7 @@ BEGIN SceneWindow
             MinAngleToUpAxis		  8.7266462599716477e-03
             InitUpAxisUp		 Yes
             TempUpAxisUp		 Yes
-            CrossAxis		 -1.0258890092788227e-01 -9.9472383976981726e-01  0.0000000000000000e+00
+            CrossAxis		  9.3119609293531946e-01 -3.6451863670050627e-01  0.0000000000000000e+00
             DefaultOffset		  1.4113000000000000e+06
             BaseDefaultOffset		  2.5660000000000000e+05
         END View
