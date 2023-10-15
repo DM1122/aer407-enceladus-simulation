@@ -1,0 +1,75 @@
+To derive the launch velocity $v_0$ in terms of the max range $d_{\text{max}}$, we will use equation \eqref{eq:max-range-optimum-angle} and equation \eqref{eq:launch-relative-velocity}.
+
+Starting with equation \eqref{eq:max-range-optimum-angle}:
+
+\begin{equation}
+d_{\text{max}} = \frac{v_0^2}{g} \left/ \left(1 - \frac{1}{2}\tilde{v}^2 \right) \right.
+\end{equation}
+
+We can substitute the value of $\tilde{v}$ from equation \eqref{eq:launch-relative-velocity}:
+
+\begin{equation}
+\tilde{v} = \frac{v_0}{\sqrt{Rg}}
+\end{equation}
+
+Square both sides:
+
+\begin{equation}
+\tilde{v}^2 = \frac{v_0^2}{Rg}
+\end{equation}
+
+Substituting this into our main equation:
+
+\begin{equation}
+d_{\text{max}} = \frac{v_0^2}{g} \left/ \left(1 - \frac{1}{2} \cdot \frac{v_0^2}{Rg} \right) \right.
+\end{equation}
+
+Multiply everything by $g$:
+
+\begin{equation}
+d_{\text{max}} \cdot g = v_0^2 \left/ \left(1 - \frac{1}{2} \cdot \frac{v_0^2}{Rg} \right) \right.
+\end{equation}
+
+Multiply everything by the denominator:
+
+\begin{equation}
+d_{\text{max}} \cdot g \left(1 - \frac{1}{2} \cdot \frac{v_0^2}{Rg} \right) = v_0^2
+\end{equation}
+
+Expanding:
+
+\begin{equation}
+d_{\text{max}} \cdot g - \frac{1}{2} \cdot \frac{d_{\text{max}} \cdot g \cdot v_0^2}{Rg} = v_0^2
+\end{equation}
+
+Multiplying everything by $Rg$:
+
+\begin{equation}
+d_{\text{max}} \cdot R \cdot g^2 - \frac{1}{2} \cdot d_{\text{max}} \cdot g \cdot v_0^2 = v_0^2 \cdot Rg
+\end{equation}
+
+Now, collect terms and solve for $v_0^2$:
+
+\begin{equation}
+v_0^2 \cdot Rg + \frac{1}{2} \cdot d_{\text{max}} \cdot g \cdot v_0^2 = d_{\text{max}} \cdot R \cdot g^2
+\end{equation}
+
+Factor out $v_0^2$:
+
+\begin{equation}
+v_0^2 \left( Rg + \frac{1}{2} \cdot d_{\text{max}} \cdot g \right) = d_{\text{max}} \cdot R \cdot g^2
+\end{equation}
+
+Finally, solve for $v_0^2$:
+
+\begin{equation}
+v_0^2 = \frac{d_{\text{max}} \cdot R \cdot g^2}{Rg + \frac{1}{2} \cdot d_{\text{max}} \cdot g}
+\end{equation}
+
+Thus, the launch velocity $v_0$ in terms of max range $d_{\text{max}}$ is:
+
+\begin{equation}
+v_0 = \sqrt{\frac{d_{\text{max}} \cdot R \cdot g^2}{Rg + \frac{1}{2} \cdot d_{\text{max}} \cdot g}}
+\end{equation}
+
+This is the expression for the launch velocity in terms of the maximum range.

@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "aer407-enceladus-simulation"
+name = "main"
 version = "0.1.0"
 description = ""
 authors = ["David Maranto <D.Maranto1122@gmail.com>"]
@@ -11,7 +11,13 @@ agi-stk12 = { path = "agi.stk12-12.6.0-py3-none-any.whl" }
 pandas = "^2.1.1"
 astropy = "^5.3.4"
 ipykernel = "^6.25.2"
+plotly = "^5.17.0"
+nbformat = "^5.9.2"
+pytest = "^7.4.2"
 
+
+[tool.poetry.group.dev.dependencies]
+jupyter-black = "^0.3.4"
 
 [build-system]
 requires = ["poetry-core"]

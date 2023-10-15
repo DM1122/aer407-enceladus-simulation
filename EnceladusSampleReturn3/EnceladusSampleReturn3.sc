@@ -1586,7 +1586,7 @@ BEGIN Scenario
 
                 StartTime		 1 Jan 2055 16:00:00.000000000
                 EndTime		 7 Jan 2055 16:00:00.000000000
-                CurrentTime		 1 Jan 2055 17:33:49.887000000
+                CurrentTime		 1 Jan 2055 16:00:00.000000000
                 Direction		 Forward
                 UpdateDelta		 3
                 RefreshDelta		 0.010000
@@ -2255,6 +2255,12 @@ BEGIN Scenario
 
     BEGIN SubObjects
 
+        Class Aircraft
+
+            Geyser_1		
+
+        END Class
+
         Class AreaTarget
 
             LandingRegion		
@@ -2270,6 +2276,99 @@ BEGIN Scenario
         Class Place
 
             Earth		
+            Geyser_1		
+            Geyser_10		
+            Geyser_11		
+            Geyser_12		
+            Geyser_13		
+            Geyser_14		
+            Geyser_15		
+            Geyser_16		
+            Geyser_17		
+            Geyser_18		
+            Geyser_19		
+            Geyser_2		
+            Geyser_20		
+            Geyser_21		
+            Geyser_22		
+            Geyser_23		
+            Geyser_24		
+            Geyser_25		
+            Geyser_26		
+            Geyser_27		
+            Geyser_28		
+            Geyser_29		
+            Geyser_3		
+            Geyser_30		
+            Geyser_31		
+            Geyser_32		
+            Geyser_33		
+            Geyser_34		
+            Geyser_35		
+            Geyser_36		
+            Geyser_37		
+            Geyser_38		
+            Geyser_39		
+            Geyser_4		
+            Geyser_40		
+            Geyser_41		
+            Geyser_42		
+            Geyser_43		
+            Geyser_44		
+            Geyser_45		
+            Geyser_46		
+            Geyser_47		
+            Geyser_48		
+            Geyser_49		
+            Geyser_5		
+            Geyser_50		
+            Geyser_51		
+            Geyser_52		
+            Geyser_53		
+            Geyser_54		
+            Geyser_55		
+            Geyser_56		
+            Geyser_57		
+            Geyser_58		
+            Geyser_59		
+            Geyser_6		
+            Geyser_60		
+            Geyser_61		
+            Geyser_62		
+            Geyser_63		
+            Geyser_64		
+            Geyser_65		
+            Geyser_66		
+            Geyser_67		
+            Geyser_68		
+            Geyser_69		
+            Geyser_7		
+            Geyser_70		
+            Geyser_71		
+            Geyser_72		
+            Geyser_73		
+            Geyser_74		
+            Geyser_75		
+            Geyser_76		
+            Geyser_77		
+            Geyser_78		
+            Geyser_79		
+            Geyser_8		
+            Geyser_80		
+            Geyser_81		
+            Geyser_82		
+            Geyser_83		
+            Geyser_84		
+            Geyser_85		
+            Geyser_86		
+            Geyser_87		
+            Geyser_88		
+            Geyser_89		
+            Geyser_9		
+            Geyser_90		
+            Geyser_91		
+            Geyser_92		
+            Geyser_93		
             Lander		
             Sun		
 
@@ -2289,6 +2388,9 @@ BEGIN Scenario
             *		
             CoverageDefinition/CoverageDefinition1		
         END Instance
+        Instance Aircraft/Geyser_1
+            Aircraft/Geyser_1		
+        END Instance
         Instance AreaTarget/LandingRegion
             AreaTarget/LandingRegion		
         END Instance
@@ -2300,6 +2402,285 @@ BEGIN Scenario
         END Instance
         Instance Place/Earth
             Place/Earth		
+        END Instance
+        Instance Place/Geyser_1
+            Place/Geyser_1		
+        END Instance
+        Instance Place/Geyser_10
+            Place/Geyser_10		
+        END Instance
+        Instance Place/Geyser_11
+            Place/Geyser_11		
+        END Instance
+        Instance Place/Geyser_12
+            Place/Geyser_12		
+        END Instance
+        Instance Place/Geyser_13
+            Place/Geyser_13		
+        END Instance
+        Instance Place/Geyser_14
+            Place/Geyser_14		
+        END Instance
+        Instance Place/Geyser_15
+            Place/Geyser_15		
+        END Instance
+        Instance Place/Geyser_16
+            Place/Geyser_16		
+        END Instance
+        Instance Place/Geyser_17
+            Place/Geyser_17		
+        END Instance
+        Instance Place/Geyser_18
+            Place/Geyser_18		
+        END Instance
+        Instance Place/Geyser_19
+            Place/Geyser_19		
+        END Instance
+        Instance Place/Geyser_2
+            Place/Geyser_2		
+        END Instance
+        Instance Place/Geyser_20
+            Place/Geyser_20		
+        END Instance
+        Instance Place/Geyser_21
+            Place/Geyser_21		
+        END Instance
+        Instance Place/Geyser_22
+            Place/Geyser_22		
+        END Instance
+        Instance Place/Geyser_23
+            Place/Geyser_23		
+        END Instance
+        Instance Place/Geyser_24
+            Place/Geyser_24		
+        END Instance
+        Instance Place/Geyser_25
+            Place/Geyser_25		
+        END Instance
+        Instance Place/Geyser_26
+            Place/Geyser_26		
+        END Instance
+        Instance Place/Geyser_27
+            Place/Geyser_27		
+        END Instance
+        Instance Place/Geyser_28
+            Place/Geyser_28		
+        END Instance
+        Instance Place/Geyser_29
+            Place/Geyser_29		
+        END Instance
+        Instance Place/Geyser_3
+            Place/Geyser_3		
+        END Instance
+        Instance Place/Geyser_30
+            Place/Geyser_30		
+        END Instance
+        Instance Place/Geyser_31
+            Place/Geyser_31		
+        END Instance
+        Instance Place/Geyser_32
+            Place/Geyser_32		
+        END Instance
+        Instance Place/Geyser_33
+            Place/Geyser_33		
+        END Instance
+        Instance Place/Geyser_34
+            Place/Geyser_34		
+        END Instance
+        Instance Place/Geyser_35
+            Place/Geyser_35		
+        END Instance
+        Instance Place/Geyser_36
+            Place/Geyser_36		
+        END Instance
+        Instance Place/Geyser_37
+            Place/Geyser_37		
+        END Instance
+        Instance Place/Geyser_38
+            Place/Geyser_38		
+        END Instance
+        Instance Place/Geyser_39
+            Place/Geyser_39		
+        END Instance
+        Instance Place/Geyser_4
+            Place/Geyser_4		
+        END Instance
+        Instance Place/Geyser_40
+            Place/Geyser_40		
+        END Instance
+        Instance Place/Geyser_41
+            Place/Geyser_41		
+        END Instance
+        Instance Place/Geyser_42
+            Place/Geyser_42		
+        END Instance
+        Instance Place/Geyser_43
+            Place/Geyser_43		
+        END Instance
+        Instance Place/Geyser_44
+            Place/Geyser_44		
+        END Instance
+        Instance Place/Geyser_45
+            Place/Geyser_45		
+        END Instance
+        Instance Place/Geyser_46
+            Place/Geyser_46		
+        END Instance
+        Instance Place/Geyser_47
+            Place/Geyser_47		
+        END Instance
+        Instance Place/Geyser_48
+            Place/Geyser_48		
+        END Instance
+        Instance Place/Geyser_49
+            Place/Geyser_49		
+        END Instance
+        Instance Place/Geyser_5
+            Place/Geyser_5		
+        END Instance
+        Instance Place/Geyser_50
+            Place/Geyser_50		
+        END Instance
+        Instance Place/Geyser_51
+            Place/Geyser_51		
+        END Instance
+        Instance Place/Geyser_52
+            Place/Geyser_52		
+        END Instance
+        Instance Place/Geyser_53
+            Place/Geyser_53		
+        END Instance
+        Instance Place/Geyser_54
+            Place/Geyser_54		
+        END Instance
+        Instance Place/Geyser_55
+            Place/Geyser_55		
+        END Instance
+        Instance Place/Geyser_56
+            Place/Geyser_56		
+        END Instance
+        Instance Place/Geyser_57
+            Place/Geyser_57		
+        END Instance
+        Instance Place/Geyser_58
+            Place/Geyser_58		
+        END Instance
+        Instance Place/Geyser_59
+            Place/Geyser_59		
+        END Instance
+        Instance Place/Geyser_6
+            Place/Geyser_6		
+        END Instance
+        Instance Place/Geyser_60
+            Place/Geyser_60		
+        END Instance
+        Instance Place/Geyser_61
+            Place/Geyser_61		
+        END Instance
+        Instance Place/Geyser_62
+            Place/Geyser_62		
+        END Instance
+        Instance Place/Geyser_63
+            Place/Geyser_63		
+        END Instance
+        Instance Place/Geyser_64
+            Place/Geyser_64		
+        END Instance
+        Instance Place/Geyser_65
+            Place/Geyser_65		
+        END Instance
+        Instance Place/Geyser_66
+            Place/Geyser_66		
+        END Instance
+        Instance Place/Geyser_67
+            Place/Geyser_67		
+        END Instance
+        Instance Place/Geyser_68
+            Place/Geyser_68		
+        END Instance
+        Instance Place/Geyser_69
+            Place/Geyser_69		
+        END Instance
+        Instance Place/Geyser_7
+            Place/Geyser_7		
+        END Instance
+        Instance Place/Geyser_70
+            Place/Geyser_70		
+        END Instance
+        Instance Place/Geyser_71
+            Place/Geyser_71		
+        END Instance
+        Instance Place/Geyser_72
+            Place/Geyser_72		
+        END Instance
+        Instance Place/Geyser_73
+            Place/Geyser_73		
+        END Instance
+        Instance Place/Geyser_74
+            Place/Geyser_74		
+        END Instance
+        Instance Place/Geyser_75
+            Place/Geyser_75		
+        END Instance
+        Instance Place/Geyser_76
+            Place/Geyser_76		
+        END Instance
+        Instance Place/Geyser_77
+            Place/Geyser_77		
+        END Instance
+        Instance Place/Geyser_78
+            Place/Geyser_78		
+        END Instance
+        Instance Place/Geyser_79
+            Place/Geyser_79		
+        END Instance
+        Instance Place/Geyser_8
+            Place/Geyser_8		
+        END Instance
+        Instance Place/Geyser_80
+            Place/Geyser_80		
+        END Instance
+        Instance Place/Geyser_81
+            Place/Geyser_81		
+        END Instance
+        Instance Place/Geyser_82
+            Place/Geyser_82		
+        END Instance
+        Instance Place/Geyser_83
+            Place/Geyser_83		
+        END Instance
+        Instance Place/Geyser_84
+            Place/Geyser_84		
+        END Instance
+        Instance Place/Geyser_85
+            Place/Geyser_85		
+        END Instance
+        Instance Place/Geyser_86
+            Place/Geyser_86		
+        END Instance
+        Instance Place/Geyser_87
+            Place/Geyser_87		
+        END Instance
+        Instance Place/Geyser_88
+            Place/Geyser_88		
+        END Instance
+        Instance Place/Geyser_89
+            Place/Geyser_89		
+        END Instance
+        Instance Place/Geyser_9
+            Place/Geyser_9		
+        END Instance
+        Instance Place/Geyser_90
+            Place/Geyser_90		
+        END Instance
+        Instance Place/Geyser_91
+            Place/Geyser_91		
+        END Instance
+        Instance Place/Geyser_92
+            Place/Geyser_92		
+        END Instance
+        Instance Place/Geyser_93
+            Place/Geyser_93		
         END Instance
         Instance Place/Lander
             Place/Lander		
