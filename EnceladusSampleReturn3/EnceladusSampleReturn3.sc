@@ -326,24 +326,14 @@ BEGIN Scenario
             BEGIN Class
                 Name		 FigureOfMerit
                 BEGIN Favorite
-                    Type		 Graph
-                    BaseDir		 User
-                    Style		 Accum Satisfied by Time
+                    Type		 Report
+                    BaseDir		 Install
+                    Style		 Percent Satisfied
                 END Favorite
                 BEGIN Favorite
                     Type		 Graph
                     BaseDir		 Install
-                    Style		 GI Region FOM
-                END Favorite
-                BEGIN Favorite
-                    Type		 Graph
-                    BaseDir		 Install
-                    Style		 GI Point Satisfaction
-                END Favorite
-                BEGIN Favorite
-                    Type		 Graph
-                    BaseDir		 Install
-                    Style		 GI All DOP
+                    Style		 Satisfied By Time
                 END Favorite
                 BEGIN Favorite
                     Type		 Graph
@@ -353,23 +343,33 @@ BEGIN Scenario
                 BEGIN Favorite
                     Type		 Graph
                     BaseDir		 Install
-                    Style		 Satisfied By Time
+                    Style		 GI All DOP
                 END Favorite
                 BEGIN Favorite
-                    Type		 Report
+                    Type		 Graph
                     BaseDir		 Install
-                    Style		 Percent Satisfied
+                    Style		 GI Point Satisfaction
+                END Favorite
+                BEGIN Favorite
+                    Type		 Graph
+                    BaseDir		 Install
+                    Style		 GI Region FOM
+                END Favorite
+                BEGIN Favorite
+                    Type		 Graph
+                    BaseDir		 User
+                    Style		 Accum Satisfied by Time
                 END Favorite
             END Class
             BEGIN Class
                 Name		 Satellite
                 BEGIN Favorite
-                    Type		 Graph
+                    Type		 Report
                     BaseDir		 Install
                     Style		 Classical Orbit Elements
                 END Favorite
                 BEGIN Favorite
-                    Type		 Report
+                    Type		 Graph
                     BaseDir		 Install
                     Style		 Classical Orbit Elements
                 END Favorite

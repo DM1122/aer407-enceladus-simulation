@@ -10,7 +10,7 @@ BEGIN Place
         CentralBody		 Enceladus
         DisplayCoords		 Geodetic
         EcfLatitude		 -7.6989999999999995e+01
-        EcfLongitude		  9.9379999999999981e+01
+        EcfLongitude		  9.9379999999999995e+01
         EcfAltitude		  0.0000000000000000e+00
         HeightAboveGround		  0.0000000000000000e+00
         ComputeTrnMaskAsNeeded		 Off

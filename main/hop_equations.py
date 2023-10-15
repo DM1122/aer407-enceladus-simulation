@@ -79,6 +79,7 @@ def optimum_launch_angle(v_tilde: float) -> u.deg:
         Optimum launch elevation angle.
     """
     theta = 0.5 * np.arccos(v_tilde**2 / (2 - v_tilde**2)) * u.rad
+    print(theta)
 
     return theta.to(u.deg)
 

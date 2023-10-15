@@ -797,17 +797,17 @@ BEGIN Satellite
                                                             </VAR>
                                                             <VAR name = "Vx">
                                                                 <QUANTITY Dimension = "Rate" Unit = "m*sec^-1">
-                                                                    <REAL>7.929434497542605</REAL>
+                                                                    <REAL>52.33426768378119</REAL>
                                                                 </QUANTITY>
                                                             </VAR>
                                                             <VAR name = "Vy">
                                                                 <QUANTITY Dimension = "Rate" Unit = "m*sec^-1">
-                                                                    <REAL>-4.525158999146051</REAL>
+                                                                    <REAL>-29.86604939436393</REAL>
                                                                 </QUANTITY>
                                                             </VAR>
                                                             <VAR name = "Vz">
                                                                 <QUANTITY Dimension = "Rate" Unit = "m*sec^-1">
-                                                                    <REAL>-4.080074090213165</REAL>
+                                                                    <REAL>-26.92848899540688</REAL>
                                                                 </QUANTITY>
                                                             </VAR>
                                                         </SCOPE>
@@ -5386,6 +5386,12 @@ BEGIN Satellite
         END ObjectCoverage
 
         BEGIN Desc
+            BEGIN ShortText
+
+            END ShortText
+            BEGIN LongText
+
+            END LongText
         END Desc
 
         BEGIN RadarCrossSection
