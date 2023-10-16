@@ -11,7 +11,7 @@ BEGIN Satellite
         BEGIN Interval
 
             StartTime		 1 Jan 2055 16:00:00.000000000
-            StopTime		 1 Jan 2055 16:27:25.128042560
+            StopTime		 1 Jan 2055 16:10:44.163682871
 
         END Interval
 
@@ -215,32 +215,32 @@ BEGIN Satellite
                                         <SCOPE Class = "container">
                                             <VAR name = "X">
                                                 <QUANTITY Dimension = "DistanceUnit" Unit = "m">
-                                                    <REAL>77249.51982925035</REAL>
+                                                    <REAL>58532.76850334348</REAL>
                                                 </QUANTITY>
                                             </VAR>
                                             <VAR name = "Y">
                                                 <QUANTITY Dimension = "DistanceUnit" Unit = "m">
-                                                    <REAL>-44084.65193115309</REAL>
+                                                    <REAL>-33399.56953307609</REAL>
                                                 </QUANTITY>
                                             </VAR>
                                             <VAR name = "Z">
                                                 <QUANTITY Dimension = "DistanceUnit" Unit = "m">
-                                                    <REAL>-232672.8907541955</REAL>
+                                                    <REAL>-239466.5410291698</REAL>
                                                 </QUANTITY>
                                             </VAR>
                                             <VAR name = "Vx">
                                                 <QUANTITY Dimension = "Rate" Unit = "m*sec^-1">
-                                                    <REAL>79.29434497542604</REAL>
+                                                    <REAL>37.87832252675123</REAL>
                                                 </QUANTITY>
                                             </VAR>
                                             <VAR name = "Vy">
                                                 <QUANTITY Dimension = "Rate" Unit = "m*sec^-1">
-                                                    <REAL>-45.25158999146051</REAL>
+                                                    <REAL>-21.61387030507954</REAL>
                                                 </QUANTITY>
                                             </VAR>
                                             <VAR name = "Vz">
                                                 <QUANTITY Dimension = "Rate" Unit = "m*sec^-1">
-                                                    <REAL>-40.80074090213164</REAL>
+                                                    <REAL>-24.45553706207679</REAL>
                                                 </QUANTITY>
                                             </VAR>
                                         </SCOPE>
@@ -444,32 +444,32 @@ BEGIN Satellite
                                         <SCOPE Class = "container">
                                             <VAR name = "X">
                                                 <QUANTITY Dimension = "DistanceUnit" Unit = "m">
-                                                    <REAL>151642.3637131882</REAL>
+                                                    <REAL>76844.64746653161</REAL>
                                                 </QUANTITY>
                                             </VAR>
                                             <VAR name = "Y">
                                                 <QUANTITY Dimension = "DistanceUnit" Unit = "m">
-                                                    <REAL>-86539.05988140426</REAL>
+                                                    <REAL>-43848.56913365605</REAL>
                                                 </QUANTITY>
                                             </VAR>
                                             <VAR name = "Z">
                                                 <QUANTITY Dimension = "DistanceUnit" Unit = "m">
-                                                    <REAL>-180959.533367502</REAL>
+                                                    <REAL>-232864.6941761026</REAL>
                                                 </QUANTITY>
                                             </VAR>
                                             <VAR name = "Vx">
                                                 <QUANTITY Dimension = "Rate" Unit = "m*sec^-1">
-                                                    <REAL>3.103656582223596</REAL>
+                                                    <REAL>18.09286633458088</REAL>
                                                 </QUANTITY>
                                             </VAR>
                                             <VAR name = "Vy">
                                                 <QUANTITY Dimension = "Rate" Unit = "m*sec^-1">
-                                                    <REAL>-1.771190558123726</REAL>
+                                                    <REAL>-10.32402810675131</REAL>
                                                 </QUANTITY>
                                             </VAR>
                                             <VAR name = "Vz">
                                                 <QUANTITY Dimension = "Rate" Unit = "m*sec^-1">
-                                                    <REAL>97.17713582693096</REAL>
+                                                    <REAL>44.58281628150819</REAL>
                                                 </QUANTITY>
                                             </VAR>
                                         </SCOPE>
@@ -659,7 +659,7 @@ BEGIN Satellite
                                         <LIST />
                                     </VAR>
                                     <VAR name = "Epoch">
-                                        <DATE>1 Jan 2055 16:28:02.128043000</DATE>
+                                        <DATE>1 Jan 2055 16:11:21.163682871</DATE>
                                     </VAR>
                                 </SCOPE>
                             </VAR>
@@ -782,32 +782,32 @@ BEGIN Satellite
                                                         <SCOPE Class = "container">
                                                             <VAR name = "X">
                                                                 <QUANTITY Dimension = "DistanceUnit" Unit = "m">
-                                                                    <REAL>77249.51982925035</REAL>
+                                                                    <REAL>58532.76850334348</REAL>
                                                                 </QUANTITY>
                                                             </VAR>
                                                             <VAR name = "Y">
                                                                 <QUANTITY Dimension = "DistanceUnit" Unit = "m">
-                                                                    <REAL>-44084.65193115309</REAL>
+                                                                    <REAL>-33399.56953307609</REAL>
                                                                 </QUANTITY>
                                                             </VAR>
                                                             <VAR name = "Z">
                                                                 <QUANTITY Dimension = "DistanceUnit" Unit = "m">
-                                                                    <REAL>-232672.8907541955</REAL>
+                                                                    <REAL>-239466.5410291698</REAL>
                                                                 </QUANTITY>
                                                             </VAR>
                                                             <VAR name = "Vx">
                                                                 <QUANTITY Dimension = "Rate" Unit = "m*sec^-1">
-                                                                    <REAL>52.33426768378119</REAL>
+                                                                    <REAL>37.87832252675123</REAL>
                                                                 </QUANTITY>
                                                             </VAR>
                                                             <VAR name = "Vy">
                                                                 <QUANTITY Dimension = "Rate" Unit = "m*sec^-1">
-                                                                    <REAL>-29.86604939436393</REAL>
+                                                                    <REAL>-21.61387030507954</REAL>
                                                                 </QUANTITY>
                                                             </VAR>
                                                             <VAR name = "Vz">
                                                                 <QUANTITY Dimension = "Rate" Unit = "m*sec^-1">
-                                                                    <REAL>-26.92848899540688</REAL>
+                                                                    <REAL>-24.45553706207679</REAL>
                                                                 </QUANTITY>
                                                             </VAR>
                                                         </SCOPE>
@@ -1014,32 +1014,32 @@ BEGIN Satellite
                                                         <SCOPE Class = "container">
                                                             <VAR name = "X">
                                                                 <QUANTITY Dimension = "DistanceUnit" Unit = "m">
-                                                                    <REAL>77249.51982925035</REAL>
+                                                                    <REAL>58532.76850334348</REAL>
                                                                 </QUANTITY>
                                                             </VAR>
                                                             <VAR name = "Y">
                                                                 <QUANTITY Dimension = "DistanceUnit" Unit = "m">
-                                                                    <REAL>-44084.65193115309</REAL>
+                                                                    <REAL>-33399.56953307609</REAL>
                                                                 </QUANTITY>
                                                             </VAR>
                                                             <VAR name = "Z">
                                                                 <QUANTITY Dimension = "DistanceUnit" Unit = "m">
-                                                                    <REAL>-232672.8907541955</REAL>
+                                                                    <REAL>-239466.5410291698</REAL>
                                                                 </QUANTITY>
                                                             </VAR>
                                                             <VAR name = "Vx">
                                                                 <QUANTITY Dimension = "Rate" Unit = "m*sec^-1">
-                                                                    <REAL>79.29434497542604</REAL>
+                                                                    <REAL>37.87832252675123</REAL>
                                                                 </QUANTITY>
                                                             </VAR>
                                                             <VAR name = "Vy">
                                                                 <QUANTITY Dimension = "Rate" Unit = "m*sec^-1">
-                                                                    <REAL>-45.25158999146051</REAL>
+                                                                    <REAL>-21.61387030507954</REAL>
                                                                 </QUANTITY>
                                                             </VAR>
                                                             <VAR name = "Vz">
                                                                 <QUANTITY Dimension = "Rate" Unit = "m*sec^-1">
-                                                                    <REAL>-40.80074090213164</REAL>
+                                                                    <REAL>-24.45553706207679</REAL>
                                                                 </QUANTITY>
                                                             </VAR>
                                                         </SCOPE>
@@ -1600,32 +1600,32 @@ BEGIN Satellite
                                                         <SCOPE Class = "container">
                                                             <VAR name = "X">
                                                                 <QUANTITY Dimension = "DistanceUnit" Unit = "m">
-                                                                    <REAL>77249.51982925035</REAL>
+                                                                    <REAL>58532.76850334348</REAL>
                                                                 </QUANTITY>
                                                             </VAR>
                                                             <VAR name = "Y">
                                                                 <QUANTITY Dimension = "DistanceUnit" Unit = "m">
-                                                                    <REAL>-44084.65193115309</REAL>
+                                                                    <REAL>-33399.56953307609</REAL>
                                                                 </QUANTITY>
                                                             </VAR>
                                                             <VAR name = "Z">
                                                                 <QUANTITY Dimension = "DistanceUnit" Unit = "m">
-                                                                    <REAL>-232672.8907541955</REAL>
+                                                                    <REAL>-239466.5410291698</REAL>
                                                                 </QUANTITY>
                                                             </VAR>
                                                             <VAR name = "Vx">
                                                                 <QUANTITY Dimension = "Rate" Unit = "m*sec^-1">
-                                                                    <REAL>79.29434497542604</REAL>
+                                                                    <REAL>37.87832252675123</REAL>
                                                                 </QUANTITY>
                                                             </VAR>
                                                             <VAR name = "Vy">
                                                                 <QUANTITY Dimension = "Rate" Unit = "m*sec^-1">
-                                                                    <REAL>-45.25158999146051</REAL>
+                                                                    <REAL>-21.61387030507954</REAL>
                                                                 </QUANTITY>
                                                             </VAR>
                                                             <VAR name = "Vz">
                                                                 <QUANTITY Dimension = "Rate" Unit = "m*sec^-1">
-                                                                    <REAL>-40.80074090213164</REAL>
+                                                                    <REAL>-24.45553706207679</REAL>
                                                                 </QUANTITY>
                                                             </VAR>
                                                         </SCOPE>
@@ -1829,32 +1829,32 @@ BEGIN Satellite
                                                         <SCOPE Class = "container">
                                                             <VAR name = "X">
                                                                 <QUANTITY Dimension = "DistanceUnit" Unit = "m">
-                                                                    <REAL>151642.3637131882</REAL>
+                                                                    <REAL>76844.64746653161</REAL>
                                                                 </QUANTITY>
                                                             </VAR>
                                                             <VAR name = "Y">
                                                                 <QUANTITY Dimension = "DistanceUnit" Unit = "m">
-                                                                    <REAL>-86539.05988140426</REAL>
+                                                                    <REAL>-43848.56913365605</REAL>
                                                                 </QUANTITY>
                                                             </VAR>
                                                             <VAR name = "Z">
                                                                 <QUANTITY Dimension = "DistanceUnit" Unit = "m">
-                                                                    <REAL>-180959.533367502</REAL>
+                                                                    <REAL>-232864.6941761026</REAL>
                                                                 </QUANTITY>
                                                             </VAR>
                                                             <VAR name = "Vx">
                                                                 <QUANTITY Dimension = "Rate" Unit = "m*sec^-1">
-                                                                    <REAL>3.103656582223596</REAL>
+                                                                    <REAL>18.09286633458088</REAL>
                                                                 </QUANTITY>
                                                             </VAR>
                                                             <VAR name = "Vy">
                                                                 <QUANTITY Dimension = "Rate" Unit = "m*sec^-1">
-                                                                    <REAL>-1.771190558123726</REAL>
+                                                                    <REAL>-10.32402810675131</REAL>
                                                                 </QUANTITY>
                                                             </VAR>
                                                             <VAR name = "Vz">
                                                                 <QUANTITY Dimension = "Rate" Unit = "m*sec^-1">
-                                                                    <REAL>97.17713582693096</REAL>
+                                                                    <REAL>44.58281628150819</REAL>
                                                                 </QUANTITY>
                                                             </VAR>
                                                         </SCOPE>
@@ -2044,7 +2044,7 @@ BEGIN Satellite
                                                         <LIST />
                                                     </VAR>
                                                     <VAR name = "Epoch">
-                                                        <DATE>1 Jan 2055 16:28:02.128043000</DATE>
+                                                        <DATE>1 Jan 2055 16:11:21.163682871</DATE>
                                                     </VAR>
                                                 </SCOPE>
                                             </VAR>
@@ -2097,16 +2097,16 @@ BEGIN Satellite
                                     </VAR>
                                     <VAR name = "LargestStep">
                                         <QUANTITY Dimension = "TimeUnit" Unit = "sec">
-                                            <REAL>135.139</REAL>
+                                            <REAL>115.486</REAL>
                                         </QUANTITY>
                                     </VAR>
                                     <VAR name = "AverageStep">
                                         <QUANTITY Dimension = "TimeUnit" Unit = "sec">
-                                            <REAL>114.6722666666667</REAL>
+                                            <REAL>103.9265714285714</REAL>
                                         </QUANTITY>
                                     </VAR>
                                     <VAR name = "NumSteps">
-                                        <INT>15</INT>
+                                        <INT>7</INT>
                                     </VAR>
                                     <VAR name = "ShouldReinitializeSTM">
                                         <BOOL>false</BOOL>
@@ -2162,7 +2162,7 @@ BEGIN Satellite
                                                     <VAR name = "IdentifierInformation">
                                                         <SCOPE>
                                                             <VAR name = "Identifier">
-                                                                <STRING>&quot;{ED4B4D2A-1949-48BC-A0AB-824CFB2EBB86}&quot;</STRING>
+                                                                <STRING>&quot;{329E3943-6A59-4923-8058-53C9A31E382D}&quot;</STRING>
                                                             </VAR>
                                                             <VAR name = "Version">
                                                                 <STRING>&quot;0&quot;</STRING>
@@ -2203,10 +2203,10 @@ BEGIN Satellite
                                                         <LIST />
                                                     </VAR>
                                                     <VAR name = "Epoch">
-                                                        <DATE>1 Jan 2055 16:28:02.128043000</DATE>
+                                                        <DATE>1 Jan 2055 16:11:21.163682871</DATE>
                                                     </VAR>
                                                     <VAR name = "TriggerDescription">
-                                                        <STRING>&quot;Altitude; Run Sequence STOP&quot;</STRING>
+                                                        <STRING>&quot;Altitude (stopped on time tolerance); Run Sequence STOP&quot;</STRING>
                                                     </VAR>
                                                     <VAR name = "CausedTermination">
                                                         <BOOL>true</BOOL>
@@ -2526,32 +2526,32 @@ BEGIN Satellite
                                                         <SCOPE Class = "container">
                                                             <VAR name = "X">
                                                                 <QUANTITY Dimension = "DistanceUnit" Unit = "m">
-                                                                    <REAL>151642.3637131882</REAL>
+                                                                    <REAL>76844.64746653161</REAL>
                                                                 </QUANTITY>
                                                             </VAR>
                                                             <VAR name = "Y">
                                                                 <QUANTITY Dimension = "DistanceUnit" Unit = "m">
-                                                                    <REAL>-86539.05988140426</REAL>
+                                                                    <REAL>-43848.56913365605</REAL>
                                                                 </QUANTITY>
                                                             </VAR>
                                                             <VAR name = "Z">
                                                                 <QUANTITY Dimension = "DistanceUnit" Unit = "m">
-                                                                    <REAL>-180959.533367502</REAL>
+                                                                    <REAL>-232864.6941761026</REAL>
                                                                 </QUANTITY>
                                                             </VAR>
                                                             <VAR name = "Vx">
                                                                 <QUANTITY Dimension = "Rate" Unit = "m*sec^-1">
-                                                                    <REAL>3.103656582223596</REAL>
+                                                                    <REAL>18.09286633458088</REAL>
                                                                 </QUANTITY>
                                                             </VAR>
                                                             <VAR name = "Vy">
                                                                 <QUANTITY Dimension = "Rate" Unit = "m*sec^-1">
-                                                                    <REAL>-1.771190558123726</REAL>
+                                                                    <REAL>-10.32402810675131</REAL>
                                                                 </QUANTITY>
                                                             </VAR>
                                                             <VAR name = "Vz">
                                                                 <QUANTITY Dimension = "Rate" Unit = "m*sec^-1">
-                                                                    <REAL>97.17713582693096</REAL>
+                                                                    <REAL>44.58281628150819</REAL>
                                                                 </QUANTITY>
                                                             </VAR>
                                                         </SCOPE>
@@ -2741,7 +2741,7 @@ BEGIN Satellite
                                                         <LIST />
                                                     </VAR>
                                                     <VAR name = "Epoch">
-                                                        <DATE>1 Jan 2055 16:28:02.128043000</DATE>
+                                                        <DATE>1 Jan 2055 16:11:21.163682871</DATE>
                                                     </VAR>
                                                 </SCOPE>
                                             </VAR>
@@ -2755,32 +2755,32 @@ BEGIN Satellite
                                                         <SCOPE Class = "container">
                                                             <VAR name = "X">
                                                                 <QUANTITY Dimension = "DistanceUnit" Unit = "m">
-                                                                    <REAL>151642.3637131882</REAL>
+                                                                    <REAL>76844.64746653161</REAL>
                                                                 </QUANTITY>
                                                             </VAR>
                                                             <VAR name = "Y">
                                                                 <QUANTITY Dimension = "DistanceUnit" Unit = "m">
-                                                                    <REAL>-86539.05988140426</REAL>
+                                                                    <REAL>-43848.56913365605</REAL>
                                                                 </QUANTITY>
                                                             </VAR>
                                                             <VAR name = "Z">
                                                                 <QUANTITY Dimension = "DistanceUnit" Unit = "m">
-                                                                    <REAL>-180959.533367502</REAL>
+                                                                    <REAL>-232864.6941761026</REAL>
                                                                 </QUANTITY>
                                                             </VAR>
                                                             <VAR name = "Vx">
                                                                 <QUANTITY Dimension = "Rate" Unit = "m*sec^-1">
-                                                                    <REAL>3.103656582223596</REAL>
+                                                                    <REAL>18.09286633458088</REAL>
                                                                 </QUANTITY>
                                                             </VAR>
                                                             <VAR name = "Vy">
                                                                 <QUANTITY Dimension = "Rate" Unit = "m*sec^-1">
-                                                                    <REAL>-1.771190558123726</REAL>
+                                                                    <REAL>-10.32402810675131</REAL>
                                                                 </QUANTITY>
                                                             </VAR>
                                                             <VAR name = "Vz">
                                                                 <QUANTITY Dimension = "Rate" Unit = "m*sec^-1">
-                                                                    <REAL>97.17713582693096</REAL>
+                                                                    <REAL>44.58281628150819</REAL>
                                                                 </QUANTITY>
                                                             </VAR>
                                                         </SCOPE>
@@ -2970,7 +2970,7 @@ BEGIN Satellite
                                                         <LIST />
                                                     </VAR>
                                                     <VAR name = "Epoch">
-                                                        <DATE>1 Jan 2055 16:28:02.128043000</DATE>
+                                                        <DATE>1 Jan 2055 16:11:21.163682871</DATE>
                                                     </VAR>
                                                 </SCOPE>
                                             </VAR>
@@ -5090,7 +5090,7 @@ BEGIN Satellite
             ScenarioEpoch		 1 Jan 2055 16:00:00.000000
             Periods
                 Rev		 1 0 0 0 0 0 0 1 0 1 0
-                 0.0000000000000000e+00  1.6451280425603618e+03  0.0000000000000000e+00  1.6451280425603618e+03
+                 0.0000000000000000e+00  6.4416368287066871e+02  0.0000000000000000e+00  6.4416368287066871e+02
             END Periods
         END PassDefn
 
@@ -5536,7 +5536,7 @@ BEGIN Satellite
                     END DefaultAttributes
                     BEGIN GraphicsInterval
                         StartTime		  0.0000000000000000e+00
-                        StopTime		  1.6451280425603618e+03
+                        StopTime		  6.4416368287066871e+02
                         BEGIN Attributes
                             AllColors		 #00ff00
                             PickString		 Propagate
