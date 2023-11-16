@@ -1,0 +1,4923 @@
+[
+    {
+        "name": "ENC-LDR-OMS-Engine-Direction",
+        "collection": null,
+        "parent": [
+            "ENC-LDR-OMS-Lander-Range-Motion"
+        ],
+        "type": null,
+        "stakeholder": [
+            "Electrical"
+        ],
+        "system": [
+            "LDR-OMS"
+        ],
+        "qualifier": "SHALL",
+        "description": "The OMS shall send the current engine direction to the CDH system.",
+        "rationale": "To determine which direction the engines are facing. This would help with GNC.",
+        "verification_method": [
+            "Test"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LDR-PWR-Batt-DOD",
+        "collection": null,
+        "parent": [
+            "ENC-LDR-PWR-Batteries"
+        ],
+        "type": "Performance",
+        "stakeholder": [
+            "Electrical"
+        ],
+        "system": [
+            "LDR-Power"
+        ],
+        "qualifier": "SHALL",
+        "description": "The batteries shall operate at 40\\% \\acrfull{dod}.",
+        "rationale": "As per Battery Sizing Trade.",
+        "verification_method": [
+            "Test"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LDR-PWR-Batt-Capacity",
+        "collection": null,
+        "parent": [
+            "ENC-LDR-PWR-Batteries"
+        ],
+        "type": "Performance",
+        "stakeholder": [
+            "Electrical"
+        ],
+        "system": [
+            "LDR-Power"
+        ],
+        "qualifier": "SHALL",
+        "description": "The batteries shall have a capacity of $\\geq 945.84\\si{Wh}$.",
+        "rationale": "As per Battery Sizing Trade.",
+        "verification_method": [
+            "Test"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LDR-PWR-Batt-Chem",
+        "collection": null,
+        "parent": [
+            "ENC-LDR-PWR-Batteries"
+        ],
+        "type": "Functional",
+        "stakeholder": [
+            "Electrical"
+        ],
+        "system": [
+            "LDR-Power"
+        ],
+        "qualifier": "SHALL",
+        "description": "The Power system batteries shall be lithium-ion batteries.",
+        "rationale": "To provide reliability and optimized performance as per Battery Chemistry Trade.",
+        "verification_method": [
+            "Review"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LDR-PWR-Prim-Volt",
+        "collection": null,
+        "parent": [
+            "ENC-LDR-PWR-Regulate",
+            "ENC-LDR-PWR-Distribution"
+        ],
+        "type": "Functional",
+        "stakeholder": [
+            "Electrical"
+        ],
+        "system": [
+            "LDR-Power"
+        ],
+        "qualifier": "SHALL",
+        "description": "The Power system primary voltage rail shall operate at 28V DC.",
+        "rationale": "To supply standardized voltage to all systems as per Electrical Power System Trade.",
+        "verification_method": [
+            "Demonstration",
+            "Review"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LDR-PWR-EPS-Arch",
+        "collection": null,
+        "parent": [
+            "ENC-LDR-PWR-Regulate",
+            "ENC-LDR-PWR-Distribution"
+        ],
+        "type": "Functional",
+        "stakeholder": [
+            "Electrical"
+        ],
+        "system": [
+            "LDR-Power"
+        ],
+        "qualifier": "SHALL",
+        "description": "The Power system shall adopt a distributed architecture.",
+        "rationale": "As per Electrical Power System Trade. A distributed architecture provides good fault tolerance as well as mass and efficiency characteristics.",
+        "verification_method": [
+            "Review"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LDR-PWR-Mitigate-LILT",
+        "collection": null,
+        "parent": [
+            "ENC-LDR-PWR-Solar-Panels"
+        ],
+        "type": "Functional",
+        "stakeholder": [
+            "Electrical"
+        ],
+        "system": [
+            "LDR-Power"
+        ],
+        "qualifier": "SHALL",
+        "description": "The solar panels shall have LILT effect mitigation technologies.",
+        "rationale": "Solar panels scoped for outer-solar system missions need to be adapted to low intensity, low temperature (LILT) conditions to prevent the characteristic drop in solar panel performance.",
+        "verification_method": [
+            "Review"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LDR-PWR-Solar-Cell-Type",
+        "collection": null,
+        "parent": [
+            "ENC-LDR-PWR-Solar-Panels"
+        ],
+        "type": "Functional",
+        "stakeholder": [
+            "Electrical"
+        ],
+        "system": [
+            "LDR-Power"
+        ],
+        "qualifier": "SHALL",
+        "description": "The solar panels shall be multi-junction with at least two junctions.",
+        "rationale": "The solar cell type determined by the solar cell type trade to achieve the required solar panel efficiency of 34%. ",
+        "verification_method": [
+            "Review"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LDR-OMS-Engine-Type",
+        "collection": null,
+        "parent": [
+            "ENC-LDR-OMS-Thrust-Control",
+            "ENC-LDR-OMS-Cycles"
+        ],
+        "type": "Constraint",
+        "stakeholder": [
+            "Controls",
+            "Systems"
+        ],
+        "system": [
+            "LDR-OMS"
+        ],
+        "qualifier": "SHALL",
+        "description": "The lander OMS shall use a liquid-fuel engine as its primary propulsion mechanism.",
+        "rationale": "As per Lander Engine Type Selection trade. ",
+        "verification_method": [
+            "Review"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LDR-PWR-Redundancy",
+        "collection": null,
+        "parent": [
+            "ENC-LDR-PWR-Life"
+        ],
+        "type": "Functional",
+        "stakeholder": [
+            "Electrical"
+        ],
+        "system": [
+            "LDR-Power"
+        ],
+        "qualifier": "SHALL",
+        "description": "The Power system shall have backup power bus for the Thermal, CDH, OMS and Communications systems.",
+        "rationale": "These systems are critical for the maneuvering of the Lander and reporting the status of the Lander back to Earth. In the case of system failure on the Lander, these systems are needed for the Lander to leave Enceladus.",
+        "verification_method": [
+            "Analysis"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LDR-PWR-Short-Open-Circuit",
+        "collection": null,
+        "parent": [
+            "ENC-LDR-PWR-Distribution"
+        ],
+        "type": "Functional",
+        "stakeholder": [
+            "Electrical"
+        ],
+        "system": [
+            "LDR-Power"
+        ],
+        "qualifier": "SHALL",
+        "description": "The Power system shall contain faults in the power bus of each sub-system.",
+        "rationale": "In the case of failure, the fault shall not propagate and affect other systems.",
+        "verification_method": [
+            "Demonstration"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LDR-PWR-Indiv-Voltage",
+        "collection": null,
+        "parent": [
+            "ENC-LDR-PWR-Distribution"
+        ],
+        "type": "Functional",
+        "stakeholder": [
+            "Electrical"
+        ],
+        "system": [
+            "LDR-Power"
+        ],
+        "qualifier": "SHALL",
+        "description": "The Power system shall support the operating voltage of each sub-suystem.",
+        "rationale": "Each sub-system may have a different operating voltage so the Power system shall be able to supply different levels of voltage.",
+        "verification_method": [
+            "Demonstration"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LDR-PWR-Batteries",
+        "collection": null,
+        "parent": [
+            "ENC-Lander-Power-Generation"
+        ],
+        "type": "Functional",
+        "stakeholder": [
+            "Systems",
+            "Electrical"
+        ],
+        "system": [
+            "LDR-Power"
+        ],
+        "qualifier": "SHALL",
+        "description": "The Power system shall have batteries.",
+        "rationale": "To support the lander in unlit periods due to Saturnian eclipses.",
+        "verification_method": [
+            "Inspection"
+        ],
+        "child": [
+            "ENC-LDR-PWR-Fuel-Cell-Power",
+            "ENC-LDR-PWR-Batt-Chem",
+            "ENC-LDR-PWR-Batt-Capacity",
+            "ENC-LDR-PWR-Batt-DOD"
+        ]
+    },
+    {
+        "name": "ENC-LDR-PWR-Solar-Array-Efficiency",
+        "collection": null,
+        "parent": [
+            "ENC-LDR-PWR-Solar-Panels"
+        ],
+        "type": "Constraint",
+        "stakeholder": [
+            "Electrical"
+        ],
+        "system": [
+            "LDR-Power"
+        ],
+        "qualifier": "SHALL",
+        "description": "The solar panels shall have an efficiency of \u2265 34%.",
+        "rationale": "To ensure a power positive sample collection mode.",
+        "verification_method": [
+            "Inspection"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LDR-CDH-Data-Protocol",
+        "collection": null,
+        "parent": [
+            "ENC-LDR-CDH-Primary-Data-Bus"
+        ],
+        "type": "Constraint",
+        "stakeholder": [
+            "Controls",
+            "Electrical"
+        ],
+        "system": [
+            "LDR-CDH"
+        ],
+        "qualifier": "SHALL",
+        "description": "The CDH system primary data bus shall communicate using SpaceWire.",
+        "rationale": "As per Data Bus Communication Protocol Selection trade. SpaceWire is selected for its high data rate, full duplex capability, and successful space mission heritage, with the understanding that external redundancy measures will be implemented to compensate for its lack of inherent redundancy.",
+        "verification_method": [
+            "Review"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LDR-COM-Lander-Orbiter",
+        "collection": null,
+        "parent": [
+            "ENC-OrbCDH-Lander-Monitoring"
+        ],
+        "type": "Functional",
+        "stakeholder": [],
+        "system": [
+            "LDR-COM"
+        ],
+        "qualifier": "SHALL",
+        "description": "The Communication system on the Lander shall maintain communication with the Orbiter during all phases of the mission while the Lander and the Orbiter are separated.",
+        "rationale": "Since the communication from the Lander to Earth is being relayed through the Orbiter, the Lander shall maintain communication with the Orbiter at all times to ensure timely transmission of data.",
+        "verification_method": [
+            "Analysis"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LDR-COM-Power-Current",
+        "collection": null,
+        "parent": [
+            "ENC-LDR-Orbiter-Communication"
+        ],
+        "type": "Performance",
+        "stakeholder": [],
+        "system": [
+            "LDR-COM"
+        ],
+        "qualifier": "SHALL",
+        "description": "The Communications system shall receive power at a current of [TBD] Amps.",
+        "rationale": "To ensure compatibility with the cables originating from the Power system.",
+        "verification_method": [
+            "Analysis",
+            "Review"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LDR-COM-Redundancy",
+        "collection": null,
+        "parent": [
+            "ENC-Lander-Mission-Duration"
+        ],
+        "type": "Functional",
+        "stakeholder": [],
+        "system": [
+            "LDR-COM"
+        ],
+        "qualifier": "SHALL",
+        "description": "The Communications system shall have redundancy built in for each component with MTBF of \u2264 100000 hrs [TBC].",
+        "rationale": "To increase availability of the component to support the duration of the mission.",
+        "verification_method": [
+            "Analysis"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-SSS-Redundancy",
+        "collection": null,
+        "parent": [
+            "ENC-Lander-Mission-Duration"
+        ],
+        "type": "Functional",
+        "stakeholder": [
+            "Electrical"
+        ],
+        "system": [
+            "LDR-SSS"
+        ],
+        "qualifier": "SHALL",
+        "description": "The SSS shall have built-in redundancy for components with MTBF of \\leq 100000 hrs.",
+        "rationale": "To increase availability of components to support the duration of mission.",
+        "verification_method": [
+            "Analysis"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-SSS-Thermal-Measure-Accuracy",
+        "collection": null,
+        "parent": [
+            "ENC-SSS-Sample-Temperature"
+        ],
+        "type": "Performance",
+        "stakeholder": [
+            "Electrical"
+        ],
+        "system": [
+            "LDR-SSS"
+        ],
+        "qualifier": "SHALL",
+        "description": "The temperature measurement taken in the SSS system shall have an accuracy of \\leq 0.1K [TBC].",
+        "rationale": "To ensure sufficient accuracy is captured in the thermal measurement.",
+        "verification_method": [
+            "Analysis",
+            "Review"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-SSS-SCS-Interface-Motors",
+        "collection": null,
+        "parent": [],
+        "type": "Functional",
+        "stakeholder": [
+            "Electrical"
+        ],
+        "system": [
+            "LDR-SSS"
+        ],
+        "qualifier": "SHALL",
+        "description": "The SSS shall have motors to open different compartment to accept samples from the SCS system.",
+        "rationale": "To keep the samples collected from different sites separate from each other. ",
+        "verification_method": [
+            "Analysis"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-SCS-Sample-Transfer-Control",
+        "collection": null,
+        "parent": [
+            "ENC-SCS-Sample-Transfer"
+        ],
+        "type": "Functional",
+        "stakeholder": [
+            "Electrical"
+        ],
+        "system": [
+            "LDR-SCS"
+        ],
+        "qualifier": "SHALL",
+        "description": "The SCS system shall have control over whether the samples collected are being deposited into the SSS system.",
+        "rationale": "To ensure that samples from different sites are kept separately from one and another, the system needs to have control over when samples are being deposited to avoid mixing samples from different sites.",
+        "verification_method": [
+            "Simulation"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-SCS-Redundancy",
+        "collection": null,
+        "parent": [
+            "ENC-Lander-Mission-Duration"
+        ],
+        "type": "Functional",
+        "stakeholder": [
+            "Electrical"
+        ],
+        "system": [
+            "LDR-SCS"
+        ],
+        "qualifier": "SHALL",
+        "description": "The SCS system shall have redundancy built in for all electronic components with MTBF of \\leq 100000 hrs.",
+        "rationale": "To increase the availability of components to support the mission duration.",
+        "verification_method": [
+            "Analysis"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-SCS-Power-Interface",
+        "collection": null,
+        "parent": [
+            "ENC-Lander-Lander-Power"
+        ],
+        "type": "Functional",
+        "stakeholder": [
+            "Electrical"
+        ],
+        "system": [
+            "LDR-SCS"
+        ],
+        "qualifier": "SHALL",
+        "description": "The SCS system shall receive power from the Power system at a current of [TBD] Amps.",
+        "rationale": "To ensure that the SCS system has power supply.",
+        "verification_method": [
+            "Analysis"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LDR-PWR-System-Check",
+        "collection": null,
+        "parent": [
+            "ENC-LDR-PWR-Health-Data"
+        ],
+        "type": "Functional",
+        "stakeholder": [
+            "Electrical"
+        ],
+        "system": [
+            "LDR-Power"
+        ],
+        "qualifier": "SHALL",
+        "description": "The Power system shall have gauges and sensor necessary to conduct system check of both the primary equipment and the backup ones when applicable.",
+        "rationale": "To report the health status of the system.",
+        "verification_method": [
+            "Analysis",
+            "Review"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LDR-PWR-Reliability",
+        "collection": null,
+        "parent": [
+            "ENC-LDR-PWR-Life"
+        ],
+        "type": "Functional",
+        "stakeholder": [
+            "Electrical"
+        ],
+        "system": [
+            "LDR-Power"
+        ],
+        "qualifier": "SHALL",
+        "description": "The Power system shall have redundancy for all electronic units with MTBF of \u2264 100000 hrs [TBC] [ROSS\u2019S NOTES]. ",
+        "rationale": "To protect the system from failure of components.",
+        "verification_method": [
+            "Analysis"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LDR-PWR-Cables-Current",
+        "collection": null,
+        "parent": [
+            "ENC-LDR-PWR-Distribution"
+        ],
+        "type": "Performance",
+        "stakeholder": [],
+        "system": [
+            "LDR-Power"
+        ],
+        "qualifier": "SHALL",
+        "description": "The cables in the Power system shall have a current capacity of \u2265 [TBD] Amps when bundled.",
+        "rationale": "To distribute sufficient power given the a certain voltage.",
+        "verification_method": [
+            "Analysis"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LDR-PWR-Cables-Size",
+        "collection": null,
+        "parent": [
+            "ENC-SRS-Volume-Budget"
+        ],
+        "type": "Performance",
+        "stakeholder": [
+            "Electrical"
+        ],
+        "system": [
+            "LDR-Power"
+        ],
+        "qualifier": "SHALL",
+        "description": "The cables in the Power system shall have a maximum diameter of [TBD] mm when bundled.",
+        "rationale": "To conform to the volume budget of the spacecraft.",
+        "verification_method": [
+            "Analysis",
+            "Inspection"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LDR-PWR-Cables-Mass",
+        "collection": null,
+        "parent": [
+            "ENC-SRS-Mass-Budget"
+        ],
+        "type": "Performance",
+        "stakeholder": [
+            "Electrical"
+        ],
+        "system": [
+            "LDR-Power"
+        ],
+        "qualifier": "SHALL",
+        "description": "The cables in the Power system shall have a unit mass of \u2264 [TBD] kg / m.",
+        "rationale": "To conform the the mass budget allocation for cables.",
+        "verification_method": [
+            "Analysis"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LDR-PWR-Cables-Ops-Voltage",
+        "collection": null,
+        "parent": [
+            "ENC-LDR-PWR-Distribution"
+        ],
+        "type": "Performance",
+        "stakeholder": [
+            "Electrical"
+        ],
+        "system": [
+            "LDR-Power"
+        ],
+        "qualifier": "SHALL",
+        "description": "The cables in the Power system shall have a maximum output of 28 Vdc [TBC].",
+        "rationale": "To minimize the power needed on the lander. This number is chosen since it is the common value used in aerospace missions [ROSS\u2019S NOTES].",
+        "verification_method": [
+            "Analysis"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LDR-PWR-Cables-Voltage-Drop",
+        "collection": null,
+        "parent": [
+            "ENC-LDR-PWR-Generation"
+        ],
+        "type": "Performance",
+        "stakeholder": [
+            "Electrical"
+        ],
+        "system": [
+            "LDR-Power"
+        ],
+        "qualifier": "SHALL",
+        "description": "The cables in the Power system shall cause a voltage drop of \u2264 [TBD] V.",
+        "rationale": "The voltage drop my current flowing through the cables shall be minimized to save the power generated.",
+        "verification_method": [
+            "Analysis"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LDR-COM-Comms-Receive",
+        "collection": null,
+        "parent": [
+            "ENC-LDR-Orbiter-Communication"
+        ],
+        "type": "Functional",
+        "stakeholder": [
+            "Electrical"
+        ],
+        "system": [
+            "LDR-COM"
+        ],
+        "qualifier": "SHALL",
+        "description": "The Communications system shall receive communications from the Orbiter.",
+        "rationale": "To enable the Lander to execute commands by the Orbiter.",
+        "verification_method": [
+            "Test"
+        ],
+        "child": [
+            "ENC-LDR-COM-Transmit-Duration"
+        ]
+    },
+    {
+        "name": "ENC-LDR-OMS-Min-Thrust",
+        "collection": null,
+        "parent": [
+            "ENC-Lander-Ascent-Descent"
+        ],
+        "type": "Performance",
+        "stakeholder": [
+            "Systems",
+            "Mechanical"
+        ],
+        "system": [
+            "LDR-OMS"
+        ],
+        "qualifier": "SHALL",
+        "description": "The Lander OMS shall produce a delta-v less than [TBD] m/s.",
+        "rationale": "A minimum delta-v will be required for precise maneuvers such a attitude corrections for docking.",
+        "verification_method": [
+            "Analysis",
+            "Review"
+        ],
+        "child": [
+            "ENC-LDR-OMS-Fuel-Flow-Rate"
+        ]
+    },
+    {
+        "name": "ENC-LDR-CDH-Primary-Data-Bus",
+        "collection": null,
+        "parent": [
+            "ENC-LDR-CDH-Org-Architecture"
+        ],
+        "type": "Functional",
+        "stakeholder": [
+            "Electrical",
+            "Controls"
+        ],
+        "system": [
+            "LDR-CDH"
+        ],
+        "qualifier": "SHALL",
+        "description": "The CDH system shall have a primary data bus through which all major systems will communicate.",
+        "rationale": "To enable many-to-many communications between the systems using a publisher-subscriber model.",
+        "verification_method": [
+            "Review"
+        ],
+        "child": [
+            "ENC-LDR-CDH-Data-Protocol"
+        ]
+    },
+    {
+        "name": "ENC-LDR-CDH-Org-Architecture",
+        "collection": null,
+        "parent": [
+            "ENC-LDR-Command-Data-Handling"
+        ],
+        "type": "Constraint",
+        "stakeholder": [
+            "Electrical"
+        ],
+        "system": [
+            "LDR-CDH"
+        ],
+        "qualifier": "SHALL",
+        "description": "The CDH system shall adopt a centralized semi-distributed organizational architecture.",
+        "rationale": "As per Centralized vs Decentralized Command and Data Handling Architecture Trade. A centralized semi-distributed architecture offers an acceptable balance of hierarchical control and fault tolerance.",
+        "verification_method": [
+            "Review"
+        ],
+        "child": [
+            "ENC-LDR-CDH-Primary-Data-Bus"
+        ]
+    },
+    {
+        "name": "ENC-LDR-Command-Data-Handling",
+        "collection": null,
+        "parent": [
+            "ENC-SRS-Command-Data-Handling"
+        ],
+        "type": "Functional",
+        "stakeholder": [
+            "Controls",
+            "Electrical"
+        ],
+        "system": [
+            "LDR"
+        ],
+        "qualifier": "SHALL",
+        "description": "The lander shall be capable of command and data handling.",
+        "rationale": "To allow for the transfer of data and commands between the systems, and implementation of modes of operation.",
+        "verification_method": [
+            "Review"
+        ],
+        "child": [
+            "ENC-LDR-CDH-Command-Data-Handling",
+            "ENC-LDR-CDH-Error-Detection",
+            "ENC-LDR-CDH-Update",
+            "ENC-LDR-CDH-Time-Synchronization",
+            "ENC-LDR-CDH-System-Status",
+            "ENC-LDR-CDH-Internal-Interface",
+            "ENC-LDR-CDH-Telemetry",
+            "ENC-LDR-CDH-Org-Architecture"
+        ]
+    },
+    {
+        "name": "ENC-LDR-GNC-Sensor-Data",
+        "collection": null,
+        "parent": [
+            "ENC-LdrGNC-Terrain-Resolution"
+        ],
+        "type": "Functional",
+        "stakeholder": [
+            "Electrical"
+        ],
+        "system": [
+            "LDR-GNC"
+        ],
+        "qualifier": "SHALL",
+        "description": "The GNC system shall be able to read and process data from system sensors.",
+        "rationale": "To be able to use sensor data as input to GNC commands and maneuvers.",
+        "verification_method": [
+            "Test"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LdrTherm-Error",
+        "collection": null,
+        "parent": [
+            "ENC-Lander-Temp-Control"
+        ],
+        "type": "Functional",
+        "stakeholder": [
+            "Mechanical",
+            "Electrical"
+        ],
+        "system": [
+            "LDR-THERM"
+        ],
+        "qualifier": "SHALL",
+        "description": "The Thermal system shall communicate irregularities in temperature data to the CDH system.",
+        "rationale": "To effectively monitor temperature of different systems.",
+        "verification_method": [
+            "Test"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LDR-CDH-Power-Interface",
+        "collection": null,
+        "parent": [
+            "ENC-LDR-CDH-Command-Data-Handling"
+        ],
+        "type": "Functional",
+        "stakeholder": [
+            "Electrical"
+        ],
+        "system": [
+            "LDR-CDH"
+        ],
+        "qualifier": "SHALL",
+        "description": "The CDH system shall receive power from the power system.",
+        "rationale": "To enable operation.",
+        "verification_method": [
+            "Test",
+            "Demonstration"
+        ],
+        "child": [
+            "ENC-LDR-CDH-Voltage"
+        ]
+    },
+    {
+        "name": "ENC-LDR-CDH-Voltage",
+        "collection": null,
+        "parent": [
+            "ENC-LDR-CDH-Power-Interface"
+        ],
+        "type": "Constraint",
+        "stakeholder": [
+            "Electrical"
+        ],
+        "system": [
+            "LDR-CDH"
+        ],
+        "qualifier": "SHALL",
+        "description": "The CDH system shall operate on a [TBD] V \u00b1 [TBD] % power rail.",
+        "rationale": "To be compatible with the electrical power architecture.",
+        "verification_method": [
+            "Inspection"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LDR-GNC-CDH-Transmit-Rate",
+        "collection": null,
+        "parent": [
+            "ENC-LdrGNC-Autonomy"
+        ],
+        "type": "Performance",
+        "stakeholder": [
+            "Electrical"
+        ],
+        "system": [
+            "LDR-GNC"
+        ],
+        "qualifier": "SHALL",
+        "description": "The GNC system shall transmit system status data to the CDH system at a rate of at least [TBD] kbps at all times.",
+        "rationale": "To be able to transmit system data as required to the CDH system.",
+        "verification_method": [
+            "Demonstration"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LDR-GNC-CDH-Receive-Rate",
+        "collection": null,
+        "parent": [
+            "ENC-LdrGNC-Autonomy"
+        ],
+        "type": "Performance",
+        "stakeholder": [
+            "Electrical"
+        ],
+        "system": [
+            "LDR-GNC"
+        ],
+        "qualifier": "SHALL",
+        "description": "The GNC system shall receive commands from the CDH system at a rate of at least [TBD] kbps at all times.",
+        "rationale": "To be able to receive system data and commands as required from the CDH system.",
+        "verification_method": [
+            "Demonstration"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LDR-Therm-CDH-Transmit-Rate",
+        "collection": null,
+        "parent": [
+            "ENC-Lander-Temp-Control"
+        ],
+        "type": "Performance",
+        "stakeholder": [
+            "Electrical"
+        ],
+        "system": [
+            "LDR-THERM"
+        ],
+        "qualifier": "SHALL",
+        "description": "The Thermal system shall transmit system status data to the CDH system at a rate of at least [TBD] kbps at all times.",
+        "rationale": "To be able to transmit system data as required to the CDH system.",
+        "verification_method": [
+            "Demonstration"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LDR-Therm-CDH-Receive-Rate",
+        "collection": null,
+        "parent": [
+            "ENC-Lander-Temp-Control"
+        ],
+        "type": "Performance",
+        "stakeholder": [
+            "Electrical"
+        ],
+        "system": [
+            "LDR-THERM"
+        ],
+        "qualifier": "SHALL",
+        "description": "The Thermal system shall receive commands from the CDH system at a rate of at least [TBD] kbps at all times.",
+        "rationale": "To be able to receive system data and commands as required from the CDH system.",
+        "verification_method": [
+            "Demonstration"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LDR-GNC-CDH-Inter",
+        "collection": null,
+        "parent": [
+            "ENC-LdrGNC-Autonomy"
+        ],
+        "type": "Functional",
+        "stakeholder": [
+            "Electrical"
+        ],
+        "system": [
+            "LDR-GNC"
+        ],
+        "qualifier": "SHALL",
+        "description": "The GNC system shall interface with the CDH system through two-way communications.",
+        "rationale": "To be able to indicate system status and receive commands.",
+        "verification_method": [
+            "Review",
+            "Test"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LDR-Therm-CDH-Inter",
+        "collection": null,
+        "parent": [
+            "ENC-Lander-Temp-Control"
+        ],
+        "type": "Functional",
+        "stakeholder": [
+            "Electrical"
+        ],
+        "system": [
+            "LDR-THERM"
+        ],
+        "qualifier": "SHALL",
+        "description": "The Thermal system shall interface with the CDH system through two-way communications.",
+        "rationale": "To be able to indicate system status.",
+        "verification_method": [
+            "Review",
+            "Test"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LDR-Mech-CDH-Transmit-Rate",
+        "collection": null,
+        "parent": [
+            "ENC-Lander-Autonomy"
+        ],
+        "type": "Performance",
+        "stakeholder": [
+            "Electrical"
+        ],
+        "system": [
+            "LDR-MECH"
+        ],
+        "qualifier": "SHALL",
+        "description": "The landing gear and solar panel systems shall transmit system status data to the CDH system at a rate of at least [TBD] kbps at all times.",
+        "rationale": "To be able to transmit system data as required to the CDH system.",
+        "verification_method": [
+            "Demonstration"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LDR-Mech-CDH-Crit-Transmit-Rate",
+        "collection": null,
+        "parent": [
+            "ENC-Lander-Autonomy"
+        ],
+        "type": "Performance",
+        "stakeholder": [
+            "Electrical"
+        ],
+        "system": [
+            "LDR-MECH"
+        ],
+        "qualifier": "SHALL",
+        "description": "The landing gear and solar panel systems shall transmit system status data to the CDH system at a rate of at least [TBD] kbps during critical sequences (take-off and landing).",
+        "rationale": "To be able to transmit system data to the CDH system at a sufficient rate to ensure safe operation during critical phases involving the landing gear.",
+        "verification_method": [
+            "Demonstration"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LDR-Mech-CDH-Crit-Receive-Rate",
+        "collection": null,
+        "parent": [
+            "ENC-Lander-Autonomy"
+        ],
+        "type": "Performance",
+        "stakeholder": [
+            "Electrical"
+        ],
+        "system": [
+            "LDR-MECH"
+        ],
+        "qualifier": "SHALL",
+        "description": "The landing gear and solar panel systems shall receive commands from the CDH system at a rate of at least [TBD] kbps during take-off and landing.",
+        "rationale": "To be able to receive system data from the CDH system at a rate sufficient to safely and effectively conduct maneuvers during critical sequences involving the landing.",
+        "verification_method": [
+            "Demonstration"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LDR-Mech-CDH-Receive-Rate",
+        "collection": null,
+        "parent": [
+            "ENC-Lander-Autonomy"
+        ],
+        "type": "Performance",
+        "stakeholder": [
+            "Electrical"
+        ],
+        "system": [
+            "LDR-MECH"
+        ],
+        "qualifier": "SHALL",
+        "description": "The landing gear and solar panel systems shall receive commands from the CDH system at a rate of at least [TBD] kbps at all times.",
+        "rationale": "To be able to receive system data and commands as required from the CDH system.",
+        "verification_method": [
+            "Demonstration"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LDR-Mech-CDH-Inter",
+        "collection": null,
+        "parent": [
+            "ENC-Lander-Autonomy"
+        ],
+        "type": "Functional",
+        "stakeholder": [
+            "Electrical"
+        ],
+        "system": [
+            "LDR-MECH"
+        ],
+        "qualifier": "SHALL",
+        "description": "The Mechanical system shall interface with the CDH system through two-way communications.",
+        "rationale": "To be able to command the landing gear to stow or extend, etc. and also be able to indicate the system status.",
+        "verification_method": [
+            "Review",
+            "Test"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LDR-CDH-Timestamp",
+        "collection": null,
+        "parent": [
+            "ENC-LDR-CDH-Telemetry",
+            "ENC-LDR-CDH-Commanding"
+        ],
+        "type": null,
+        "stakeholder": [
+            "Electrical"
+        ],
+        "system": [
+            "LDR-CDH"
+        ],
+        "qualifier": "SHALL",
+        "description": "The CDH system shall timestamp commands and telemetry prior to storing in memory.",
+        "rationale": "Useful for analyzing telemetry after downlink, and for aiding debugging issues manually at Mission Control.",
+        "verification_method": [
+            "Test",
+            "Demonstration"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LDR-CDH-Commanding",
+        "collection": null,
+        "parent": [
+            "ENC-LDR-CDH-Modes"
+        ],
+        "type": null,
+        "stakeholder": [
+            "Electrical"
+        ],
+        "system": [
+            "LDR-CDH"
+        ],
+        "qualifier": "SHALL",
+        "description": "The CDH system shall send commands to all systems.",
+        "rationale": "To enable modes of operation.",
+        "verification_method": [
+            "Test"
+        ],
+        "child": [
+            "ENC-LDR-CDH-Timestamp"
+        ]
+    },
+    {
+        "name": "ENC-LDR-CDH-Telemetry",
+        "collection": null,
+        "parent": [
+            "ENC-SRS-Command-Data-Handling",
+            "ENC-LDR-Command-Data-Handling"
+        ],
+        "type": null,
+        "stakeholder": [
+            "Electrical"
+        ],
+        "system": [
+            "LDR-CDH"
+        ],
+        "qualifier": "SHALL",
+        "description": "The CDH system shall receive health and telemetry data from all systems.",
+        "rationale": "To allow for monitoring of the health of the spacecraft and enable fault detection, isolation, and recovery.",
+        "verification_method": [
+            "Test"
+        ],
+        "child": [
+            "ENC-LDR-CDH-Timestamp"
+        ]
+    },
+    {
+        "name": "ENC-LDR-COM-Transmit-Duration",
+        "collection": null,
+        "parent": [
+            "ENC-LDR-COM-Comms-Transmit",
+            "ENC-LDR-COM-Comms-Receive"
+        ],
+        "type": "Constraint",
+        "stakeholder": [
+            "Electrical"
+        ],
+        "system": [
+            "LDR-COM"
+        ],
+        "qualifier": "SHALL",
+        "description": "The Communications system shall transmit and receive data with the Orbiter over periods of [TBD] min.",
+        "rationale": "Based on access analysis.",
+        "verification_method": [
+            "Demonstration",
+            "Test"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LDR-COM-BER",
+        "collection": null,
+        "parent": [
+            "ENC-LDR-Orbiter-Communication"
+        ],
+        "type": "Performance",
+        "stakeholder": [
+            "Electrical"
+        ],
+        "system": [
+            "LDR-COM"
+        ],
+        "qualifier": "SHALL",
+        "description": "The Communications system shall communicate with the orbiter with a maximum bit-error rate of 10^-5 [TBC].",
+        "rationale": "Rule of thumb.",
+        "verification_method": [
+            "Analysis"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LDR-OMS-Power-Status",
+        "collection": null,
+        "parent": [
+            "ENC-LDR-OMS-Power"
+        ],
+        "type": "Functional",
+        "stakeholder": [
+            "Electrical",
+            "Controls"
+        ],
+        "system": [
+            "LDR-OMS"
+        ],
+        "qualifier": "SHALL",
+        "description": "The OMS shall send the current power status to the CDH system.",
+        "rationale": "To determine how much power is being received and consumed in the current mode of operation.",
+        "verification_method": [
+            "Test"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LDR-OMS-Fuel-Status",
+        "collection": null,
+        "parent": [
+            "ENC-LDR-OMS-Propellant-Quantity"
+        ],
+        "type": "Functional",
+        "stakeholder": [
+            "Electrical",
+            "Controls"
+        ],
+        "system": [
+            "LDR-OMS"
+        ],
+        "qualifier": "SHALL",
+        "description": "The OMS shall send the current fuel status to the CDH system.",
+        "rationale": "To determine how much fuel is remaining, how much fuel is flowing, and how to manage the remaining fuel effectively.",
+        "verification_method": [
+            "Test"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LDR-OMS-Health",
+        "collection": null,
+        "parent": [
+            "ENC-SRS-Flight-Environments"
+        ],
+        "type": "Functional",
+        "stakeholder": [
+            "Electrical",
+            "Controls"
+        ],
+        "system": [
+            "LDR-OMS"
+        ],
+        "qualifier": "SHALL",
+        "description": "The OMS shall send health data to the CDH system.",
+        "rationale": "To monitor the health of the Lander\u2019s OMS.",
+        "verification_method": [
+            "Test"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LDR-OMS-Engine-Status",
+        "collection": null,
+        "parent": [
+            "ENC-LDR-OMS-Startup"
+        ],
+        "type": "Functional",
+        "stakeholder": [
+            "Electrical",
+            "Controls"
+        ],
+        "system": [
+            "LDR-OMS"
+        ],
+        "qualifier": "SHALL",
+        "description": "The OMS shall send the current engine status to the CDH system.",
+        "rationale": "To determine whether startup is complete and the OMS is fully functional or not.",
+        "verification_method": [
+            "Test"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LDR-OMS-RCS-Data",
+        "collection": null,
+        "parent": [
+            "ENC-LDR-OMS-RCS"
+        ],
+        "type": "Functional",
+        "stakeholder": [
+            "Electrical",
+            "Controls"
+        ],
+        "system": [
+            "LDR-OMS"
+        ],
+        "qualifier": "SHALL",
+        "description": "The RCS shall receive commands from the CDH system.",
+        "rationale": "To effectively control the RCS thrusters of the Lander\u2019s OMS.",
+        "verification_method": [
+            "Test"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LDR-OMS-RCS-Health",
+        "collection": null,
+        "parent": [
+            "ENC-LDR-OMS-RCS"
+        ],
+        "type": "Functional",
+        "stakeholder": [
+            "Electrical",
+            "Controls"
+        ],
+        "system": [
+            "LDR-OMS"
+        ],
+        "qualifier": "SHALL",
+        "description": "The RCS shall send health data to the CDH system.",
+        "rationale": "To monitor the health of the RCS thrusters of the Lander\u2019s OMS.",
+        "verification_method": [
+            "Test"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LDR-PWR-Battery-Life",
+        "collection": null,
+        "parent": [
+            "ENC-LDR-PWR-Life"
+        ],
+        "type": "Performance",
+        "stakeholder": [
+            "Electrical"
+        ],
+        "system": [
+            "LDR-Power"
+        ],
+        "qualifier": "SHALL",
+        "description": "The battery shall have a life of \u2265 [TBD] full-discharge cycles.",
+        "rationale": "To ensure that sufficient number of batteries can support the entire mission.",
+        "verification_method": [
+            "Analysis"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LDR-PWR-Battery-Specific-Power",
+        "collection": null,
+        "parent": [
+            "ENC-LDR-PWR-Supply"
+        ],
+        "type": "Performance",
+        "stakeholder": [
+            "Electrical"
+        ],
+        "system": [
+            "LDR-Power"
+        ],
+        "qualifier": "SHALL",
+        "description": "The battery shall have a specific power of \u2265 [TBD] W/kg.",
+        "rationale": "To ensure the lander can deliver the amount of power required during the mission. Using specific power provides insights into the volume contribution from the batteries.",
+        "verification_method": [
+            "Analysis"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LDR-PWR-Battery-Energy-Density",
+        "collection": null,
+        "parent": [
+            "ENC-LDR-PWR-Store-Power"
+        ],
+        "type": "Performance",
+        "stakeholder": [
+            "Electrical"
+        ],
+        "system": [
+            "LDR-Power"
+        ],
+        "qualifier": "SHALL",
+        "description": "The battery shall have an energy density of \u2265 [TBD] Wh/l.",
+        "rationale": "To ensure the lander has a certain storage capacity for energy. Using energy density provides insights into the volume contribution from the batteries.",
+        "verification_method": [
+            "Analysis"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LDR-PWR-Battery-Specific-Energy",
+        "collection": null,
+        "parent": [
+            "ENC-LDR-PWR-Store-Power"
+        ],
+        "type": "Performance",
+        "stakeholder": [
+            "Electrical"
+        ],
+        "system": [
+            "LDR-Power"
+        ],
+        "qualifier": "SHALL",
+        "description": "The battery shall have a specific energy of \u2265 [TBD] Wh/kg.",
+        "rationale": "To ensure the lander has a certain storage capacity for energy. Using specific energy provides insights into the mass contribution from the batteries.",
+        "verification_method": [
+            "Analysis"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LDR-COM-Voltage",
+        "collection": null,
+        "parent": [
+            "ENC-LDR-COM-Power-Interface"
+        ],
+        "type": "Constraint",
+        "stakeholder": [
+            "Electrical"
+        ],
+        "system": [
+            "LDR-COM"
+        ],
+        "qualifier": "SHALL",
+        "description": "The Communications system shall operate on a [TBD] V \u00b1 [TBD] V power rail.",
+        "rationale": "To be compatible with the electrical power architecture.",
+        "verification_method": [
+            "Inspection"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LDR-COM-Verify-Send",
+        "collection": null,
+        "parent": [
+            "ENC-LDR-Orbiter-Communication"
+        ],
+        "type": "Functional",
+        "stakeholder": [
+            "Electrical"
+        ],
+        "system": [
+            "LDR-COM"
+        ],
+        "qualifier": "SHALL",
+        "description": "The Communications system shall verify the success of communications to the Orbiter.",
+        "rationale": "To allow for re-transmission in the case the data fails to be received correctly.",
+        "verification_method": [
+            "Test"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LDR-Mech-Deploy-Shutter",
+        "collection": null,
+        "parent": [
+            "ENC-LDR-Mech-Deploy-Power"
+        ],
+        "type": "Performance",
+        "stakeholder": [
+            "Electrical"
+        ],
+        "system": [
+            "LDR-MECH"
+        ],
+        "qualifier": "SHALL",
+        "description": "The Mechanical system shall receive [TBD] W to be able to deploy the shutter covering the Lander and the top surface of the SCS.",
+        "rationale": "The covering of the SCS was selected to be deployable, thus, the Mechanical system must provide enough power for the shutter to execute different modes of the Lander\u2019s operation.",
+        "verification_method": [
+            "Analysis",
+            "Simulation",
+            "Demonstration"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LNDR-GNC-Compute-Power",
+        "collection": null,
+        "parent": [
+            "ENC-LdrGNC-Site-Transit"
+        ],
+        "type": "Performance",
+        "stakeholder": [
+            "Electrical"
+        ],
+        "system": [
+            "LDR-GNC"
+        ],
+        "qualifier": "SHALL",
+        "description": "The computational components of the GNC system shall operate at \\leq [TBD] W on average and \\leq [TBD] W at peak power.",
+        "rationale": "To adhere to the power budget and to be able to execute primary navigation functions by computing and processing data.",
+        "verification_method": [
+            "Analysis",
+            "Simulation"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LNDR-GNC-Recon-Power",
+        "collection": null,
+        "parent": [
+            "ENC-LdrGNC-Site-Transit"
+        ],
+        "type": "Performance",
+        "stakeholder": [
+            "Electrical"
+        ],
+        "system": [
+            "LDR-GNC"
+        ],
+        "qualifier": "SHALL",
+        "description": "The sensor components of the GNC system shall operate at \\leq [TBD] W on average and \\leq [TBD] W at peak power consumption.",
+        "rationale": "To adhere to the power budget and to be able to execute primary navigation function by obtaining data from the operational sensors.",
+        "verification_method": [
+            "Analysis",
+            "Simulation"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LDR-Therm-Compute-Power",
+        "collection": null,
+        "parent": [
+            "ENC-LdrTherm-Process"
+        ],
+        "type": "Performance",
+        "stakeholder": [
+            "Systems",
+            "Electrical",
+            "Mechanical"
+        ],
+        "system": [
+            "LDR-THERM"
+        ],
+        "qualifier": "SHALL",
+        "description": "The computational units of the Thermal system shall operate at \\leq [TBD] W on average and \\leq [TBD] W at peak power consumption.",
+        "rationale": "To support data processing and storage as specified by requirements the Thermal system needs power.",
+        "verification_method": [
+            "Analysis",
+            "Simulation"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LDR-Therm-Active-Therm-Power",
+        "collection": null,
+        "parent": [
+            "ENC-LdrTherm-Reg-Subsystems"
+        ],
+        "type": "Performance",
+        "stakeholder": [
+            "Systems",
+            "Electrical",
+            "Mechanical"
+        ],
+        "system": [
+            "LDR-THERM"
+        ],
+        "qualifier": "SHALL",
+        "description": "The active thermal control units of the Thermal system shall operate at \\leq [TBD] W on average and \\leq [TBD] W at peak power consumption.",
+        "rationale": "To ensure adherence to the power budget and support of any operational modes of the Thermal system.",
+        "verification_method": [
+            "Analysis",
+            "Simulation"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LDR-Therm-Sensor-Power ",
+        "collection": null,
+        "parent": [
+            "ENC-SRS-Power-Budget",
+            "ENC-LdrTherm-Sensor"
+        ],
+        "type": "Performance",
+        "stakeholder": [
+            "Systems",
+            "Electrical",
+            "Mechanical"
+        ],
+        "system": [
+            "LDR-THERM"
+        ],
+        "qualifier": "SHALL",
+        "description": "The sensors of the Thermal system shall operate at \\leq [TBD] W on average and \\leq [TBD] W at peak power consumption.",
+        "rationale": "To ensure adherence to the power budget and support of any operational modes of the Thermal system.",
+        "verification_method": [
+            "Analysis",
+            "Simulation"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LDR-Mech-Deploy-Land-Gear",
+        "collection": null,
+        "parent": [
+            "ENC-LDR-Mech-Deploy-Power"
+        ],
+        "type": "Performance",
+        "stakeholder": [
+            "Electrical"
+        ],
+        "system": [
+            "LDR-MECH"
+        ],
+        "qualifier": "SHALL",
+        "description": "The Mechanical system shall receive [TBD] W to be able to deploy the landing gear.",
+        "rationale": "The landing gear was selected to be deployable, thus, the Mechanical system must provide enough power for deployment.",
+        "verification_method": [
+            "Analysis",
+            "Simulation",
+            "Demonstration"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LDR-Mech-Deploy-Solar-Panels",
+        "collection": null,
+        "parent": [
+            "ENC-LDR-Mech-Deploy-Power",
+            "ENC-LDR-PWR-Solar-Array-Deployable"
+        ],
+        "type": "Performance",
+        "stakeholder": [
+            "Electrical"
+        ],
+        "system": [
+            "LDR-MECH"
+        ],
+        "qualifier": "SHALL",
+        "description": "The Mechanical system shall receive [TBD] W to deploy solar panels.",
+        "rationale": "To enter charging mode, the solar panels must be deployed through their connection to the Mechanical system.",
+        "verification_method": [
+            "Analysis",
+            "Demonstration",
+            "Simulation"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LDR-Mech-Deploy-Power",
+        "collection": null,
+        "parent": [],
+        "type": "Functional",
+        "stakeholder": [
+            "Systems",
+            "Electrical",
+            "Mechanical"
+        ],
+        "system": [
+            "LDR-MECH"
+        ],
+        "qualifier": "SHALL",
+        "description": "The Mechanical system shall receive power for all of its deployable parts.",
+        "rationale": "The Lander\u2019s design contains several parts that would require power to enter different modes of operation.",
+        "verification_method": [
+            "Review"
+        ],
+        "child": [
+            "ENC-LDR-Mech-Deploy-Solar-Panels",
+            "ENC-LDR-Mech-Deploy-Land-Gear",
+            "ENC-LDR-Mech-Deploy-Shutter"
+        ]
+    },
+    {
+        "name": "ENC-LDR-PWR-Receive-Command",
+        "collection": null,
+        "parent": [
+            "ENC-SCS-CDH-Interface"
+        ],
+        "type": "Functional",
+        "stakeholder": [
+            "Electrical"
+        ],
+        "system": [
+            "LDR-Power"
+        ],
+        "qualifier": "SHALL",
+        "description": "The Power subsystem shall receive commands from the CDH system.",
+        "rationale": "To ensure control of the power subsystem.",
+        "verification_method": [
+            "Inspection"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-SCS-Health-Data",
+        "collection": null,
+        "parent": [
+            "ENC-SCS-CDH-Interface"
+        ],
+        "type": "Functional",
+        "stakeholder": [
+            "Electrical"
+        ],
+        "system": [
+            "LDR-SCS"
+        ],
+        "qualifier": "SHALL",
+        "description": "The SCS shall send health data to the CDH subsystem.",
+        "rationale": "To ensure the SCS is being monitored.",
+        "verification_method": [
+            "Test"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LDR-PWR-Health-Data",
+        "collection": null,
+        "parent": [
+            "ENC-SCS-CDH-Interface"
+        ],
+        "type": "Functional",
+        "stakeholder": [
+            "Electrical"
+        ],
+        "system": [
+            "LDR-Power"
+        ],
+        "qualifier": "SHALL",
+        "description": "The Power system shall send health data to the CDH system.",
+        "rationale": "To ensure the power system is being monitored.",
+        "verification_method": [
+            "Inspection"
+        ],
+        "child": [
+            "ENC-LDR-PWR-System-Check"
+        ]
+    },
+    {
+        "name": "ENC-SSS-Mass-Measurement",
+        "collection": null,
+        "parent": [
+            "ENC-Lander-Sample-Mass"
+        ],
+        "type": "Functional",
+        "stakeholder": [
+            "Systems"
+        ],
+        "system": [
+            "LDR-SSS"
+        ],
+        "qualifier": "SHALL",
+        "description": "The SSS shall measure the mass of collected sample.",
+        "rationale": "To ensure sufficient sample is collected.",
+        "verification_method": [
+            "Inspection"
+        ],
+        "child": [
+            "ENC-SSS-Mass-Data",
+            "ENC-SSS-Mass-Frequency",
+            "ENC-SSS-Mass-Resolution"
+        ]
+    },
+    {
+        "name": "ENC-SCS-Collection-Progress",
+        "collection": null,
+        "parent": [
+            "ENC-SCS-CDH-Interface"
+        ],
+        "type": "Performance",
+        "stakeholder": [
+            "Electrical"
+        ],
+        "system": [
+            "LDR-SCS"
+        ],
+        "qualifier": "SHALL",
+        "description": "The SCS shall send the sample collection progress to the CDH subsystem at a frequency of two times per day.",
+        "rationale": "To monitor the sampling progress so the mission can be adapted to evolving plume fallback conditions.",
+        "verification_method": [
+            "Test"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-SCS-Shutter-Status",
+        "collection": null,
+        "parent": [
+            "ENC-SCS-CDH-Interface"
+        ],
+        "type": "Functional",
+        "stakeholder": [
+            "Electrical"
+        ],
+        "system": [
+            "LDR-SCS"
+        ],
+        "qualifier": "SHALL",
+        "description": "The SCS shall send the collector shutter status to the CDH subsystem after every actuation.",
+        "rationale": "To ensure the state of the SCS is known by the CDH.",
+        "verification_method": [
+            "Test"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-SCS-Shutter-State",
+        "collection": null,
+        "parent": [
+            "ENC-SCS-CDH-Interface"
+        ],
+        "type": "Functional",
+        "stakeholder": [
+            "Electrical"
+        ],
+        "system": [
+            "LDR-SCS"
+        ],
+        "qualifier": "SHALL",
+        "description": "The SCS shall measure the state of the collector shutters.",
+        "rationale": "To ensure they can be verified open or closed.",
+        "verification_method": [
+            "Inspection"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-SSS-Mass-Resolution",
+        "collection": null,
+        "parent": [
+            "ENC-SSS-Mass-Measurement"
+        ],
+        "type": "Performance",
+        "stakeholder": [
+            "Electrical"
+        ],
+        "system": [
+            "LDR-SSS"
+        ],
+        "qualifier": "SHALL",
+        "description": "The SSS shall measure the collected sample mass with a resolution of \\leq 0.25 [TBC] grams.",
+        "rationale": "To ensure we can accurately measure the collected plume material for a given sampling site.",
+        "verification_method": [
+            "Test"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-SSS-Mass-Frequency",
+        "collection": null,
+        "parent": [
+            "ENC-SSS-Mass-Measurement"
+        ],
+        "type": "Functional",
+        "stakeholder": [
+            "Electrical"
+        ],
+        "system": [
+            "LDR-SSS"
+        ],
+        "qualifier": "SHALL",
+        "description": "The SSS shall measure the collected sample mass at a frequency of twice per Earth day.",
+        "rationale": "To ensure the sample progress is tracked. Due to the slow collection rate, a greater measurement frequency is not needed.",
+        "verification_method": [
+            "Test"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-SSS-Mass-Data",
+        "collection": null,
+        "parent": [
+            "ENC-SSS-Mass-Measurement"
+        ],
+        "type": "Functional",
+        "stakeholder": [
+            "Electrical"
+        ],
+        "system": [
+            "LDR-SSS"
+        ],
+        "qualifier": "SHALL",
+        "description": "The SSS shall process raw sample mass sensor data.",
+        "rationale": "To allow for mass collected to be sent to the CDH subsystem.",
+        "verification_method": [
+            "Test"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-SSS-Storage-State",
+        "collection": null,
+        "parent": [
+            "ENC-SSS-Store"
+        ],
+        "type": "Functional",
+        "stakeholder": [
+            "Electrical"
+        ],
+        "system": [
+            "LDR-SSS"
+        ],
+        "qualifier": "SHALL",
+        "description": "The SSS shall send the active sample storage unit to the CDH subsystem at the start of each sampling cycle.",
+        "rationale": "To ensure the current sample container is known.",
+        "verification_method": [
+            "Test"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-SSS-Storage-Status",
+        "collection": null,
+        "parent": [
+            "ENC-SSS-Sample-Temperature"
+        ],
+        "type": "Performance",
+        "stakeholder": [
+            "Electrical"
+        ],
+        "system": [
+            "LDR-SSS"
+        ],
+        "qualifier": "SHALL",
+        "description": "The SSS shall send the sample storage status to the CDH subsystem at a frequency of [TBD] Hz.",
+        "rationale": "To ensure the sample environment is being monitored.",
+        "verification_method": [
+            "Test"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-SSS-Thermal-Frequency",
+        "collection": null,
+        "parent": [
+            "ENC-SSS-Sample-Temperature"
+        ],
+        "type": "Performance",
+        "stakeholder": [
+            "Electrical"
+        ],
+        "system": [
+            "LDR-SSS"
+        ],
+        "qualifier": "SHALL",
+        "description": "The SSS shall measure the sample thermal environment at a frequency of [TBD] Hz.",
+        "rationale": "To ensure the sample environment is being monitored.",
+        "verification_method": [
+            "Test"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-SSS-Thermal-Data",
+        "collection": null,
+        "parent": [
+            "ENC-SSS-Sample-Temperature"
+        ],
+        "type": "Functional",
+        "stakeholder": [
+            "Electrical"
+        ],
+        "system": [
+            "LDR-SSS"
+        ],
+        "qualifier": "SHALL",
+        "description": "The SSS shall process raw thermal sensor data.",
+        "rationale": "So that temperature data can be sent to the CDH subsystem.",
+        "verification_method": [
+            "Test"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-SSS-Receive-Command",
+        "collection": null,
+        "parent": [
+            "ENC-SSS-CDH-Interface"
+        ],
+        "type": "Functional",
+        "stakeholder": [
+            "Electrical"
+        ],
+        "system": [
+            "LDR-SSS"
+        ],
+        "qualifier": "SHALL",
+        "description": "The SSS shall receive command from the CDH subsystem.",
+        "rationale": "To be operational.",
+        "verification_method": [
+            "Inspection"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-SSS-CDH-Interface",
+        "collection": null,
+        "parent": [
+            "ENC-SRS-Command-Data-Handling"
+        ],
+        "type": "Constraint",
+        "stakeholder": [
+            "Systems"
+        ],
+        "system": [
+            "LDR-SSS"
+        ],
+        "qualifier": "SHALL",
+        "description": "The SSS shall interface with the CDH subsystem through two way communication.",
+        "rationale": "To ensure control by the CDH subsystem and transmission of data from the SSS.",
+        "verification_method": [
+            "Review"
+        ],
+        "child": [
+            "ENC-SSS-Health-Data",
+            "ENC-SSS-Receive-Command"
+        ]
+    },
+    {
+        "name": "ENC-SSS-Health-Data",
+        "collection": null,
+        "parent": [
+            "ENC-SSS-CDH-Interface"
+        ],
+        "type": "Functional",
+        "stakeholder": [
+            "Electrical"
+        ],
+        "system": [
+            "LDR-SSS"
+        ],
+        "qualifier": "SHALL",
+        "description": "The SSS shall send health data to the CDH subsystem.",
+        "rationale": "To ensure monitoring of the SSS.",
+        "verification_method": [
+            "Inspection"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LDR-OMS-RCS-Fuel-Compatibility",
+        "collection": null,
+        "parent": [
+            "ENC-LDR-OMS-RCS"
+        ],
+        "type": "Constraint",
+        "stakeholder": [
+            "Systems"
+        ],
+        "system": [
+            "LDR-OMS-RCS"
+        ],
+        "qualifier": "SHALL",
+        "description": "The Lander OMS shall make use of the same propellant as the main engine, drawing from the same tanks",
+        "rationale": "In order to avoid the mass costs of a separate propellant system",
+        "verification_method": [
+            "Review"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LDR-OMS-RCS",
+        "collection": null,
+        "parent": [],
+        "type": "Constraint",
+        "stakeholder": [
+            "Systems"
+        ],
+        "system": [
+            "LDR-OMS"
+        ],
+        "qualifier": "SHALL",
+        "description": "The Lander OMS shall make use of Reaction Control System (RCS) thrusters.",
+        "rationale": "To provide translational control during hops and descent. As per trade TBD.",
+        "verification_method": [
+            "Review"
+        ],
+        "child": [
+            "ENC-LDR-OMS-RCS-Fuel-Compatibility",
+            "ENC-LDR-OMS-RCS-Data",
+            "ENC-LDR-OMS-RCS-Health"
+        ]
+    },
+    {
+        "name": "ENC-LDR-OMS-Cycles",
+        "collection": "Propulsion Method Drivers",
+        "parent": [
+            "ENC-LDR-OMS-Thrust"
+        ],
+        "type": "Performance",
+        "stakeholder": [
+            "Mechanical"
+        ],
+        "system": [
+            "LDR-OMS"
+        ],
+        "qualifier": "SHALL",
+        "description": "The Lander OMS shall produce thrust for at least 21 on/off cycles.",
+        "rationale": "To enable the lander to conduct hops to 20 different landing sites, plus the ascent to orbit.",
+        "verification_method": [
+            "Test",
+            "Demonstration"
+        ],
+        "child": [
+            "ENC-LDR-OMS-Engine-Type"
+        ]
+    },
+    {
+        "name": "ENC-LDR-PWR-Thermal-Interface",
+        "collection": null,
+        "parent": [],
+        "type": "Functional",
+        "stakeholder": [
+            "Systems",
+            "Mechanical"
+        ],
+        "system": [
+            "LDR-Power"
+        ],
+        "qualifier": "SHALL",
+        "description": "The Power system shall interface with thermal system.",
+        "rationale": "To be able to maintain power system in the operational temperature range and ensure compatibility with the thermal system through the interface.",
+        "verification_method": [
+            "Test",
+            "Review"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-SRS-Sample-Storage-Conditions",
+        "collection": null,
+        "parent": [
+            "ENC-SRS-Mission"
+        ],
+        "type": "Performance",
+        "stakeholder": [
+            "MDA"
+        ],
+        "system": [
+            "SRS"
+        ],
+        "qualifier": "SHALL",
+        "description": "Store the samples at no more than +-5\u00b0C from the temperature at which they were collected",
+        "rationale": "As per AER407 2023 Clarifications Round 2",
+        "verification_method": [
+            "Test",
+            "Demonstration"
+        ],
+        "child": [
+            "ENC-Lander-Sample-Storage"
+        ]
+    },
+    {
+        "name": "ENC-LdrMech-Material",
+        "collection": null,
+        "parent": [
+            "ENC-LdrMech-Support",
+            "ENC-SRS-Launch-Environment",
+            "ENC-SRS-Flight-Environments"
+        ],
+        "type": "Constraint",
+        "stakeholder": [
+            "Mechanical"
+        ],
+        "system": [
+            "LDR-MECH"
+        ],
+        "qualifier": "SHALL",
+        "description": "The mechanical system\u2019s primary structure shall be made of titanium alloy.",
+        "rationale": "As per Structure Material Selection trade. Provides an excellent balance of strength-to-weight, corrosion resistance, impact resistance, and performance at low temperatures.",
+        "verification_method": [
+            "Review"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-SSS-Transfer-Samples-Contact",
+        "collection": null,
+        "parent": [],
+        "type": "Functional",
+        "stakeholder": [
+            "Mechanical"
+        ],
+        "system": [
+            "LDR-SSS"
+        ],
+        "qualifier": "SHALL",
+        "description": "The SSS shall not involve any physical contact with the samples which may lead to sample contamination.",
+        "rationale": "Regardless of the mechanism for transfer, the samples shall not come into contact with something which may lead to degradation of the samples.",
+        "verification_method": [
+            "Analysis"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-SSS-Transfer-Samples-Climate",
+        "collection": null,
+        "parent": [],
+        "type": "Environmental",
+        "stakeholder": [
+            "Mechanical"
+        ],
+        "system": [
+            "LDR-SSS"
+        ],
+        "qualifier": "SHALL",
+        "description": "The SSS shall maintain climate control to preserve sample integrity during sample transfer from SSS to SRC.",
+        "rationale": "The interface between SSS and SRC needs to have climate control to ensure the sample integrity is preserved.",
+        "verification_method": [
+            "Analysis"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LDR-Mech-Thermal-Source",
+        "collection": null,
+        "parent": [
+            "ENC-SRS-Flight-Environments"
+        ],
+        "type": "Constraint",
+        "stakeholder": [
+            "Mechanical"
+        ],
+        "system": [
+            "LDR-MECH"
+        ],
+        "qualifier": "SHALL",
+        "description": "The mechanical subsystem shall use a radioisotope heating unit (RHU) to thermally regulate the lander.",
+        "rationale": "This constraint is driven by the power supply analysis that is dictating power be consumed at a bare minimum. Using an RHU removes a significant power draw from the Lander system.",
+        "verification_method": [
+            "Inspection"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-SCS-Mechanical-Interface",
+        "collection": null,
+        "parent": [
+            "ENC-Lander-Sample-Collection"
+        ],
+        "type": "Functional",
+        "stakeholder": [
+            "Systems"
+        ],
+        "system": [
+            "LDR-SCS"
+        ],
+        "qualifier": "SHALL",
+        "description": "The SCS shall interface mechanically with the Lander.",
+        "rationale": "To ensure the SCS is attached to the lander.",
+        "verification_method": [
+            "Inspection"
+        ],
+        "child": [
+            "ENC-SCS-Obstruct-Charging"
+        ]
+    },
+    {
+        "name": "ENC-SCS-Obstruct-Charging",
+        "collection": null,
+        "parent": [
+            "ENC-SCS-Mechanical-Interface"
+        ],
+        "type": "Functional",
+        "stakeholder": [
+            "Mechanical"
+        ],
+        "system": [
+            "LDR-SCS"
+        ],
+        "qualifier": "SHALL",
+        "description": "The SCS shall not interfere with the solar array charging when in the deployed state.",
+        "rationale": "To ensure the power supply is not hindered.",
+        "verification_method": [
+            "Review"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LDR-PWR-Fuel-Cells",
+        "collection": null,
+        "parent": [
+            "ENC-Lander-Power-Generation"
+        ],
+        "type": "Functional",
+        "stakeholder": [
+            "Systems",
+            "Electrical"
+        ],
+        "system": [
+            "LDR-Power"
+        ],
+        "qualifier": "SHALL",
+        "description": "The Power system shall have fuel cells.",
+        "rationale": "The fuel cells are used to power the lander in high power consuming tasks such as commuting between sampling sites.",
+        "verification_method": [
+            "Inspection"
+        ],
+        "child": [
+            "ENC-LDR-PWR-Fuel-Cell-Power"
+        ]
+    },
+    {
+        "name": "ENC-LDR-PWR-Solar-Panels",
+        "collection": null,
+        "parent": [
+            "ENC-Lander-Power-Generation"
+        ],
+        "type": "Functional",
+        "stakeholder": [
+            "Systems",
+            "Electrical"
+        ],
+        "system": [
+            "LDR-Power"
+        ],
+        "qualifier": "SHALL",
+        "description": "The Power system shall have solar arrays.",
+        "rationale": "The solar arrays are used to generate power while sampling on Enceladus.",
+        "verification_method": [
+            "Inspection"
+        ],
+        "child": [
+            "ENC-LDR-PWR-Solar-Array-Articulation",
+            "ENC-LDR-PWR-Solar-Array-Deployable",
+            "ENC-LDR-PWR-Solar-Array-Size",
+            "ENC-LDR-PWR-Solar-Array-Blockage",
+            "ENC-LDR-PWR-Solar-Array-Efficiency",
+            "ENC-LDR-PWR-Solar-Cell-Type",
+            "ENC-LDR-PWR-Mitigate-LILT"
+        ]
+    },
+    {
+        "name": "ENC-LDR-PWR-Solar-Array-Articulation",
+        "collection": null,
+        "parent": [
+            "ENC-LDR-PWR-Solar-Panels"
+        ],
+        "type": "Functional",
+        "stakeholder": [
+            "Mechanical",
+            "Electrical"
+        ],
+        "system": [
+            "LDR-Power"
+        ],
+        "qualifier": "SHALL",
+        "description": "The solar arrays shall have 3 degrees of freedom articulation.",
+        "rationale": "To take advantage of the greatest possible solar flux at the south pole of Enceladus.",
+        "verification_method": [
+            "Inspection"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LDR-PWR-Fuel-Cell-Power",
+        "collection": null,
+        "parent": [
+            "ENC-LDR-PWR-Fuel-Cells",
+            "ENC-LDR-PWR-Batteries"
+        ],
+        "type": "Performance",
+        "stakeholder": [
+            "Electrical"
+        ],
+        "system": [
+            "LDR-Power"
+        ],
+        "qualifier": "SHALL",
+        "description": "The fuel cells shall produce \u2265 350 W for 192 hours [TBC].",
+        "rationale": "This is the required power supply for tasks not covered by the solar panels.",
+        "verification_method": [
+            "Test"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LDR-PWR-Solar-Array-Blockage",
+        "collection": null,
+        "parent": [
+            "ENC-LDR-PWR-Solar-Panels"
+        ],
+        "type": "Constraint",
+        "stakeholder": [
+            "Mechanical",
+            "Electrical"
+        ],
+        "system": [
+            "LDR-Power"
+        ],
+        "qualifier": "SHALL",
+        "description": "The solar panels shall be unobscured by any lander component.",
+        "rationale": "Solar panels need to be un-obscured since power generation is very limited.",
+        "verification_method": [
+            "Review"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LDR-PWR-Solar-Array-Deployable",
+        "collection": null,
+        "parent": [
+            "ENC-LDR-PWR-Solar-Panels"
+        ],
+        "type": "Functional",
+        "stakeholder": [
+            "Mechanical",
+            "Electrical"
+        ],
+        "system": [
+            "LDR-Power"
+        ],
+        "qualifier": "SHALL",
+        "description": "The solar panels shall be deployable.",
+        "rationale": "To ensure we meet stowed volume constraints.",
+        "verification_method": [
+            "Inspection"
+        ],
+        "child": [
+            "ENC-LDR-Mech-Deploy-Solar-Panels"
+        ]
+    },
+    {
+        "name": "ENC-LDR-PWR-Solar-Array-Size",
+        "collection": null,
+        "parent": [
+            "ENC-LDR-PWR-Solar-Panels"
+        ],
+        "type": "Constraint",
+        "stakeholder": [
+            "Mechanical",
+            "Electrical"
+        ],
+        "system": [
+            "LDR-Power"
+        ],
+        "qualifier": "SHALL",
+        "description": "The Power system shall have a solar array size of 10m^2 [TBC].",
+        "rationale": "This is the sizing determined to meet sampling power requirements.",
+        "verification_method": [
+            "Inspection"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LDR-OMS-Contin-Ops",
+        "collection": null,
+        "parent": [
+            "ENC-Lander-Modes"
+        ],
+        "type": "Performance",
+        "stakeholder": [
+            "Mechanical"
+        ],
+        "system": [
+            "LDR-OMS"
+        ],
+        "qualifier": "SHALL",
+        "description": "The Lander OMS shall operate continuously for [TBD] min.",
+        "rationale": "To support different modes of operation. \u201cOperating continuously\u201d means the OMS system is activated and not on \u201cstandby\u201d mode, for example, when the lander is collecting samples on the surface of Enceladus.",
+        "verification_method": [
+            "Analysis"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LDR-OMS-Startup",
+        "collection": null,
+        "parent": [
+            "ENC-LDR-OMS-Thermal-Interface"
+        ],
+        "type": "Performance",
+        "stakeholder": [
+            "Mechanical"
+        ],
+        "system": [
+            "LDR-OMS"
+        ],
+        "qualifier": "SHALL",
+        "description": "The Lander OMS shall have a startup time less than [TBD] min before the OMS is fully functional.",
+        "rationale": "Since this relates to the timeline for the mission, this requirement specifies the max. time that the OMS needs to warm up to a temperature where all features of the system are functional.",
+        "verification_method": [
+            "Analysis"
+        ],
+        "child": [
+            "ENC-LDR-OMS-Engine-Status"
+        ]
+    },
+    {
+        "name": "ENC-SRS-Flight-Environments",
+        "collection": null,
+        "parent": [
+            "ENC-SRS-Mission"
+        ],
+        "type": "Environmental",
+        "stakeholder": [
+            "Systems",
+            "Electrical",
+            "Mechanical",
+            "Controls"
+        ],
+        "system": [
+            "SRS",
+            "ORB",
+            "LDR",
+            "LDR-ADCS",
+            "ORB-ADCS",
+            "LDR-Power",
+            "ORB-Power",
+            "LDR-MECH",
+            "ORB-MECH",
+            "LDR-SCS",
+            "ORB-COM",
+            "LDR-COM",
+            "ORB-RECON",
+            "ORB-OMS",
+            "LDR-OMS",
+            "ORB-THERM",
+            "LDR-THERM",
+            "ORB-CDH",
+            "LDR-CDH",
+            "LDR-GNC",
+            "ORB-SRC",
+            "LDR-SSS",
+            "ORB-RPO"
+        ],
+        "qualifier": "SHALL",
+        "description": "The SRS systems shall survive and/or operate in the environments described in the Dreamcatcher Flight Environments document.",
+        "rationale": "To enable all operations to be performed within the required flight environments.",
+        "verification_method": [
+            "Test",
+            "Review",
+            "Analysis"
+        ],
+        "child": [
+            "ENC-LdrMech-Material",
+            "ENC-LDR-OMS-Health",
+            "ENC-LDR-Mech-Thermal-Source"
+        ]
+    },
+    {
+        "name": "ENC-SCS-Collector-Size",
+        "collection": null,
+        "parent": [
+            "ENC-SCS-Collection-Rate"
+        ],
+        "type": "Constraint",
+        "stakeholder": [
+            "Mechanical"
+        ],
+        "system": [
+            "LDR-SCS"
+        ],
+        "qualifier": "SHALL",
+        "description": "The SCS shall have a collector area of 2.75 square meters as viewed from above.",
+        "rationale": "As determined by a sizing trade, this array size provides an optimal tradeoff between collection rate and mass/volume criteria.",
+        "verification_method": [
+            "Inspection"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-SSS-",
+        "collection": null,
+        "parent": [
+            "ENC-SSS-Mech-Interface"
+        ],
+        "type": "Functional",
+        "stakeholder": [
+            "Mechanical"
+        ],
+        "system": [
+            "LDR-SSS"
+        ],
+        "qualifier": "SHALL",
+        "description": "The SSS shall support loads from the SSS and collected samples during all modes of operation.",
+        "rationale": "To maintain structural integrity of this sub-system.",
+        "verification_method": [
+            "Test"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-SSS-Store",
+        "collection": null,
+        "parent": [
+            "ENC-SSS-SCS-Interface"
+        ],
+        "type": "Functional",
+        "stakeholder": [
+            "Mechanical"
+        ],
+        "system": [
+            "LDR-SSS"
+        ],
+        "qualifier": "SHALL",
+        "description": "The SSS shall store samples separately based on sampling location. ",
+        "rationale": "To satisfy the customer request of having samples from different sources distinct from one and another.",
+        "verification_method": [
+            "Review"
+        ],
+        "child": [
+            "ENC-SSS-Storage-State"
+        ]
+    },
+    {
+        "name": "ENC-LdrTherm-Loading-Power",
+        "collection": null,
+        "parent": [
+            "ENC-LdrTherm-Mech-Interface"
+        ],
+        "type": "Performance",
+        "stakeholder": [
+            "Mechanical"
+        ],
+        "system": [
+            "LDR-THERM"
+        ],
+        "qualifier": "SHALL",
+        "description": "Support the weight of structures up to [TBD] N on the interface with the power sub-system.",
+        "rationale": "To satisfy the loading requirement at the interface.",
+        "verification_method": [
+            "Analysis"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LdrTherm-Temp-Sense-SSS",
+        "collection": null,
+        "parent": [
+            "ENC-LdrTherm-Record"
+        ],
+        "type": "Functional",
+        "stakeholder": [
+            "Mechanical"
+        ],
+        "system": [
+            "LDR-THERM"
+        ],
+        "qualifier": "SHALL",
+        "description": "Maintain the position of sensors at the interface with the SSS sub-system during all modes of operation.",
+        "rationale": "To ensure that the thermal sensors remain functional during all modes of operation and lander configuration.",
+        "verification_method": [
+            "Analysis"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LdrTherm-Temp-Sense-SCS",
+        "collection": null,
+        "parent": [
+            "ENC-LdrTherm-Record"
+        ],
+        "type": "Functional",
+        "stakeholder": [
+            "Mechanical"
+        ],
+        "system": [
+            "LDR-THERM"
+        ],
+        "qualifier": "SHALL",
+        "description": "Maintain the position of sensors at the interface with the SCS sub-system during all modes of operation.",
+        "rationale": "To ensure that the thermal sensors remain functional during all modes of operation and lander configuration.",
+        "verification_method": [
+            "Analysis"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LdrTherm-Temp-Sense-OMS",
+        "collection": null,
+        "parent": [
+            "ENC-LdrTherm-Record"
+        ],
+        "type": "Functional",
+        "stakeholder": [
+            "Mechanical"
+        ],
+        "system": [
+            "LDR-THERM"
+        ],
+        "qualifier": "SHALL",
+        "description": "Maintain the position of sensors at the interface with the OMS sub-system during all modes of operation.",
+        "rationale": "To ensure that the thermal sensors remain functional during all modes of operation and lander configuration.",
+        "verification_method": [
+            "Analysis"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LdrTherm-Temp-Sense-GNC",
+        "collection": null,
+        "parent": [
+            "ENC-LdrTherm-Record"
+        ],
+        "type": "Functional",
+        "stakeholder": [
+            "Mechanical"
+        ],
+        "system": [
+            "LDR-THERM"
+        ],
+        "qualifier": "SHALL",
+        "description": "Maintain the position of sensors at the interface with the GNC sub-system during all modes of operation.",
+        "rationale": "To ensure that the thermal sensors remain functional during all modes of operation and lander configuration.",
+        "verification_method": [
+            "Analysis"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LdrTherm-Temp-Sense-CDH",
+        "collection": null,
+        "parent": [
+            "ENC-LdrTherm-Record"
+        ],
+        "type": "Functional",
+        "stakeholder": [
+            "Mechanical"
+        ],
+        "system": [
+            "LDR-THERM"
+        ],
+        "qualifier": "SHALL",
+        "description": "Maintain the position of sensors at the interface with the C&DH sub-system during all modes of operation.",
+        "rationale": "To ensure that the thermal sensors remain functional during all modes of operation and lander configuration.",
+        "verification_method": [
+            "Analysis"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LdrTherm-Temp-Sense-Comm",
+        "collection": null,
+        "parent": [
+            "ENC-LdrTherm-Record"
+        ],
+        "type": "Functional",
+        "stakeholder": [
+            "Mechanical"
+        ],
+        "system": [
+            "LDR-THERM"
+        ],
+        "qualifier": "SHALL",
+        "description": "Maintain the position of sensors at the interface with the communications sub-system during all modes of operation.",
+        "rationale": "To ensure that the thermal sensors remain functional during all modes of operation and lander configuration.",
+        "verification_method": [
+            "Analysis"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LdrTherm-Temp-Sense-Mech",
+        "collection": null,
+        "parent": [
+            "ENC-LdrTherm-Mech-Interface"
+        ],
+        "type": "Functional",
+        "stakeholder": [
+            "Mechanical"
+        ],
+        "system": [
+            "LDR-THERM"
+        ],
+        "qualifier": "SHALL",
+        "description": "Maintain the position of sensors at the interface with the mechanical sub-system during all modes of operation.",
+        "rationale": "To ensure that the thermal sensors remain functional during all modes of operation and lander configuration.",
+        "verification_method": [
+            "Test"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LdrTherm-Temp-Sense-Power",
+        "collection": null,
+        "parent": [
+            "ENC-LdrTherm-Record"
+        ],
+        "type": "Functional",
+        "stakeholder": [
+            "Mechanical"
+        ],
+        "system": [
+            "LDR-THERM"
+        ],
+        "qualifier": "SHALL",
+        "description": "Maintain the position of sensors at the interface with the power sub-system during all modes of operation.",
+        "rationale": "To ensure that the thermal sensors remain functional during all modes of operation and lander configuration.",
+        "verification_method": [
+            "Analysis"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LdrTherm-Loading-SSS",
+        "collection": null,
+        "parent": [
+            "ENC-LdrTherm-Mech-Interface"
+        ],
+        "type": "Performance",
+        "stakeholder": [
+            "Mechanical"
+        ],
+        "system": [
+            "LDR-THERM"
+        ],
+        "qualifier": "SHALL",
+        "description": "Support the weight of structures up to [TBD] N on the interface with the SSS sub-system.",
+        "rationale": "To satisfy the loading requirement at the interface.",
+        "verification_method": [
+            "Analysis"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LdrTherm-Loading-SCS",
+        "collection": null,
+        "parent": [
+            "ENC-LdrTherm-Mech-Interface"
+        ],
+        "type": "Performance",
+        "stakeholder": [
+            "Mechanical"
+        ],
+        "system": [
+            "LDR-THERM"
+        ],
+        "qualifier": "SHALL",
+        "description": "Support the weight of structures up to [TBD] N on the interface with the SCS sub-system.",
+        "rationale": "To satisfy the loading requirement at the interface.",
+        "verification_method": [
+            "Analysis"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LdrTherm-Loading-OMS",
+        "collection": null,
+        "parent": [
+            "ENC-LdrTherm-Mech-Interface"
+        ],
+        "type": "Performance",
+        "stakeholder": [
+            "Mechanical"
+        ],
+        "system": [
+            "LDR-THERM"
+        ],
+        "qualifier": "SHALL",
+        "description": "Support the weight of structures up to [TBD] N on the interface with the OMS sub-system.",
+        "rationale": "To satisfy the loading requirement at the interface.",
+        "verification_method": [
+            "Analysis"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LdrTherm-Loading-GNC",
+        "collection": null,
+        "parent": [
+            "ENC-LdrTherm-Mech-Interface"
+        ],
+        "type": "Performance",
+        "stakeholder": [
+            "Mechanical"
+        ],
+        "system": [
+            "LDR-THERM"
+        ],
+        "qualifier": "SHALL",
+        "description": "Support the weight of structures up to [TBD] N on the interface with the GNC sub-system.",
+        "rationale": "To satisfy the loading requirement at the interface.",
+        "verification_method": [
+            "Analysis"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LdrTherm-Loading-CDH",
+        "collection": null,
+        "parent": [
+            "ENC-LdrTherm-Mech-Interface"
+        ],
+        "type": "Performance",
+        "stakeholder": [
+            "Mechanical"
+        ],
+        "system": [
+            "LDR-THERM"
+        ],
+        "qualifier": "SHALL",
+        "description": "Support the weight of structures up to [TBD] N on the interface with the C&DH sub-system.",
+        "rationale": "To satisfy the loading requirement at the interface.",
+        "verification_method": [
+            "Analysis"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LdrTherm-Loading-Comm",
+        "collection": null,
+        "parent": [
+            "ENC-LdrTherm-Mech-Interface"
+        ],
+        "type": "Performance",
+        "stakeholder": [
+            "Mechanical"
+        ],
+        "system": [
+            "LDR-THERM"
+        ],
+        "qualifier": "SHALL",
+        "description": "Support the weight of structures up to [TBD] N on the interface with the communications sub-system.",
+        "rationale": "To satisfy the loading requirement at the interface.",
+        "verification_method": [
+            "Analysis"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LdrTherm-Loading-Mech",
+        "collection": null,
+        "parent": [
+            "ENC-LdrTherm-Mech-Interface"
+        ],
+        "type": "Performance",
+        "stakeholder": [],
+        "system": [
+            "LDR-THERM"
+        ],
+        "qualifier": "SHALL",
+        "description": "Support the weight of structures up to [TBD] N on the interface with the mechanical sub-system.",
+        "rationale": "Although the decision is not made yet, the thermal system shall support any loading imposed by other subsystems if necessary.",
+        "verification_method": [
+            "Test"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LdrTherm-Delivery",
+        "collection": null,
+        "parent": [
+            "ENC-LdrTherm-Mech-Interface"
+        ],
+        "type": "Functional",
+        "stakeholder": [
+            "Mechanical"
+        ],
+        "system": [
+            "LDR-THERM"
+        ],
+        "qualifier": "SHALL",
+        "description": "Deliver heat from the source to the targeted component.",
+        "rationale": "The mechanical interface needs to allow the heat to pass through from the thermal source to the targeted component on the lander.",
+        "verification_method": [
+            "Analysis"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LdrTherm-Sensor",
+        "collection": null,
+        "parent": [
+            "ENC-LdrTherm-Record"
+        ],
+        "type": "Functional",
+        "stakeholder": [
+            "Mechanical"
+        ],
+        "system": [
+            "LDR-THERM"
+        ],
+        "qualifier": "SHALL",
+        "description": "Maintain accuracy in all modes of operations and lander configurations.",
+        "rationale": "The temperature sensors that sense temperatures shall maintain the same degree of accuracy in all modes of operations and spacecraft configurations to support thermal regulation.",
+        "verification_method": [
+            "Analysis",
+            "Simulation"
+        ],
+        "child": [
+            "ENC-LDR-Therm-Sensor-Power "
+        ]
+    },
+    {
+        "name": "ENC-LdrMech-Rad-Shield",
+        "collection": null,
+        "parent": [
+            "ENC-SRS-Radiation-Environment"
+        ],
+        "type": "Environmental",
+        "stakeholder": [
+            "Mechanical"
+        ],
+        "system": [
+            "LDR-MECH"
+        ],
+        "qualifier": "SHALL",
+        "description": "Maintain the functionality of radiation shielding components in all lander configurations.",
+        "rationale": "The radiation shielding supported by the mechanical sub-system must remain functional in all lander configurations, regardless of the changes in the state of the lander, such as deployed vs not deployed.",
+        "verification_method": [
+            "Analysis"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LdrMech-Heater",
+        "collection": null,
+        "parent": [
+            "ENC-Lander-Temp-Control"
+        ],
+        "type": "Environmental",
+        "stakeholder": [
+            "Mechanical"
+        ],
+        "system": [
+            "LDR-MECH"
+        ],
+        "qualifier": "SHALL",
+        "description": "Maintain the functionality of heating elements during all lander configurations.",
+        "rationale": "The heating elements supported by the mechanical sub-system must remain functional in all lander configurations, regardless of the changes in the state of the lander, such as deployed vs not deployed.",
+        "verification_method": [
+            "Analysis"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LdrMech-Deploy-Cycles",
+        "collection": null,
+        "parent": [
+            "ENC-LdrMech-Support"
+        ],
+        "type": "Performance",
+        "stakeholder": [
+            "Mechanical"
+        ],
+        "system": [
+            "LDR-MECH"
+        ],
+        "qualifier": "SHALL",
+        "description": "Remain operational after [TBD] number of deployment and retraction for the deployable components.",
+        "rationale": "Although whether to make a certain component deployable are design decisions yet to be made, this requirement ensures the mechanical sub-system can support the extension and retraction of these deployable components.",
+        "verification_method": [
+            "Test"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-SCS-Collection-Array",
+        "collection": null,
+        "parent": [],
+        "type": "Functional",
+        "stakeholder": [
+            "Mechanical"
+        ],
+        "system": [
+            "LDR-SCS"
+        ],
+        "qualifier": "SHALL",
+        "description": "The SCS shall support the weight of the collection array and sample weight.",
+        "rationale": "Although not a load coming from exterior the collection array materials and configurations are yet to be chosen but the weight has to be supported by the mechanism nonetheless.",
+        "verification_method": [
+            "Analysis",
+            "Simulation"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-SCS-External-Component-Loads",
+        "collection": null,
+        "parent": [],
+        "type": "Functional",
+        "stakeholder": [],
+        "system": [
+            "LDR-SCS"
+        ],
+        "qualifier": "SHALL",
+        "description": "The SCS shall bear the load of any configuration of the external part of the system itself.",
+        "rationale": "The moments introduced by various configurations of the SCS introduce some loads not present at the start of its operation.",
+        "verification_method": [
+            "Demonstration",
+            "Analysis"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-SCS-Environment-Hazards-Protection",
+        "collection": null,
+        "parent": [],
+        "type": "Functional",
+        "stakeholder": [
+            "Mechanical"
+        ],
+        "system": [
+            "LDR-SCS"
+        ],
+        "qualifier": "SHALL",
+        "description": "The SCS shall not allow lander\u2019s systems to be exposed to any physical environmental hazards on Enceladus\u2019 surface, any hazards resulting from the interaction of the lander and the environment throughout the lander\u2019s operational cycle. ",
+        "rationale": "Collection mechanism is one of the systems that interacts with the environment of Enceladus physically. It also interacts with systems onboard the lander suggesting that those have to be protected against any contamination that the interaction of these systems and SCS might incur.",
+        "verification_method": [
+            "Simulation",
+            "Test",
+            "Analysis"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-SCS-Environment-Hazards-Durability",
+        "collection": null,
+        "parent": [],
+        "type": "Functional",
+        "stakeholder": [
+            "Mechanical"
+        ],
+        "system": [
+            "LDR-SCS"
+        ],
+        "qualifier": "SHALL",
+        "description": "The SCS shall withstand any physical environmental hazards on Enceladus\u2019 surface, any hazards resulting from the interaction of the lander and the environment throughout the lander\u2019s operational cycle (for example, melted ice, wind loads).",
+        "rationale": "Collection mechanism is one of the systems that interacts with the environment of Enceladus physically. These interfaces as well as weather on Enceladus have to be designed for from all mechanical perspectives.",
+        "verification_method": [
+            "Simulation",
+            "Test",
+            "Analysis"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-SCS-Thermal-Cycling",
+        "collection": null,
+        "parent": [
+            "ENC-SCS-Thermal-Environment"
+        ],
+        "type": "Functional",
+        "stakeholder": [
+            "Mechanical"
+        ],
+        "system": [
+            "LDR-SCS"
+        ],
+        "qualifier": "SHALL",
+        "description": "The SCS shall withstand thermal cycles as specified by [TBD] for its physical components.",
+        "rationale": "SCS is the mechanism that interface with the sample material, Enceladus\u2019 environment and the environment of the lander itself. It is expected that there would be temperature gradient that can cause thermal cycling to be an issue.",
+        "verification_method": [
+            "Simulation",
+            "Analysis",
+            "Test"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LdrMech-Shock",
+        "collection": null,
+        "parent": [
+            "ENC-Lander-Ascent-Descent"
+        ],
+        "type": "Functional",
+        "stakeholder": [
+            "Mechanical"
+        ],
+        "system": [
+            "LDR-MECH"
+        ],
+        "qualifier": "SHALL",
+        "description": "Absorb shock from landing sequences such that the peak acceleration felt by internal components is below TBD m/s^2.",
+        "rationale": "To protect internal components from the physical impact of landing.",
+        "verification_method": [
+            "Analysis"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LdrMech-Rad-Shield",
+        "collection": null,
+        "parent": [
+            "ENC-SRS-Radiation-Environment"
+        ],
+        "type": "Functional",
+        "stakeholder": [
+            "Mechanical"
+        ],
+        "system": [
+            "LDR-MECH"
+        ],
+        "qualifier": "SHALL",
+        "description": "Shield all internal components from solar radiation environments as defined in the Dreamcatcher Flight Environments Document",
+        "rationale": "To protect internal components from damage by radiation.",
+        "verification_method": [
+            "Analysis"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LdrMech-Therm-Inter",
+        "collection": null,
+        "parent": [
+            "ENC-Lander-Struct-Integr"
+        ],
+        "type": "Functional",
+        "stakeholder": [
+            "Mechanical"
+        ],
+        "system": [
+            "LDR-MECH"
+        ],
+        "qualifier": "SHALL",
+        "description": "Provide structural support to all components of the thermal subsystem via mechanical interface between the chassis.",
+        "rationale": "To provide structural support for the thermal subsystem.",
+        "verification_method": [
+            "Review"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LdrMech-SSS-Inter",
+        "collection": null,
+        "parent": [
+            "ENC-Lander-Struct-Integr",
+            "ENC-LdrMech-Support"
+        ],
+        "type": "Functional",
+        "stakeholder": [
+            "Mechanical"
+        ],
+        "system": [
+            "LDR-MECH"
+        ],
+        "qualifier": "SHALL",
+        "description": "Provide structural support to all components of the sample storage subsystem via mechanical interface between the chassis.",
+        "rationale": "To provide structural support for the sample storage subsystem.",
+        "verification_method": [
+            "Review"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LdrMech-SCS-Inter",
+        "collection": null,
+        "parent": [
+            "ENC-Lander-Struct-Integr",
+            "ENC-LdrMech-Support"
+        ],
+        "type": "Functional",
+        "stakeholder": [
+            "Mechanical"
+        ],
+        "system": [
+            "LDR-MECH"
+        ],
+        "qualifier": "SHALL",
+        "description": "Provide structural support to all components of the sample collection subsystem via mechanical interface between the chassis.",
+        "rationale": "To provide structural support for the sample collection subsystem.",
+        "verification_method": [
+            "Review"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LdrMech-Pwr-Inter",
+        "collection": null,
+        "parent": [
+            "ENC-Lander-Struct-Integr",
+            "ENC-LdrMech-Support"
+        ],
+        "type": "Functional",
+        "stakeholder": [
+            "Mechanical"
+        ],
+        "system": [
+            "LDR-MECH"
+        ],
+        "qualifier": "SHALL",
+        "description": "Provide structural support to all components of the power subsystem via mechanical interface between the chassis.",
+        "rationale": "To provide structural support for the power subsystem.",
+        "verification_method": [
+            "Review"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LdrMech-OMS-Inter",
+        "collection": null,
+        "parent": [
+            "ENC-Lander-Struct-Integr",
+            "ENC-LdrMech-Support"
+        ],
+        "type": "Functional",
+        "stakeholder": [
+            "Mechanical"
+        ],
+        "system": [
+            "LDR-MECH"
+        ],
+        "qualifier": "SHALL",
+        "description": "Provide structural support to all components of the OMS subsystem via mechanical interface between the chassis.",
+        "rationale": "To provide structural support for the OMS subsystem.",
+        "verification_method": [
+            "Review"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LdrMech-CDH-Inter",
+        "collection": null,
+        "parent": [
+            "ENC-Lander-Struct-Integr",
+            "ENC-LdrMech-Support"
+        ],
+        "type": "Functional",
+        "stakeholder": [
+            "Mechanical"
+        ],
+        "system": [
+            "LDR-MECH"
+        ],
+        "qualifier": "SHALL",
+        "description": "Provide structural support to all components of the CDH subsystem via mechanical interface between the chassis.",
+        "rationale": "To provide structural support for the CDH subsystem.",
+        "verification_method": [
+            "Review"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LdrMech-Comms-Inter",
+        "collection": null,
+        "parent": [
+            "ENC-Lander-Struct-Integr",
+            "ENC-LdrMech-Support"
+        ],
+        "type": "Functional",
+        "stakeholder": [
+            "Mechanical"
+        ],
+        "system": [
+            "LDR-MECH"
+        ],
+        "qualifier": "SHALL",
+        "description": "Provide structural support to all components of the communications subsystem via mechanical interface between the chassis.",
+        "rationale": "To provide structural support for the communications subsystem.",
+        "verification_method": [
+            "Review"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LdrMech-GNC-Inter",
+        "collection": null,
+        "parent": [
+            "ENC-Lander-Struct-Integr",
+            "ENC-LdrMech-Support"
+        ],
+        "type": "Functional",
+        "stakeholder": [
+            "Mechanical"
+        ],
+        "system": [
+            "LDR-MECH"
+        ],
+        "qualifier": "SHALL",
+        "description": "Provide structural support to all components of the GNC subsystem via mechanical interface between the chassis.",
+        "rationale": "To provide structural support for the GNC subsystem.",
+        "verification_method": [
+            "Review"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LdrMech-Encel-Debris",
+        "collection": null,
+        "parent": [
+            "ENC-SRS-Orbital-Debris"
+        ],
+        "type": "Functional",
+        "stakeholder": [
+            "Mechanical"
+        ],
+        "system": [
+            "LDR-MECH"
+        ],
+        "qualifier": "SHALL",
+        "description": "Shield internal components from external debris impact to the Lander system (as defined in the Environmental Definitions) during Enceladus operations%.",
+        "rationale": "To shield internal components from debris impact, i.e. from particulate matter ejected from geysers.",
+        "verification_method": [
+            "Analysis"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LdrMech-Inter-Debris",
+        "collection": null,
+        "parent": [
+            "ENC-SRS-Orbital-Debris"
+        ],
+        "type": "Functional",
+        "stakeholder": [
+            "Mechanical"
+        ],
+        "system": [
+            "LDR-MECH"
+        ],
+        "qualifier": "SHALL",
+        "description": "Mitigate the risk of failure of internal components from external debris impact to the Lander system (as defined in the Environmental Definitions) during operations on Enceladus to below 5%.",
+        "rationale": "To shield internal components from debris impact.",
+        "verification_method": [
+            "Analysis"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LdrMech-Detach-Load",
+        "collection": null,
+        "parent": [
+            "ENC-Lander-Ascent-Descent"
+        ],
+        "type": "Performance",
+        "stakeholder": [
+            "Mechanical"
+        ],
+        "system": [
+            "LDR-MECH"
+        ],
+        "qualifier": "SHALL",
+        "description": "Remain operational after experiencing loads during docking with the orbiter of at least TBD N.",
+        "rationale": "The lander mechanical structure must be able to withstand the loads and forces when docking with the orbiter.",
+        "verification_method": [
+            "Test",
+            "Analysis"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LdrMech-Dock-Load",
+        "collection": null,
+        "parent": [
+            "ENC-Lander-Ascent-Descent"
+        ],
+        "type": "Performance",
+        "stakeholder": [
+            "Mechanical"
+        ],
+        "system": [
+            "LDR-MECH"
+        ],
+        "qualifier": "SHALL",
+        "description": "Remain operational after experiencing loads during detachment from the orbiter of at least TBD N.",
+        "rationale": "The lander mechanical structure must be able to withstand the loads and forces when detaching from the orbiter.",
+        "verification_method": [
+            "Test",
+            "Analysis"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LdrMech-Orbit-Load",
+        "collection": null,
+        "parent": [
+            "ENC-Lander-Ascent-Descent"
+        ],
+        "type": "Performance",
+        "stakeholder": [
+            "Mechanical"
+        ],
+        "system": [
+            "LDR-MECH"
+        ],
+        "qualifier": "SHALL",
+        "description": "Remain operational under loads during orbital maneuvering.",
+        "rationale": "The lander mechanical structure must be able to withstand the loads experienced during any orbital maneuvers between Enceladus collection points and transit to/from the orbiter.",
+        "verification_method": [
+            "Test",
+            "Analysis"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LdrMech-Inter-Load",
+        "collection": null,
+        "parent": [
+            "ENC-Lander-Struct-Integr"
+        ],
+        "type": "Performance",
+        "stakeholder": [
+            "Mechanical"
+        ],
+        "system": [
+            "LDR-MECH"
+        ],
+        "qualifier": "SHALL",
+        "description": "Remain operational under loads experienced during interplanetary cruise.",
+        "rationale": "The lander mechanical structure must be able to withstand the loads experienced during interplanetary cruise.",
+        "verification_method": [
+            "Test",
+            "Analysis"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LdrMech-Land-Cycles",
+        "collection": null,
+        "parent": [
+            "ENC-Lander-Ascent-Descent"
+        ],
+        "type": "Performance",
+        "stakeholder": [
+            "Mechanical"
+        ],
+        "system": [
+            "LDR-MECH"
+        ],
+        "qualifier": "SHALL",
+        "description": "Remain operational after experiencing at least TBD landing sequence load cycles.",
+        "rationale": "The lander mechanical structure must be able to withstand the fatigue impacts from loads and forces during landing.",
+        "verification_method": [
+            "Test",
+            "Analysis"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LdrMech-Land-Load",
+        "collection": null,
+        "parent": [
+            "ENC-Lander-Ascent-Descent"
+        ],
+        "type": "Performance",
+        "stakeholder": [
+            "Mechanical"
+        ],
+        "system": [
+            "LDR-MECH"
+        ],
+        "qualifier": "SHALL",
+        "description": "Remain operational after experiencing landing loads of at least TBD N.",
+        "rationale": "The lander mechanical structure must be able to withstand the loads and forces during landing when approaching Enceladus and maneuvering between sites on Enceladus.",
+        "verification_method": [
+            "Test",
+            "Analysis"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LDR-PWR-Heat-Dissipation",
+        "collection": null,
+        "parent": [],
+        "type": "Functional",
+        "stakeholder": [
+            "Systems",
+            "Mechanical"
+        ],
+        "system": [
+            "LDR-Power"
+        ],
+        "qualifier": "SHALL",
+        "description": "The Power system on the Lander shall dissipate heat at a rate \u2265 [TBD] W.",
+        "rationale": "To be able to maintain power system in the operational temperature range as applied to physical parts of the system like materials chosen (may be facilitated by thermal system).",
+        "verification_method": [
+            "Simulation",
+            "Test"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LdrMech-Insulation",
+        "collection": null,
+        "parent": [
+            "ENC-Lander-Temp-Control"
+        ],
+        "type": "Environmental",
+        "stakeholder": [
+            "Mechanical"
+        ],
+        "system": [
+            "LDR-MECH"
+        ],
+        "qualifier": "SHALL",
+        "description": "Maintain the functionality of insulating components in all lander configurations.",
+        "rationale": "The insulation components supported by the mechanical sub-system must remain functional in all lander configurations, regardless of the changes in the state of the lander, such as deployed vs not deployed.",
+        "verification_method": [
+            "Analysis"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LdrMech-Stiffness",
+        "collection": null,
+        "parent": [
+            "ENC-Lander-Struct-Integr"
+        ],
+        "type": "Performance",
+        "stakeholder": [
+            "Mechanical"
+        ],
+        "system": [
+            "LDR-MECH"
+        ],
+        "qualifier": "SHALL",
+        "description": "Have a stiffness of at least [TBD] N/m.",
+        "rationale": "To protect the lander from any unexpected external factors, such as debris.",
+        "verification_method": [
+            "Analysis"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LdrMech-Motion",
+        "collection": null,
+        "parent": [
+            "ENC-Lander-Struct-Integr"
+        ],
+        "type": "Constraint",
+        "stakeholder": [
+            "Mechanical"
+        ],
+        "system": [
+            "LDR-MECH"
+        ],
+        "qualifier": "SHALL",
+        "description": "Not restrain any necessary range of motion required to complete a mode of operations.",
+        "rationale": "While providing structural support, the mechanical sub-system shall not restraint any range of motion, if not intentional, of any other sub-system.",
+        "verification_method": [
+            "Review"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LdrMech-Conti-Ops",
+        "collection": null,
+        "parent": [
+            "ENC-Lander-Modes"
+        ],
+        "type": "Performance",
+        "stakeholder": [
+            "Mechanical"
+        ],
+        "system": [
+            "LDR-MECH"
+        ],
+        "qualifier": "SHALL",
+        "description": "Be able to operate continuously for [TBD] min in a mode of operations.",
+        "rationale": "This applies to the entire lander during any mode of operations. The duration may change according to each mode. This requirement encompasses, for example, motors and gearboxes which may have limitation on continuous operations.",
+        "verification_method": [
+            "Test",
+            "Analysis"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LDR-COM-Antenna-Rotate-Y",
+        "collection": null,
+        "parent": [
+            "ENC-Orbiter-Lander-Communication"
+        ],
+        "type": "Performance",
+        "stakeholder": [
+            "Mechanical"
+        ],
+        "system": [
+            "LDR-COM"
+        ],
+        "qualifier": "SHALL",
+        "description": "The communications system shall be capable of pointing the antenna within a range of TBD \\textdegrees - TBD \\textdegrees about the system y-axis, if a movable antenna is used.",
+        "rationale": "To ensure sufficient signal pointing capability as required.",
+        "verification_method": [
+            "Demonstration",
+            "Review"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LDR-COM-Antenna-Rotate-X",
+        "collection": null,
+        "parent": [
+            "ENC-Orbiter-Lander-Communication"
+        ],
+        "type": "Performance",
+        "stakeholder": [
+            "Mechanical"
+        ],
+        "system": [
+            "LDR-COM"
+        ],
+        "qualifier": "SHALL",
+        "description": "The communications system shall be capable of pointing the antenna within a range of TBD \\textdegrees - TBD \\textdegrees about the system x-axis.",
+        "rationale": "To ensure sufficient signal pointing capability as required.",
+        "verification_method": [
+            "Demonstration",
+            "Review"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LDR-PWR-Interface-Temperature",
+        "collection": null,
+        "parent": [],
+        "type": "Functional",
+        "stakeholder": [
+            "Mechanical",
+            "Systems"
+        ],
+        "system": [
+            "LDR-Power"
+        ],
+        "qualifier": "SHALL",
+        "description": "The Power system shall operate in the range of [TBD] K to [TBD] K throughout all of its connections with all the other systems on the spacecraft.",
+        "rationale": "The extensions of the power system have to also be operable in the specified temperature range.",
+        "verification_method": [
+            "Analysis",
+            "Test"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LDR-COM-Antenna-Acc",
+        "collection": null,
+        "parent": [
+            "ENC-Orbiter-Lander-Communication"
+        ],
+        "type": "Performance",
+        "stakeholder": [
+            "Mechanical",
+            "Electrical"
+        ],
+        "system": [
+            "LDR-COM"
+        ],
+        "qualifier": "SHALL",
+        "description": "The Communications system shall direct the RF signal with a resolution of [TBD] degrees.",
+        "rationale": "To ensure overall pointing accuracy of the communication signal/beam (includes mechanical and beam pointing as necessary). Error tolerance is defined as the degree angle between the actual RF signal direction vector and the desired RF signal direction vector.",
+        "verification_method": [
+            "Test"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LdrMech-Natural-Freq",
+        "collection": null,
+        "parent": [
+            "ENC-Lander-Struct-Integr"
+        ],
+        "type": "Constraint",
+        "stakeholder": [
+            "Mechanical"
+        ],
+        "system": [
+            "LDR-MECH"
+        ],
+        "qualifier": "SHALL",
+        "description": "Have a natural frequency that is different from any other systems that the lander interacts with.",
+        "rationale": "To avoid the higher vibration due to resonance.",
+        "verification_method": [
+            "Analysis"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LdrMech-Half-Power-Bandwidth",
+        "collection": null,
+        "parent": [
+            "ENC-Lander-Modes"
+        ],
+        "type": "Performance",
+        "stakeholder": [
+            "Mechanical"
+        ],
+        "system": [
+            "LDR-MECH"
+        ],
+        "qualifier": "SHALL",
+        "description": "Have a half-power-bandwidth of [TBD].",
+        "rationale": "This is the measurement of the damping capability that the lander\u2019s mechanical sub-system provides.",
+        "verification_method": [
+            "Analysis"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LdrMech-Damping",
+        "collection": null,
+        "parent": [
+            "ENC-Lander-Modes"
+        ],
+        "type": "Functional",
+        "stakeholder": [
+            "Mechanical"
+        ],
+        "system": [
+            "LDR-MECH"
+        ],
+        "qualifier": "SHALL",
+        "description": "Provide sufficient damping to components on the lander during all modes of operations.",
+        "rationale": "Damping is necessary to control loading controlled by vibration due to the movement of the components.",
+        "verification_method": [
+            "Test"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LdrMech-Holding",
+        "collection": null,
+        "parent": [
+            "ENC-Lander-Modes"
+        ],
+        "type": "Functional",
+        "stakeholder": [
+            "Mechanical"
+        ],
+        "system": [
+            "LDR-MECH"
+        ],
+        "qualifier": "SHALL",
+        "description": "Hold moving components stationary relative to the lander when necessary.",
+        "rationale": "When a moving components is deployed to a certain position, it may need to stay at the position for a certain mode of operation. The mechanical structure needs to be able to hold the component in place.",
+        "verification_method": [
+            "Test"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LdrMech-Moving",
+        "collection": null,
+        "parent": [
+            "ENC-LdrMech-Support"
+        ],
+        "type": "Functional",
+        "stakeholder": [
+            "Mechanical"
+        ],
+        "system": [
+            "LDR-MECH"
+        ],
+        "qualifier": "SHALL",
+        "description": "Maintain structural integrity of any moving components on the lander through motion when needed.",
+        "rationale": "As a mechanical requirement, the motors as part of the mechanical sub-system needs to support the movement of the motors.",
+        "verification_method": [
+            "Test"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-SRS-Max-Mission-Duration",
+        "collection": null,
+        "parent": [
+            "ENC-SRS-Mission"
+        ],
+        "type": "Constraint",
+        "stakeholder": [
+            "MDA"
+        ],
+        "system": [
+            "SRS"
+        ],
+        "qualifier": "SHOULD",
+        "description": "Complete its mission within 18 years",
+        "rationale": "As per correspondence with MDA",
+        "verification_method": [
+            "Review"
+        ],
+        "child": [
+            "ENC-SRS-Mission-Duration"
+        ]
+    },
+    {
+        "name": "ENC-LDR-CDH-Temperature",
+        "collection": null,
+        "parent": [
+            "ENC-LDR-CDH-Thermal-Interface"
+        ],
+        "type": "Constraint",
+        "stakeholder": [
+            "Mechanical"
+        ],
+        "system": [
+            "LDR-CDH"
+        ],
+        "qualifier": "SHALL",
+        "description": "The CDH shall maintain a temperature between [TBD] K and [TBD] K.",
+        "rationale": "The CDH unit will need to be thermally regulated to ensure it remains within operational temperatures.",
+        "verification_method": [
+            "Test"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LDR-OMS-Thermal-Interface",
+        "collection": null,
+        "parent": [],
+        "type": "Functional",
+        "stakeholder": [
+            "Systems",
+            "Mechanical"
+        ],
+        "system": [
+            "LDR-OMS"
+        ],
+        "qualifier": "SHALL",
+        "description": "The Lander OMS shall interface with the Thermal subsystem.",
+        "rationale": "The OMS will need thermal control to remain operational in the intense environments of Enceladus.",
+        "verification_method": [
+            "Analysis"
+        ],
+        "child": [
+            "ENC-LDR-OMS-Fuel-Thermal-Control",
+            "ENC-LDR-OMS-Startup"
+        ]
+    },
+    {
+        "name": "ENC-LDR-OMS-Fuel-Thermal-Control",
+        "collection": null,
+        "parent": [
+            "ENC-LDR-OMS-Thermal-Interface"
+        ],
+        "type": "Constraint",
+        "stakeholder": [
+            "Mechanical"
+        ],
+        "system": [
+            "LDR-OMS"
+        ],
+        "qualifier": "SHALL",
+        "description": "The Lander OMS shall maintain fuel temperature between [TBD] K and [TBD] K.",
+        "rationale": "The fuel tanks and lines will need to be thermally regulated (active or passive) to ensure the fuel remains usable.",
+        "verification_method": [
+            "Test"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-SRS-Power-Budget",
+        "collection": null,
+        "parent": [
+            "ENC-SRS-Mission"
+        ],
+        "type": "Constraint",
+        "stakeholder": [
+            "Systems",
+            "Controls",
+            "Electrical",
+            "Mechanical"
+        ],
+        "system": [
+            "SRS",
+            "ORB",
+            "LDR",
+            "LDR-ADCS",
+            "ORB-ADCS",
+            "LDR-Power",
+            "ORB-Power",
+            "LDR-MECH",
+            "ORB-MECH",
+            "LDR-SCS",
+            "ORB-COM",
+            "LDR-COM",
+            "ORB-RECON",
+            "ORB-OMS",
+            "LDR-OMS",
+            "ORB-THERM",
+            "LDR-THERM",
+            "ORB-CDH",
+            "LDR-CDH",
+            "ORB-SRC",
+            "LDR-GNC",
+            "LDR-SSS",
+            "ORB-RPO"
+        ],
+        "qualifier": "SHALL",
+        "description": "The SRS systems shall adhere to the power allocation in the power budget.",
+        "rationale": "To ensure the spacecraft has sufficient power for the mission execution.",
+        "verification_method": [
+            "Test"
+        ],
+        "child": [
+            "ENC-LDR-Therm-Sensor-Power "
+        ]
+    },
+    {
+        "name": "ENC-SRS-Volume-Budget",
+        "collection": null,
+        "parent": [
+            "ENC-SRS-Spacecraft-Volume"
+        ],
+        "type": "Constraint",
+        "stakeholder": [
+            "Systems",
+            "Controls",
+            "Electrical",
+            "Mechanical"
+        ],
+        "system": [
+            "SRS",
+            "ORB",
+            "LDR",
+            "LDR-ADCS",
+            "ORB-ADCS",
+            "LDR-Power",
+            "ORB-Power",
+            "LDR-MECH",
+            "ORB-MECH",
+            "LDR-SCS",
+            "ORB-COM",
+            "LDR-COM",
+            "ORB-RECON",
+            "ORB-OMS",
+            "LDR-OMS",
+            "ORB-THERM",
+            "LDR-THERM",
+            "ORB-CDH",
+            "LDR-CDH",
+            "ORB-SRC",
+            "LDR-GNC",
+            "LDR-SSS",
+            "ORB-RPO"
+        ],
+        "qualifier": "SHALL",
+        "description": "The SRS systems shall adhere to the volume allocation in the volume budget.",
+        "rationale": "To ensure compliance with volume constraint.",
+        "verification_method": [
+            "Inspection"
+        ],
+        "child": [
+            "ENC-LDR-PWR-Cables-Size"
+        ]
+    },
+    {
+        "name": "ENC-LDR-OMS-Orientation-Accuracy",
+        "collection": null,
+        "parent": [
+            "ENC-LDR-OMS-Lander-Accuracy"
+        ],
+        "type": "Performance",
+        "stakeholder": [
+            "Mechanical",
+            "Controls"
+        ],
+        "system": [
+            "LDR-OMS"
+        ],
+        "qualifier": "SHALL",
+        "description": "The Lander OMS shall have a minimum orientation resolution of 2 mRad in each axis.",
+        "rationale": "This is the propagation of ENC-LdrOMS-Lander-Accuracy requirement to the mechanical subsystem.",
+        "verification_method": [
+            "Review"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LDR-OMS-Propellant-Storage",
+        "collection": null,
+        "parent": [
+            "ENC-LDR-OMS-Propellant-Quantity"
+        ],
+        "type": "Constraint",
+        "stakeholder": [
+            "Mechanical"
+        ],
+        "system": [
+            "LDR-OMS"
+        ],
+        "qualifier": "SHALL",
+        "description": "The Lander OMS shall store [TBD] kg of fuel.",
+        "rationale": "The lander will need to carry a minimum amount of fuel for the mission objectives. This will require a tank with sufficient volume to store the given fuel.",
+        "verification_method": [
+            "Inspection"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LDR-OMS-Gimbal (WIP)",
+        "collection": null,
+        "parent": [],
+        "type": "Performance",
+        "stakeholder": [
+            "Mechanical",
+            "Electrical",
+            "Controls"
+        ],
+        "system": [
+            "LDR-OMS-ME"
+        ],
+        "qualifier": "SHALL",
+        "description": "The Lander OMS shall be capable of gimbaling \u00b1TBD degrees in both pitch and yaw axes",
+        "rationale": "To allow for ",
+        "verification_method": [
+            "Analysis"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LDR-OMS-Hard-Translation-Control",
+        "collection": null,
+        "parent": [
+            "ENC-LDR-OMS-Lander-Range-Motion"
+        ],
+        "type": "Constraint",
+        "stakeholder": [
+            "Mechanical"
+        ],
+        "system": [
+            "LDR-OMS"
+        ],
+        "qualifier": "SHALL",
+        "description": "The Lander OMS shall provide at least one translational degree of freedom at the maximum thruster capability.",
+        "rationale": "The thruster placement will need to allow the lander to take on powerful burns in at least one direction for the deorbit burn, ascent, and hop maneuvers.",
+        "verification_method": [
+            "Simulation"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LDR-OMS-Thrust-Control",
+        "collection": "Propulsion Method Drivers",
+        "parent": [
+            "ENC-LDR-OMS-Thrust"
+        ],
+        "type": "Performance",
+        "stakeholder": [
+            "Mechanical",
+            "Electrical",
+            "Controls"
+        ],
+        "system": [
+            "LDR-OMS"
+        ],
+        "qualifier": "SHALL",
+        "description": "The Lander OMS shall provide a controllable thrust between [TBD] N to [TBD] N.",
+        "rationale": "Thrust control assists the execution of landing where fine adjustments are required",
+        "verification_method": [
+            "Test"
+        ],
+        "child": [
+            "ENC-LDR-OMS-Engine-Type"
+        ]
+    },
+    {
+        "name": "ENC-LDR-OMS-Soft-Translation-Control",
+        "collection": null,
+        "parent": [
+            "ENC-LDR-OMS-Lander-Range-Motion"
+        ],
+        "type": "Constraint",
+        "stakeholder": [
+            "Mechanical"
+        ],
+        "system": [
+            "LDR-OMS"
+        ],
+        "qualifier": "SHALL",
+        "description": "The Lander OMS shall have three translational degrees of freedom at the minimum thruster capability.",
+        "rationale": "The thruster placements will need to allow the lander to take any position for detailed maneuvers such as docking.",
+        "verification_method": [
+            "Simulation"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LDR-OMS-Orientation-Control",
+        "collection": null,
+        "parent": [
+            "ENC-LDR-OMS-Lander-Range-Motion"
+        ],
+        "type": "Constraint",
+        "stakeholder": [
+            "Mechanical"
+        ],
+        "system": [
+            "LDR-OMS"
+        ],
+        "qualifier": "SHALL",
+        "description": "The Lander OMS shall provide three rotational degrees of freedom.",
+        "rationale": "The thruster placements will need to allow the lander to take on an arbitrary orientation for its deploy and return maneuvers.",
+        "verification_method": [
+            "Simulation"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LDR-OMS-Fuel-Flow-Rate",
+        "collection": null,
+        "parent": [
+            "ENC-LDR-OMS-Max-Thrust",
+            "ENC-LDR-OMS-Min-Thrust"
+        ],
+        "type": "Performance",
+        "stakeholder": [
+            "Mechanical"
+        ],
+        "system": [
+            "LDR-OMS"
+        ],
+        "qualifier": "SHALL",
+        "description": "The Lander OMS shall have a fuel mass flow rate to the thrusters of [TBD] kg/s.",
+        "rationale": "A minimum fuel mass flow rate is required for the thrusters to achieve there maximum delta-v requirement.",
+        "verification_method": [
+            "Test"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LdrGNC-Trajectory-Planning",
+        "collection": null,
+        "parent": [
+            "ENC-Lander-Site-Travel"
+        ],
+        "type": "Functional",
+        "stakeholder": [
+            "Systems"
+        ],
+        "system": [
+            "LDR-GNC"
+        ],
+        "qualifier": "SHALL",
+        "description": "Generate trajectory plan for suborbital hops from one location on Enceladus to another.",
+        "rationale": "Enable the Lander to visit multiple plume sites",
+        "verification_method": [
+            "Analysis"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LdrGNC-Stiffness",
+        "collection": null,
+        "parent": [
+            "ENC-LdrGNC-Mechanical-Interface"
+        ],
+        "type": "Performance",
+        "stakeholder": [
+            "Mechanical"
+        ],
+        "system": [
+            "LDR-GNC"
+        ],
+        "qualifier": "SHALL",
+        "description": "Be supported by a structure with a stiffness of TBD \u00b1 TBD N/m.",
+        "rationale": "Stable measurements of the environment are necessary for accurate landing, as well as obstacle and relief avoidance during jumps. It must also withstand the high\ndynamic loads during takeoff and landing",
+        "verification_method": [
+            "Test"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LdrGNC-FOV",
+        "collection": null,
+        "parent": [
+            "ENC-LdrGNC-Mechanical-Interface"
+        ],
+        "type": "Performance",
+        "stakeholder": [
+            "Mechanical",
+            "Systems"
+        ],
+        "system": [
+            "LDR-GNC"
+        ],
+        "qualifier": "SHALL",
+        "description": "Have a field of view of 360\u00b0.",
+        "rationale": "Enable observation and mapping of the environment around the vehicle irrespective of orientation",
+        "verification_method": [
+            "Demonstration",
+            "Test"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-SRS-Mass-Budget",
+        "collection": null,
+        "parent": [
+            "ENC-SRS-Maximum-Mass"
+        ],
+        "type": "Constraint",
+        "stakeholder": [
+            "Systems",
+            "Controls",
+            "Mechanical",
+            "Electrical"
+        ],
+        "system": [
+            "SRS",
+            "ORB",
+            "LDR",
+            "LDR-ADCS",
+            "ORB-ADCS",
+            "LDR-Power",
+            "ORB-Power",
+            "LDR-MECH",
+            "ORB-MECH",
+            "LDR-SCS",
+            "ORB-COM",
+            "LDR-COM",
+            "ORB-RECON",
+            "ORB-OMS",
+            "LDR-OMS",
+            "ORB-THERM",
+            "LDR-THERM",
+            "ORB-CDH",
+            "LDR-CDH",
+            "ORB-SRC",
+            "LDR-GNC",
+            "LDR-SSS",
+            "ORB-RPO"
+        ],
+        "qualifier": "SHALL",
+        "description": "The SRS systems shall adhere to the mass allocation in the mass budget.",
+        "rationale": "To ensure compliance with mass constraint.",
+        "verification_method": [
+            "Inspection"
+        ],
+        "child": [
+            "ENC-LDR-PWR-Cables-Mass"
+        ]
+    },
+    {
+        "name": "ENC-LdrGNC-Mechanical-Interface",
+        "collection": null,
+        "parent": [
+            "ENC-Lander-Struct-Integr"
+        ],
+        "type": "Functional",
+        "stakeholder": [
+            "Mechanical"
+        ],
+        "system": [
+            "LDR-GNC"
+        ],
+        "qualifier": "SHALL",
+        "description": "Interface mechanically with the mechanical system.",
+        "rationale": "To physically support the GNC system",
+        "verification_method": [
+            "Inspection"
+        ],
+        "child": [
+            "ENC-LdrGNC-Stiffness",
+            "ENC-LdrGNC-FOV"
+        ]
+    },
+    {
+        "name": "ENC-LDR-OMS-Collision-Avoid",
+        "collection": null,
+        "parent": [
+            "ENC-Lander-Orbit"
+        ],
+        "type": "Functional",
+        "stakeholder": [
+            "Controls"
+        ],
+        "system": [
+            "LDR-OMS"
+        ],
+        "qualifier": "SHALL",
+        "description": "The Lander OMS shall be able to avoid collisions with other particles / spacecrafts / debris in space (",
+        "rationale": "To prevent damages to the lander.",
+        "verification_method": [
+            "Test"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-OrbOMS-Collision-Avoid",
+        "collection": null,
+        "parent": [
+            "ENC-Orbiter-Orbital-Maneuvers"
+        ],
+        "type": "Functional",
+        "stakeholder": [],
+        "system": [
+            "ORB-OMS"
+        ],
+        "qualifier": "SHALL",
+        "description": "Be able to avoid collisions with other particles / spacecrafts / debris in space (",
+        "rationale": "This is to prevent damages to the orbiter",
+        "verification_method": [
+            "Test"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-Lander-Orbit",
+        "collection": null,
+        "parent": [
+            "ENC-Lander-Orbiter-Docking"
+        ],
+        "type": "Performance",
+        "stakeholder": [],
+        "system": [
+            "LDR"
+        ],
+        "qualifier": "SHALL",
+        "description": "Be able to enter a orbit at [TBD] km above the surface of Enceladus.",
+        "rationale": "This is the orbit that the lander will dock back with the orbiter.",
+        "verification_method": [
+            "Simulation"
+        ],
+        "child": [
+            "ENC-LDR-OMS-Collision-Avoid"
+        ]
+    },
+    {
+        "name": "ENC-Orbiter-Docking-Speed",
+        "collection": null,
+        "parent": [
+            "ENC-Orbiter-Rendezvous"
+        ],
+        "type": "Performance",
+        "stakeholder": [],
+        "system": [
+            "ORB"
+        ],
+        "qualifier": "SHALL",
+        "description": "Adjust speed to within +- [TBD] m/s of the velocity of the lander in orbit.",
+        "rationale": "In order for the orbiter to dock with the lander, the orbiter needs to change speed in order to meet with the lander.",
+        "verification_method": [
+            "Simulation"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-Orbiter-Flt-Code",
+        "collection": null,
+        "parent": [
+            "ENC-Orbiter-Remote-Programming"
+        ],
+        "type": "Performance",
+        "stakeholder": [],
+        "system": [
+            "ORB"
+        ],
+        "qualifier": "SHALL",
+        "description": "Be able to conduct a full image upgrade for all flight code within [TBD] min.",
+        "rationale": "This performance requirement is to ensure that the upgrade speed of the flight code satisfies operational needs.",
+        "verification_method": [
+            "Test"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-Orbiter-Lander-Power",
+        "collection": null,
+        "parent": [
+            "ENC-Orbiter-Power-Lander"
+        ],
+        "type": "Performance",
+        "stakeholder": [],
+        "system": [
+            "ORB"
+        ],
+        "qualifier": "SHALL",
+        "description": "Be able to provide at least [TBD] W of power to the lander",
+        "rationale": "While the lander is docked with the orbiter, the orbiter provides power to the lander. ",
+        "verification_method": [
+            "Test"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-LDR-PWR-Store-Power",
+        "collection": null,
+        "parent": [
+            "ENC-Lander-Orbiter-Power"
+        ],
+        "type": "Performance",
+        "stakeholder": [
+            "Electrical"
+        ],
+        "system": [
+            "LDR-Power"
+        ],
+        "qualifier": "SHALL",
+        "description": "The Power system shall store \\geq [TBD] Wh of power.",
+        "rationale": "To ensure lander can store power for later use.",
+        "verification_method": [
+            "Analysis",
+            "Test"
+        ],
+        "child": [
+            "ENC-LDR-PWR-Battery-Specific-Energy",
+            "ENC-LDR-PWR-Battery-Energy-Density"
+        ]
+    },
+    {
+        "name": "ENC-OrbRPO-Rendevous-Plan",
+        "collection": null,
+        "parent": [
+            "ENC-Orbiter-Rendezvous"
+        ],
+        "type": "Functional",
+        "stakeholder": [
+            "Systems"
+        ],
+        "system": [
+            "ORB-RPO"
+        ],
+        "qualifier": "SHALL",
+        "description": "Be capable of generating rendezvous plans",
+        "rationale": "To enable docking with the Lander while in orbit",
+        "verification_method": [
+            "Test"
+        ],
+        "child": [
+            "ENC-OrbRPO-Orbit-Determination",
+            "ENC-OrbRPO-Orbit-Propagation",
+            "ENC-OrbRPO-Pose-Estimation"
+        ]
+    },
+    {
+        "name": "ENC-OrbRPO-Pose-Estimation",
+        "collection": null,
+        "parent": [
+            "ENC-OrbRPO-Rendevous-Plan"
+        ],
+        "type": "Performance",
+        "stakeholder": [
+            "Systems"
+        ],
+        "system": [
+            "ORB-RPO"
+        ],
+        "qualifier": "SHALL",
+        "description": "Estimate the pose of the passive craft during rendezvous to within TBD deg and TBD m",
+        "rationale": "To achieve the accuracy necessary for successful rendezvous operations",
+        "verification_method": [
+            "Simulation",
+            "Analysis"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-OrbRPO-Orbit-Propagation",
+        "collection": null,
+        "parent": [
+            "ENC-OrbRPO-Rendevous-Plan"
+        ],
+        "type": "Performance",
+        "stakeholder": [
+            "Systems"
+        ],
+        "system": [
+            "ORB-RPO"
+        ],
+        "qualifier": "SHALL",
+        "description": "Be capable of propagating the spacecraft\u2019s orbit forward in time with a loss in accuracy of no more than TBD per orbit",
+        "rationale": "To achieve the accuracy necessary for successful rendezvous operations",
+        "verification_method": [
+            "Simulation",
+            "Analysis"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-OrbRPO-Plume",
+        "collection": null,
+        "parent": [
+            "ENC-Orbiter-Plume-Impact",
+            "ENC-Lander-Plume-Impact"
+        ],
+        "type": "Environmental",
+        "stakeholder": [
+            "Electrical"
+        ],
+        "system": [
+            "ORB-RPO"
+        ],
+        "qualifier": "SHALL",
+        "description": "Operate while travelling through plume material",
+        "rationale": "To ensure communication is possible while in orbit around Encladus",
+        "verification_method": [
+            "Analysis"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-OrbRPO-Publish-Heartbeat",
+        "collection": null,
+        "parent": [
+            "ENC-Orbiter-DSN-Communication"
+        ],
+        "type": "Performance",
+        "stakeholder": [
+            "Electrical"
+        ],
+        "system": [
+            "ORB-RPO"
+        ],
+        "qualifier": "SHALL",
+        "description": "Publish heartbeat data to CDH at a constant frequency of TBD Hz",
+        "rationale": "To allow for external health monitoring",
+        "verification_method": [
+            "Test"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-OrbRPO-Therm-Interface",
+        "collection": null,
+        "parent": [
+            "ENC-Orbiter-DSN-Communication"
+        ],
+        "type": "Functional",
+        "stakeholder": [
+            "Electrical"
+        ],
+        "system": [
+            "ORB-RPO"
+        ],
+        "qualifier": "SHALL",
+        "description": "Be thermally regulated via interface with the Thermal system",
+        "rationale": "To ensure safe operation within operational temperature range",
+        "verification_method": [
+            "Review",
+            "Demonstration"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-OrbRPO-Mech-Interface",
+        "collection": null,
+        "parent": [
+            "ENC-Orbiter-DSN-Communication"
+        ],
+        "type": "Functional",
+        "stakeholder": [
+            "Electrical"
+        ],
+        "system": [
+            "ORB-RPO"
+        ],
+        "qualifier": "SHALL",
+        "description": "Interface with the Mechanical system by mechanical attachment",
+        "rationale": "To remain attached to the spacecraft",
+        "verification_method": [
+            "Review"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-OrbRPO-Control",
+        "collection": null,
+        "parent": [
+            "ENC-Orbiter-DSN-Communication"
+        ],
+        "type": "Functional",
+        "stakeholder": [
+            "Electrical"
+        ],
+        "system": [
+            "ORB-RPO"
+        ],
+        "qualifier": "SHALL",
+        "description": "Accept communication control commands from OBC",
+        "rationale": "To enable modes of operation",
+        "verification_method": [
+            "Test"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-OrbRPO-Power-Interface",
+        "collection": null,
+        "parent": [
+            "ENC-Orbiter-DSN-Communication"
+        ],
+        "type": "Functional",
+        "stakeholder": [
+            "Electrical"
+        ],
+        "system": [
+            "ORB-RPO"
+        ],
+        "qualifier": "SHALL",
+        "description": "Receive power from Power system",
+        "rationale": "To enable computation",
+        "verification_method": [
+            "Review"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-OrbRPO-Orbit-Determination",
+        "collection": null,
+        "parent": [
+            "ENC-OrbRPO-Rendevous-Plan"
+        ],
+        "type": "Performance",
+        "stakeholder": [
+            "Systems"
+        ],
+        "system": [
+            "ORB-RPO"
+        ],
+        "qualifier": "SHALL",
+        "description": "Be capable of determining the orbital parameters of the spacecraft\u2019s orbit to within TBD error",
+        "rationale": "To achieve the accuracy necessary for successful rendezvous operations",
+        "verification_method": [
+            "Simulation",
+            "Analysis"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-Orbiter-Rendezvous",
+        "collection": null,
+        "parent": [
+            "ENC-Orbiter-Lander-Docking"
+        ],
+        "type": "Functional",
+        "stakeholder": [
+            "Systems",
+            "Operations",
+            "Controls"
+        ],
+        "system": [
+            "ORB"
+        ],
+        "qualifier": "SHALL",
+        "description": "Rendevouz with the Lander in orbit",
+        "rationale": "To enable retrieval of the collected samples from the Lander",
+        "verification_method": [
+            "Analysis"
+        ],
+        "child": [
+            "ENC-OrbRPO-Rendevous-Plan",
+            "ENC-Orbiter-Docking-Speed"
+        ]
+    },
+    {
+        "name": "ENC-OrbRecon-Spectral-Data-UV",
+        "collection": null,
+        "parent": [
+            "ENC-Orbiter-Remote-Sensing",
+            "ENC-Orbiter-Topography-Survey"
+        ],
+        "type": "Performance",
+        "stakeholder": [
+            "Science"
+        ],
+        "system": [
+            "ORB-RECON"
+        ],
+        "qualifier": "SHALL",
+        "description": "Map a planetary surface with a spectral range from100-200nm at a resolution of 1nm (UV) (TBC)",
+        "rationale": "Water vapor has absorption features in the ultraviolet range. Specifically, the Lyman-alpha line (around 121.6 nm) is often used in space missions to detect water vapor.\n\nThese features are expected to help inform sample site selection by determining the composition of plume material (which is mostly water) near the surface",
+        "verification_method": [
+            "Analysis"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-OrbCOM-Transmit-Rate",
+        "collection": null,
+        "parent": [
+            "ENC-Orbiter-DSN-Communication"
+        ],
+        "type": "Performance",
+        "stakeholder": [
+            "Electrical"
+        ],
+        "system": [
+            "ORB-COM"
+        ],
+        "qualifier": "SHALL",
+        "description": "Have a transmit throughput of TBD Kbps",
+        "rationale": "To ensure data can be communicated within the allotted communication windows",
+        "verification_method": [
+            "Test"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-Lander-Attitude-Determination",
+        "collection": null,
+        "parent": [
+            "ENC-SRS-Attitude-Determination"
+        ],
+        "type": "Performance",
+        "stakeholder": [
+            "Systems"
+        ],
+        "system": [
+            "LDR"
+        ],
+        "qualifier": "SHALL",
+        "description": "Determine attitude to within \u2264 0.001deg +- 5% across all axes and mission phases",
+        "rationale": "To ensure attitude-based operations such as reconnaissance, orbital maneuvering, and rendezvousing can be executed ",
+        "verification_method": [
+            "Test"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-Orbiter-Attitude-Determination",
+        "collection": null,
+        "parent": [
+            "ENC-SRS-Attitude-Determination"
+        ],
+        "type": "Performance",
+        "stakeholder": [
+            "Systems"
+        ],
+        "system": [
+            "ORB"
+        ],
+        "qualifier": "SHALL",
+        "description": "Determine attitude to within \u2264 0.001deg +- 5% across all axes and mission phases",
+        "rationale": "To ensure attitude-based operations such as reconnaissance, orbital maneuvering, and rendezvousing can be executed ",
+        "verification_method": [
+            "Test"
+        ],
+        "child": []
+    },
+    {
+        "name": "ENC-SRS-Attitude-Determination",
+        "collection": null,
+        "parent": [
+            "ENC-SRS-GNC"
+        ],
+        "type": "Performance",
+        "stakeholder": [
+            "Systems"
+        ],
+        "system": [
+            "SRS"
+        ],
+        "qualifier": "SHALL",
+        "description": "Determine attitude to within \u2264 0.001deg +- 5% across all axes and mission phases",
+        "rationale": "To ensure attitude-based operations such as reconnaissance, orbital maneuvering, and rendezvousing can be executed ",
+        "verification_method": [
+            "Test"
+        ],
+        "child": [
+            "ENC-Orbiter-Attitude-Determination",
+            "ENC-Lander-Attitude-Determination"
+        ]
+    },
+    {
+        "name": "ENC-Lander-Mission-Duration",
+        "collection": null,
+        "parent": [
+            "ENC-SRS-Mission-Duration"
+        ],
+        "type": "Functional",
+        "stakeholder": [
+            "Systems"
+        ],
+        "system": [
+            "LDR"
+        ],
+        "qualifier": "SHALL",
+        "description": "Operate over the mission lifetime specified in the Mission Timeline Budget",
+        "rationale": "To ensure mission objectives are met",
+        "verification_method": [
+            "Analysis"
+        ],
+        "child": [
+            "ENC-LDR-PWR-Life",
+            "ENC-SCS-Redundancy",
+            "ENC-SSS-Redundancy",
+            "ENC-LDR-COM-Redundancy"
+        ]
+    },
+    {
+        "name": "ENC-Orbiter-Mission-Duration",
+        "collection": null,
+        "parent": [
+            "ENC-SRS-Mission-Duration"
+        ],
+        "type": "Functional",
+        "stakeholder": [
+            "Systems"
+        ],
+        "system": [
+            "ORB"
+        ],
+        "qualifier": "SHALL",
+        "description": "Operate over the mission lifetime specified in the Mission Timeline Budget",
+        "rationale": "To ensure mission objectives are met",
+        "verification_method": [
+            "Analysis"
+        ],
+        "child": [
+            "ENC-OrbPwr-Life"
+        ]
+    },
+    {
+        "name": "ENC-SRS-Mission-Duration",
+        "collection": null,
+        "parent": [
+            "ENC-SRS-Max-Mission-Duration"
+        ],
+        "type": "Functional",
+        "stakeholder": [
+            "Systems"
+        ],
+        "system": [
+            "SRS"
+        ],
+        "qualifier": "SHALL",
+        "description": "Operate over the mission lifetime specified in the Mission Timeline Budget",
+        "rationale": "To ensure mission objectives are met",
+        "verification_method": [
+            "Analysis"
+        ],
+        "child": [
+            "ENC-Orbiter-Mission-Duration",
+            "ENC-Lander-Mission-Duration",
+            "ENC-Lander-Avg-Speed"
+        ]
+    }
+]
