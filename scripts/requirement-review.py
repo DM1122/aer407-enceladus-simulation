@@ -36,7 +36,7 @@ class SystemGPT:
 
         while True:
             response: dict = self.notion.databases.query(
-                **{
+                {
                     "database_id": self.database_id,
                     "start_cursor": start_cursor,
                     "page_size": 100,  # max page size allowed by the API
