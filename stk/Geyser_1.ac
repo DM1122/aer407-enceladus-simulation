@@ -19,7 +19,7 @@ BEGIN Aircraft
             BEGIN EVENTINTERVAL
                 StartEvent		
                 BEGIN EVENT
-                    Epoch		 1 Jan 2055 16:00:00.000000000
+                    Epoch		 17 Jun 2040 00:00:00.000000000
                     EventEpoch		
                     BEGIN EVENT
                         Type		 EVENT_LINKTO
@@ -36,7 +36,7 @@ BEGIN Aircraft
                 IntervalState		 StartStop
             END EVENTINTERVAL
 
-            TimeOfFirstWaypoint		 1 Jan 2055 16:00:00.000
+            TimeOfFirstWaypoint		 17 Jun 2040 00:00:00.000000000
 
             UseScenTime		 No
             ArcGranularity		  5.7295779513082323e-01
@@ -70,12 +70,12 @@ BEGIN Aircraft
 
     BEGIN Attitude
 
-        ScenarioEpoch		 1 Jan 2055 16:00:00.000000
+        ScenarioEpoch		 17 Jun 2040 00:00:00.000000
 
         BEGIN Profile
             Name		 AircraftZDownAtt
             UserNamed		 No
-            StartTime		  0.0000000000000000e+00
+            StartTime		  4.5892800000000000e+08
             BEGIN AircraftZDown
                 Azimuth		  0.0000000000000000e+00
             END AircraftZDown

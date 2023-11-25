@@ -11,7 +11,7 @@ BEGIN Satellite
         BEGIN Interval
 
             StartTime		 1 Jan 2055 16:00:00.000000000
-            StopTime		 1 Jan 2055 16:10:44.163682871
+            StopTime		 1 Jan 2055 16:10:44.163682878
 
         END Interval
 
@@ -659,7 +659,7 @@ BEGIN Satellite
                                         <LIST />
                                     </VAR>
                                     <VAR name = "Epoch">
-                                        <DATE>1 Jan 2055 16:11:21.163682871</DATE>
+                                        <DATE>1 Jan 2055 16:11:21.163682997</DATE>
                                     </VAR>
                                 </SCOPE>
                             </VAR>
@@ -2044,7 +2044,7 @@ BEGIN Satellite
                                                         <LIST />
                                                     </VAR>
                                                     <VAR name = "Epoch">
-                                                        <DATE>1 Jan 2055 16:11:21.163682871</DATE>
+                                                        <DATE>1 Jan 2055 16:11:21.163682997</DATE>
                                                     </VAR>
                                                 </SCOPE>
                                             </VAR>
@@ -2203,7 +2203,7 @@ BEGIN Satellite
                                                         <LIST />
                                                     </VAR>
                                                     <VAR name = "Epoch">
-                                                        <DATE>1 Jan 2055 16:11:21.163682871</DATE>
+                                                        <DATE>1 Jan 2055 16:11:21.163682997</DATE>
                                                     </VAR>
                                                     <VAR name = "TriggerDescription">
                                                         <STRING>&quot;Altitude (stopped on time tolerance); Run Sequence STOP&quot;</STRING>
@@ -2741,7 +2741,7 @@ BEGIN Satellite
                                                         <LIST />
                                                     </VAR>
                                                     <VAR name = "Epoch">
-                                                        <DATE>1 Jan 2055 16:11:21.163682871</DATE>
+                                                        <DATE>1 Jan 2055 16:11:21.163682997</DATE>
                                                     </VAR>
                                                 </SCOPE>
                                             </VAR>
@@ -2970,7 +2970,7 @@ BEGIN Satellite
                                                         <LIST />
                                                     </VAR>
                                                     <VAR name = "Epoch">
-                                                        <DATE>1 Jan 2055 16:11:21.163682871</DATE>
+                                                        <DATE>1 Jan 2055 16:11:21.163682997</DATE>
                                                     </VAR>
                                                 </SCOPE>
                                             </VAR>
@@ -5087,10 +5087,10 @@ BEGIN Satellite
             RangeFirstPass		 1
             RangeLastPass		 2147483647
             DisplayScheme		 AllEphemeris
-            ScenarioEpoch		 1 Jan 2055 16:00:00.000000
+            ScenarioEpoch		 17 Jun 2040 00:00:00.000000
             Periods
                 Rev		 1 0 0 0 0 0 0 1 0 1 0
-                 0.0000000000000000e+00  6.4416368287066871e+02  0.0000000000000000e+00  6.4416368287066871e+02
+                 4.5892800000000000e+08  4.5892864416368288e+08  4.5892800000000000e+08  4.5892864416368288e+08
             END Periods
         END PassDefn
 
@@ -5110,7 +5110,7 @@ BEGIN Satellite
 
     BEGIN Attitude
 
-        ScenarioEpoch		 1 Jan 2055 16:00:00.000000
+        ScenarioEpoch		 17 Jun 2040 00:00:00.000000
 
         BEGIN Profile
             Name		 ECIVVLH
@@ -5386,12 +5386,6 @@ BEGIN Satellite
         END ObjectCoverage
 
         BEGIN Desc
-            BEGIN ShortText
-
-            END ShortText
-            BEGIN LongText
-
-            END LongText
         END Desc
 
         BEGIN RadarCrossSection
@@ -5494,7 +5488,7 @@ BEGIN Satellite
             END GenericGraphics
 
             BEGIN AttributeData
-                ShowGfx		 On
+                ShowGfx		 Off
                 AttributeType		                CustomIntervals		
                 BEGIN DefaultAttributes
                     Show		 On
@@ -5535,8 +5529,8 @@ BEGIN Satellite
                         SpecSwathLineStyle		 1
                     END DefaultAttributes
                     BEGIN GraphicsInterval
-                        StartTime		  0.0000000000000000e+00
-                        StopTime		  6.4416368287066871e+02
+                        StartTime		  4.5892800000000000e+08
+                        StopTime		  4.5892864416368288e+08
                         BEGIN Attributes
                             AllColors		 #00ff00
                             PickString		 Propagate

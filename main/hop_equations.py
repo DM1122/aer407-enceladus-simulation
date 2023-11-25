@@ -50,7 +50,9 @@ def launch_velocity_from_max_range(d_max: u.m, R: u.m, g: u.m / u.s**2) -> u.m /
         Launch velocity to travel a given distance
     """
 
-    return np.sqrt((d_max * R * g**2) / (R * g + 0.5 * d_max * g))
+    v = np.sqrt((d_max * R * g**2) / (R * g + 0.5 * d_max * g))
+
+    return v.decompose()
 
 
 def launch_relative_velocity(v0: u.m / u.s, R: u.m, g: u.m / u.s**2) -> float:
@@ -78,8 +80,7 @@ def optimum_launch_angle(v_tilde: float) -> u.deg:
     Returns:
         Optimum launch elevation angle.
     """
-    theta = 0.5 * np.arccos(v_tilde**2 / (2 - v_tilde**2)) * u.rad
-    print(theta)
+    theta = 0.5 * np.arccos(v_tilde**2 / (2 - v_tilde**2))
 
     return theta.to(u.deg)
 
@@ -141,6 +142,19 @@ def launch_velocity_from_delta_v(dV: u.m / u.s) -> u.m / u.s:
         Resulting launch velocity.
     """
     return 0.5 * dV
+
+
+def hop_delta_v(v0: u.m / u.s) -> u.m / u.s:
+    """
+    Calculate the required delta-v for a hop of a given launch velocity
+
+    Parameters:
+        v0: Launch velocity
+
+    Returns:
+        Required delta-v
+    """
+    return 2 * v0
 
 
 def delta_v_from_launch_velocity(v0: u.m / u.s) -> u.m / u.s:

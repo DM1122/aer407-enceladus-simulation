@@ -5,10 +5,10 @@ BEGIN Scenario
 
     BEGIN Epoch
 
-        Epoch		 1 Jan 2055 16:00:00.000000000
+        Epoch		 17 Jun 2040 00:00:00.000000000
         SmartEpoch		
         BEGIN EVENT
-            Epoch		 1 Jan 2055 16:00:00.000000000
+            Epoch		 17 Jun 2040 00:00:00.000000000
             EventEpoch		
             BEGIN EVENT
                 Type		 EVENT_LINKTO
@@ -22,13 +22,13 @@ BEGIN Scenario
 
     BEGIN Interval
 
-        Start		 1 Jan 2055 16:00:00.000000000
-        Stop		 7 Jan 2055 16:00:00.000000000
+        Start		 17 Jun 2040 00:00:00.000000000
+        Stop		 1 Jul 2040 00:00:00.000000000
         SmartInterval		
         BEGIN EVENTINTERVAL
             BEGIN Interval
-                Start		 1 Jan 2055 16:00:00.000000000
-                Stop		 7 Jan 2055 16:00:00.000000000
+                Start		 17 Jun 2040 00:00:00.000000000
+                Stop		 1 Jul 2040 00:00:00.000000000
             END Interval
             IntervalState		 Explicit
         END EVENTINTERVAL
@@ -121,8 +121,8 @@ BEGIN Scenario
             LaunchWindowUseEntireTraj		 Yes
             LaunchWindowTrajMETStart		 0
             LaunchWindowTrajMETStop		 900
-            LaunchWindowStart		 -986256000
-            LaunchWindowStop		 -986169600
+            LaunchWindowStart		 -527328000
+            LaunchWindowStop		 -527241600
             LaunchMETOffset		 0
             LaunchWindowUseSecEphem		 No 
             LaunchWindowUseScenFolderForSecEphem		 Yes
@@ -1584,9 +1584,9 @@ BEGIN Scenario
 
             BEGIN Animation
 
-                StartTime		 1 Jan 2055 16:00:00.000000000
-                EndTime		 7 Jan 2055 16:00:00.000000000
-                CurrentTime		 1 Jan 2055 16:00:00.000000000
+                StartTime		 17 Jun 2040 00:00:00.000000000
+                EndTime		 1 Jul 2040 00:00:00.000000000
+                CurrentTime		 17 Jun 2040 00:00:00.000000000
                 Direction		 Reverse
                 UpdateDelta		 3
                 RefreshDelta		 0.010000
@@ -1857,7 +1857,7 @@ BEGIN Scenario
 
                     BEGIN Style
                         Name		 DefaultWithBing
-                        Time		 -986256000
+                        Time		 -527328000
                         UpdateDelta		 10
 
                         BEGIN MapAttributes
@@ -2045,7 +2045,7 @@ BEGIN Scenario
 
                     BEGIN Style
                         Name		 DefaultWithoutBing
-                        Time		 -986256000
+                        Time		 -527328000
                         UpdateDelta		 10
 
                         BEGIN MapAttributes
@@ -2258,12 +2258,6 @@ BEGIN Scenario
 
     BEGIN SubObjects
 
-        Class Aircraft
-
-            Geyser_1		
-
-        END Class
-
         Class AreaTarget
 
             LandingRegion		
@@ -2390,9 +2384,6 @@ BEGIN Scenario
         Instance *
             *		
             CoverageDefinition/CoverageDefinition1		
-        END Instance
-        Instance Aircraft/Geyser_1
-            Aircraft/Geyser_1		
         END Instance
         Instance AreaTarget/LandingRegion
             AreaTarget/LandingRegion		

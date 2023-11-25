@@ -39,7 +39,7 @@ BEGIN CoverageDefinition
         UseLightTimeDelay		 No
         TimeSense		 PerAsset
         DetectEventsUsingSamplesOnly		 No
-        AutoRecompute		 Yes
+        AutoRecompute		 No
         UseAllAssetAccess		 No
         AssetSatisType		 AtLeast
         AssetSatisThreshold		 1
@@ -57,8 +57,8 @@ BEGIN CoverageDefinition
 
     BEGIN Interval
 
-        AccStart		 1 Jan 2055 16:00:00.000000000
-        AccStop		 7 Jan 2055 16:00:00.000000000
+        AccStart		 17 Jun 2040 00:00:00.000000000
+        AccStop		 1 Jul 2040 00:00:00.000000000
         UseScenarioInterval		 No
         AccIntervalPtr		
         BEGIN EVENTINTERVAL
@@ -73,10 +73,6 @@ BEGIN CoverageDefinition
 
 
     END Interval
-
-    BEGIN SavedAccesses
-        FileName		 CoverageDefinition1.cva
-    END SavedAccesses
 
     BEGIN Extensions
 
@@ -107,7 +103,7 @@ BEGIN CoverageDefinition
 
             BEGIN Graphics
 
-                Show		 No
+                Show		 Yes
                 ShowGrid		 Yes
                 ShowRegions		 No
                 ShowRegionsText		 No
