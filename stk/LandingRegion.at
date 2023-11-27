@@ -71,7 +71,7 @@ BEGIN AreaTarget
 
             BEGIN Graphics
 
-                ShowGfx		 On
+                ShowGfx		 Off
                 Inherit		 On
                 ShowCentroid		 On
                 ShowBoundaryPts		 Off

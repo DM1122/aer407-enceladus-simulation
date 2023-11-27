@@ -9,11 +9,11 @@ BEGIN CoverageDefinition
 
         VersionIndicator		 20080103
         BEGIN LatitudeBounds
-            MinLatitude		 -90
+            MinLatitude		 -80
             MaxLatitude		 -59.99999999999999
         END LatitudeBounds
-        LatResolution		  1.0000000000000000e+00
-        LonResolution		  1.0000000000000000e+00
+        LatResolution		  2.2328830675402309e-01
+        LonResolution		  2.2328830675402309e-01
         UsePolarRegions		 Yes
         GridClass		 Target
         PointLocationMethod		 EqualArea
@@ -74,6 +74,10 @@ BEGIN CoverageDefinition
 
     END Interval
 
+    BEGIN SavedAccesses
+        FileName		 CoverageDefinition1.cva
+    END SavedAccesses
+
     BEGIN Extensions
 
         BEGIN ExternData
@@ -83,6 +87,12 @@ BEGIN CoverageDefinition
         END ADFFileData
 
         BEGIN Desc
+            BEGIN ShortText
+
+            END ShortText
+            BEGIN LongText
+
+            END LongText
         END Desc
 
         BEGIN Crdn

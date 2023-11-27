@@ -324,39 +324,16 @@ BEGIN Scenario
 
         BEGIN ReportFavorites
             BEGIN Class
-                Name		 Satellite
-                BEGIN Favorite
-                    Type		 Graph
-                    BaseDir		 Install
-                    Style		 Classical Orbit Elements
-                END Favorite
+                Name		 FigureOfMerit
                 BEGIN Favorite
                     Type		 Report
                     BaseDir		 Install
-                    Style		 Classical Orbit Elements
-                END Favorite
-            END Class
-            BEGIN Class
-                Name		 FigureOfMerit
-                BEGIN Favorite
-                    Type		 Graph
-                    BaseDir		 User
-                    Style		 Accum Satisfied by Time
+                    Style		 Percent Satisfied
                 END Favorite
                 BEGIN Favorite
                     Type		 Graph
                     BaseDir		 Install
-                    Style		 GI Region FOM
-                END Favorite
-                BEGIN Favorite
-                    Type		 Graph
-                    BaseDir		 Install
-                    Style		 GI Point Satisfaction
-                END Favorite
-                BEGIN Favorite
-                    Type		 Graph
-                    BaseDir		 Install
-                    Style		 GI All DOP
+                    Style		 Satisfied By Time
                 END Favorite
                 BEGIN Favorite
                     Type		 Graph
@@ -366,12 +343,35 @@ BEGIN Scenario
                 BEGIN Favorite
                     Type		 Graph
                     BaseDir		 Install
-                    Style		 Satisfied By Time
+                    Style		 GI All DOP
                 END Favorite
+                BEGIN Favorite
+                    Type		 Graph
+                    BaseDir		 Install
+                    Style		 GI Point Satisfaction
+                END Favorite
+                BEGIN Favorite
+                    Type		 Graph
+                    BaseDir		 Install
+                    Style		 GI Region FOM
+                END Favorite
+                BEGIN Favorite
+                    Type		 Graph
+                    BaseDir		 User
+                    Style		 Accum Satisfied by Time
+                END Favorite
+            END Class
+            BEGIN Class
+                Name		 Satellite
                 BEGIN Favorite
                     Type		 Report
                     BaseDir		 Install
-                    Style		 Percent Satisfied
+                    Style		 Classical Orbit Elements
+                END Favorite
+                BEGIN Favorite
+                    Type		 Graph
+                    BaseDir		 Install
+                    Style		 Classical Orbit Elements
                 END Favorite
             END Class
         END ReportFavorites
@@ -1586,7 +1586,7 @@ BEGIN Scenario
 
                 StartTime		 17 Jun 2040 00:00:00.000000000
                 EndTime		 1 Jul 2040 00:00:00.000000000
-                CurrentTime		 17 Jun 2040 00:00:00.000000000
+                CurrentTime		 30 Jun 2040 23:07:27.260000000
                 Direction		 Reverse
                 UpdateDelta		 3
                 RefreshDelta		 0.010000

@@ -7,7 +7,7 @@ sequenceDiagram
 
     box LDR
         participant COM
-        participant CDH
+        participant OBC
         participant SSS
         participant GNC
         participant OMS
@@ -16,39 +16,39 @@ sequenceDiagram
     end
 
     activate ORB
-    activate CDH
+    activate OBC
     activate COM
     activate SSS
     activate Power
     activate MCC
 
-    SSS ->> CDH: Collected sample mass threshold met
-    CDH ->> COM: Sample collection complete
+    SSS ->> OBC: Collected sample mass threshold met
+    OBC ->> COM: Sample collection complete
     COM ->> ORB: Sample collection complete
     ORB ->> MCC: Sample collection complete
     MCC ->> ORB: Move to [location]
     ORB ->> COM: Move to [location]
-    COM ->> CDH: Move to [location]
+    COM ->> OBC: Move to [location]
 
-    Note over CDH: Flight Preparation
-        CDH ->> GNC: Generate trajectory plan to [location]
+    Note over OBC: Pre-Flight Mode
+        OBC ->> GNC: Generate trajectory plan to [location]
         activate GNC
-        GNC -->> CDH: Trajectory plan to [location]
+        GNC -->> OBC: Trajectory plan to [location]
         deactivate GNC
-        CDH ->> OMS: Heat fuel tanks
+        OBC ->> OMS: Heat fuel tanks
         activate OMS
-        CDH ->> Power: Activate fuel cells
-        Power --> CDH: Fuel cells active
-        OMS --> CDH: Fuel tanks heated
+        OBC ->> Power: Activate fuel cells
+        Power --> OBC: Fuel cells active
+        OMS --> OBC: Fuel tanks heated
 
-        CDH ->> Mech: Enter flight configuration
+        OBC ->> Mech: Enter flight configuration
         activate Mech
         Mech ->> Mech: Stow solar panels, close SCS cover
         deactivate Mech
-        CDH ->> GNC: Execute trajectory plan
+        OBC ->> GNC: Execute trajectory plan
         activate GNC
     
-    deactivate CDH
+    deactivate OBC
     deactivate COM
     deactivate SSS
     deactivate Power
@@ -56,5 +56,4 @@ sequenceDiagram
     deactivate MCC
     deactivate GNC
     deactivate OMS
-
 ```

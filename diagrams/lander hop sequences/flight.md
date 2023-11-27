@@ -1,73 +1,64 @@
 # Flight Sequence
 ```mermaid
 sequenceDiagram
-    
-    participant MCC
+
     participant ORB
 
     box LDR
         participant COM
-        participant CDH
+        participant OBC
         participant SSS
         participant GNC
         participant OMS
-        participant Power
         participant Mech
     end
 
     activate ORB
-    activate CDH
+    activate OBC
     activate COM
     activate SSS
-    activate Power
-    activate MCC
     activate GNC
     activate OMS
 
-    Note over CDH: Flight Phase
+    Note over OBC: Flight Mode
         
         loop Flight Telemetry
-            GNC -->> CDH: Telemetry
-            CDH -->> COM: Telemetry
+            GNC -->> OBC: Telemetry
+            GNC -->> COM: Telemetry
             COM -->> ORB: Telemetry
         end     
         GNC ->> OMS: Engage main engine
-
+        OBC ->> Mech: Stow landing gear
 
         loop Ascent Control
             GNC ->> GNC: Determine attitude
             GNC -->> OMS: RCS throttle control
         end
 
-        GNC ->> GNC: trajectory established
+        Note over GNC: Trajectory established
         GNC ->> OMS: Disengage main engine
 
-    Note over CDH: Landing Phase
+    Note over OBC: Landing Mode
         GNC ->> GNC: Apoapsis reached
         GNC ->> OMS: Flip around using RCS
         Note over GNC: Landing burn
             GNC ->> OMS: Engage main engine
+            OBC ->> Mech: Deploy landing gear
             GNC ->> GNC: Scan terrain
         
             opt If landing site does not meet criteria
-                GNC ->> GNC: Adjust landing site
+                GNC ->> GNC: Plan landing site adjustment
                 GNC ->> OMS: Translate spacecraft
             end
 
-            GNC ->> OMS: Execute landing
+            GNC ->> OMS: Throttle engine for landing
             GNC ->> OMS: Shutdown main engine
             deactivate OMS            
-            GNC ->> CDH: Landing complete
+            GNC ->> OBC: Landed
             deactivate GNC
-            CDH ->> COM: Landing complete
-            COM ->> ORB: Landing complete
-            ORB ->> MCC: Landing complete
-            
 
-    deactivate CDH
+    deactivate OBC
     deactivate COM
     deactivate SSS
-    deactivate Power
     deactivate ORB
-    deactivate MCC
 ```

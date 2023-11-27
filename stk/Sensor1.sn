@@ -9,8 +9,8 @@ BEGIN Sensor
 
         BEGIN Rectangular
 
-            UpDownAngle		  1.0000000000000000e+00
-            SideToSideAngle		  2.0000000000000000e+01
+            UpDownAngle		  2.0000000000000000e-02
+            SideToSideAngle		  2.0000000000000001e-01
             AngularPatternResolution		  3.0000000000000004e+00
 
         END Rectangular
@@ -64,6 +64,12 @@ BEGIN Sensor
         END ObjectCoverage
 
         BEGIN Desc
+            BEGIN ShortText
+
+            END ShortText
+            BEGIN LongText
+
+            END LongText
         END Desc
 
         BEGIN Refraction
