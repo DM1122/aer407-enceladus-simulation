@@ -1,0 +1,67 @@
+<?xml version = "1.0" encoding = "UTF-8" standalone = "yes"?>
+<TimelineLine_Prefs STK_version = "12.6.0">
+    <Views Type = "Content">
+        <ContentView Name = "Scenario Availability">
+            <Row ClassName = "Scenario" ComponentName = "AvailabilityIntervals" DisplayName = "LinkBudgetScenario AvailabilityIntervals" IsDefaultName = "True" IsExpanded = "False" IsGroup = "False" IsHidden = "False" Path = "/Application/STK/Scenario/LinkBudgetScenario" Type = "IntervalList">
+                <Interval Name = "LinkBudgetScenario AvailabilityIntervals" StartTime = "17 Jun 2040 00:00:00.000" StopTime = "17 Jul 2040 00:00:00.000" />
+            </Row>
+            <Row ClassName = "Access" ComponentName = "AccessIntervals" DisplayName = "Place-Lander-Transmitter-Transmitter-To-Satellite-Orbiter-Receiver-Receiver AccessIntervals" IsDefaultName = "True" IsExpanded = "False" IsGroup = "False" IsHidden = "False" Path = "Access:/Application/STK/Scenario/LinkBudgetScenario/Place/Lander/Transmitter/Transmitter;/Application/STK/Scenario/LinkBudgetScenario/Satellite/Orbiter/Receiver/Receiver" Type = "IntervalList">
+                <Interval Name = "Place-Lander-Transmitter-Transmitter-To-Satellite-Orbiter-Receiver-Receiver AccessIntervals" StartTime = "17 Jun 2040 04:49:36.488" StopTime = "17 Jun 2040 05:47:17.803" />
+                <Interval Name = "Place-Lander-Transmitter-Transmitter-To-Satellite-Orbiter-Receiver-Receiver AccessIntervals" StartTime = "17 Jun 2040 11:39:03.377" StopTime = "17 Jun 2040 12:26:39.173" />
+                <Interval Name = "Place-Lander-Transmitter-Transmitter-To-Satellite-Orbiter-Receiver-Receiver AccessIntervals" StartTime = "18 Jun 2040 00:14:39.567" StopTime = "18 Jun 2040 01:07:03.135" />
+                <Interval Name = "Place-Lander-Transmitter-Transmitter-To-Satellite-Orbiter-Receiver-Receiver AccessIntervals" StartTime = "18 Jun 2040 06:52:30.484" StopTime = "18 Jun 2040 07:54:23.394" />
+                <Interval Name = "Place-Lander-Transmitter-Transmitter-To-Satellite-Orbiter-Receiver-Receiver AccessIntervals" StartTime = "18 Jun 2040 14:06:08.406" StopTime = "18 Jun 2040 15:19:27.603" />
+                <Interval Name = "Place-Lander-Transmitter-Transmitter-To-Satellite-Orbiter-Receiver-Receiver AccessIntervals" StartTime = "19 Jun 2040 03:18:37.852" StopTime = "19 Jun 2040 03:43:57.692" />
+                <Interval Name = "Place-Lander-Transmitter-Transmitter-To-Satellite-Orbiter-Receiver-Receiver AccessIntervals" StartTime = "19 Jun 2040 09:10:56.600" StopTime = "19 Jun 2040 10:21:56.093" />
+                <Interval Name = "Place-Lander-Transmitter-Transmitter-To-Satellite-Orbiter-Receiver-Receiver AccessIntervals" StartTime = "19 Jun 2040 16:13:47.821" StopTime = "19 Jun 2040 17:30:17.112" />
+                <Interval Name = "Place-Lander-Transmitter-Transmitter-To-Satellite-Orbiter-Receiver-Receiver AccessIntervals" StartTime = "19 Jun 2040 23:49:19.179" StopTime = "20 Jun 2040 00:18:16.673" />
+                <Interval Name = "Place-Lander-Transmitter-Transmitter-To-Satellite-Orbiter-Receiver-Receiver AccessIntervals" StartTime = "20 Jun 2040 18:26:39.659" StopTime = "20 Jun 2040 19:33:00.721" />
+                <Interval Name = "Place-Lander-Transmitter-Transmitter-To-Satellite-Orbiter-Receiver-Receiver AccessIntervals" StartTime = "21 Jun 2040 01:38:23.109" StopTime = "21 Jun 2040 02:45:19.990" />
+                <Interval Name = "Place-Lander-Transmitter-Transmitter-To-Satellite-Orbiter-Receiver-Receiver AccessIntervals" StartTime = "24 Jun 2040 08:06:42.200" StopTime = "24 Jun 2040 08:33:47.999" />
+                <Interval Name = "Place-Lander-Transmitter-Transmitter-To-Satellite-Orbiter-Receiver-Receiver AccessIntervals" StartTime = "24 Jun 2040 15:13:41.331" StopTime = "24 Jun 2040 16:21:59.481" />
+                <Interval Name = "Place-Lander-Transmitter-Transmitter-To-Satellite-Orbiter-Receiver-Receiver AccessIntervals" StartTime = "24 Jun 2040 22:56:56.687" StopTime = "24 Jun 2040 23:03:29.941" />
+                <Interval Name = "Place-Lander-Transmitter-Transmitter-To-Satellite-Orbiter-Receiver-Receiver AccessIntervals" StartTime = "25 Jun 2040 17:12:12.546" StopTime = "25 Jun 2040 18:27:25.593" />
+                <Interval Name = "Place-Lander-Transmitter-Transmitter-To-Satellite-Orbiter-Receiver-Receiver AccessIntervals" StartTime = "26 Jun 2040 00:24:49.260" StopTime = "26 Jun 2040 01:42:09.442" />
+                <Interval Name = "Place-Lander-Transmitter-Transmitter-To-Satellite-Orbiter-Receiver-Receiver AccessIntervals" StartTime = "26 Jun 2040 19:52:29.947" StopTime = "26 Jun 2040 20:28:45.369" />
+                <Interval Name = "Place-Lander-Transmitter-Transmitter-To-Satellite-Orbiter-Receiver-Receiver AccessIntervals" StartTime = "27 Jun 2040 02:34:23.603" StopTime = "27 Jun 2040 03:43:10.280" />
+                <Interval Name = "Place-Lander-Transmitter-Transmitter-To-Satellite-Orbiter-Receiver-Receiver AccessIntervals" StartTime = "27 Jun 2040 09:43:16.639" StopTime = "27 Jun 2040 10:56:47.463" />
+                <Interval Name = "Place-Lander-Transmitter-Transmitter-To-Satellite-Orbiter-Receiver-Receiver AccessIntervals" StartTime = "27 Jun 2040 16:16:32.931" StopTime = "27 Jun 2040 16:45:40.579" />
+                <Interval Name = "Place-Lander-Transmitter-Transmitter-To-Satellite-Orbiter-Receiver-Receiver AccessIntervals" StartTime = "27 Jun 2040 22:58:47.606" StopTime = "27 Jun 2040 23:26:15.855" />
+                <Interval Name = "Place-Lander-Transmitter-Transmitter-To-Satellite-Orbiter-Receiver-Receiver AccessIntervals" StartTime = "28 Jun 2040 04:49:15.965" StopTime = "28 Jun 2040 06:03:54.305" />
+                <Interval Name = "Place-Lander-Transmitter-Transmitter-To-Satellite-Orbiter-Receiver-Receiver AccessIntervals" StartTime = "28 Jun 2040 12:09:35.090" StopTime = "28 Jun 2040 13:07:46.267" />
+                <Interval Name = "Place-Lander-Transmitter-Transmitter-To-Satellite-Orbiter-Receiver-Receiver AccessIntervals" StartTime = "28 Jun 2040 19:09:28.491" StopTime = "28 Jun 2040 19:56:49.820" />
+                <Interval Name = "Place-Lander-Transmitter-Transmitter-To-Satellite-Orbiter-Receiver-Receiver AccessIntervals" StartTime = "29 Jun 2040 07:46:48.478" StopTime = "29 Jun 2040 08:23:04.213" />
+                <Interval Name = "Place-Lander-Transmitter-Transmitter-To-Satellite-Orbiter-Receiver-Receiver AccessIntervals" StartTime = "29 Jun 2040 14:04:10.246" StopTime = "29 Jun 2040 15:20:57.743" />
+                <Interval Name = "Place-Lander-Transmitter-Transmitter-To-Satellite-Orbiter-Receiver-Receiver AccessIntervals" StartTime = "29 Jun 2040 21:21:11.440" StopTime = "29 Jun 2040 22:36:15.048" />
+                <Interval Name = "Place-Lander-Transmitter-Transmitter-To-Satellite-Orbiter-Receiver-Receiver AccessIntervals" StartTime = "30 Jun 2040 16:27:44.808" StopTime = "30 Jun 2040 17:23:41.245" />
+                <Interval Name = "Place-Lander-Transmitter-Transmitter-To-Satellite-Orbiter-Receiver-Receiver AccessIntervals" StartTime = "30 Jun 2040 23:22:31.749" StopTime = "1 Jul 2040 00:40:34.903" />
+                <Interval Name = "Place-Lander-Transmitter-Transmitter-To-Satellite-Orbiter-Receiver-Receiver AccessIntervals" StartTime = "1 Jul 2040 06:54:15.557" StopTime = "1 Jul 2040 07:39:13.627" />
+                <Interval Name = "Place-Lander-Transmitter-Transmitter-To-Satellite-Orbiter-Receiver-Receiver AccessIntervals" StartTime = "2 Jul 2040 01:37:20.976" StopTime = "2 Jul 2040 02:33:07.167" />
+                <Interval Name = "Place-Lander-Transmitter-Transmitter-To-Satellite-Orbiter-Receiver-Receiver AccessIntervals" StartTime = "2 Jul 2040 08:46:13.873" StopTime = "2 Jul 2040 09:49:58.060" />
+                <Interval Name = "Place-Lander-Transmitter-Transmitter-To-Satellite-Orbiter-Receiver-Receiver AccessIntervals" StartTime = "4 Jul 2040 13:15:39.233" StopTime = "4 Jul 2040 13:23:31.774" />
+                <Interval Name = "Place-Lander-Transmitter-Transmitter-To-Satellite-Orbiter-Receiver-Receiver AccessIntervals" StartTime = "5 Jul 2040 22:17:15.837" StopTime = "5 Jul 2040 23:23:13.287" />
+                <Interval Name = "Place-Lander-Transmitter-Transmitter-To-Satellite-Orbiter-Receiver-Receiver AccessIntervals" StartTime = "6 Jul 2040 05:43:03.963" StopTime = "6 Jul 2040 06:23:42.827" />
+                <Interval Name = "Place-Lander-Transmitter-Transmitter-To-Satellite-Orbiter-Receiver-Receiver AccessIntervals" StartTime = "7 Jul 2040 00:16:45.253" StopTime = "7 Jul 2040 01:21:53.752" />
+                <Interval Name = "Place-Lander-Transmitter-Transmitter-To-Satellite-Orbiter-Receiver-Receiver AccessIntervals" StartTime = "7 Jul 2040 07:25:38.376" StopTime = "7 Jul 2040 08:43:12.718" />
+                <Interval Name = "Place-Lander-Transmitter-Transmitter-To-Satellite-Orbiter-Receiver-Receiver AccessIntervals" StartTime = "8 Jul 2040 09:27:05.464" StopTime = "8 Jul 2040 10:44:47.631" />
+                <Interval Name = "Place-Lander-Transmitter-Transmitter-To-Satellite-Orbiter-Receiver-Receiver AccessIntervals" StartTime = "8 Jul 2040 16:42:39.215" StopTime = "8 Jul 2040 17:58:43.176" />
+                <Interval Name = "Place-Lander-Transmitter-Transmitter-To-Satellite-Orbiter-Receiver-Receiver AccessIntervals" StartTime = "9 Jul 2040 11:50:22.131" StopTime = "9 Jul 2040 12:55:26.674" />
+                <Interval Name = "Place-Lander-Transmitter-Transmitter-To-Satellite-Orbiter-Receiver-Receiver AccessIntervals" StartTime = "9 Jul 2040 18:57:19.621" StopTime = "9 Jul 2040 19:57:08.284" />
+                <Interval Name = "Place-Lander-Transmitter-Transmitter-To-Satellite-Orbiter-Receiver-Receiver AccessIntervals" StartTime = "10 Jul 2040 01:57:35.937" StopTime = "10 Jul 2040 03:04:41.501" />
+                <Interval Name = "Place-Lander-Transmitter-Transmitter-To-Satellite-Orbiter-Receiver-Receiver AccessIntervals" StartTime = "10 Jul 2040 14:59:55.290" StopTime = "10 Jul 2040 15:35:25.659" />
+                <Interval Name = "Place-Lander-Transmitter-Transmitter-To-Satellite-Orbiter-Receiver-Receiver AccessIntervals" StartTime = "10 Jul 2040 20:59:09.584" StopTime = "10 Jul 2040 22:15:27.792" />
+                <Interval Name = "Place-Lander-Transmitter-Transmitter-To-Satellite-Orbiter-Receiver-Receiver AccessIntervals" StartTime = "11 Jul 2040 04:19:43.114" StopTime = "11 Jul 2040 05:29:19.149" />
+                <Interval Name = "Place-Lander-Transmitter-Transmitter-To-Satellite-Orbiter-Receiver-Receiver AccessIntervals" StartTime = "11 Jul 2040 23:40:22.360" StopTime = "12 Jul 2040 00:26:43.623" />
+                <Interval Name = "Place-Lander-Transmitter-Transmitter-To-Satellite-Orbiter-Receiver-Receiver AccessIntervals" StartTime = "12 Jul 2040 06:19:51.422" StopTime = "12 Jul 2040 07:37:36.501" />
+                <Interval Name = "Place-Lander-Transmitter-Transmitter-To-Satellite-Orbiter-Receiver-Receiver AccessIntervals" StartTime = "12 Jul 2040 13:37:45.378" StopTime = "12 Jul 2040 14:46:23.180" />
+                <Interval Name = "Place-Lander-Transmitter-Transmitter-To-Satellite-Orbiter-Receiver-Receiver AccessIntervals" StartTime = "13 Jul 2040 08:34:48.867" StopTime = "13 Jul 2040 09:34:25.894" />
+                <Interval Name = "Place-Lander-Transmitter-Transmitter-To-Satellite-Orbiter-Receiver-Receiver AccessIntervals" StartTime = "13 Jul 2040 15:37:16.835" StopTime = "13 Jul 2040 16:51:55.131" />
+                <Interval Name = "Place-Lander-Transmitter-Transmitter-To-Satellite-Orbiter-Receiver-Receiver AccessIntervals" StartTime = "14 Jul 2040 18:06:22.060" StopTime = "14 Jul 2040 18:32:34.020" />
+                <Interval Name = "Place-Lander-Transmitter-Transmitter-To-Satellite-Orbiter-Receiver-Receiver AccessIntervals" StartTime = "15 Jul 2040 01:21:42.295" StopTime = "15 Jul 2040 01:57:44.352" />
+            </Row>
+        </ContentView>
+    </Views>
+    <Views Type = "Time">
+        <TimeView FullViewRulerStartTime = "0.000000" FullViewRulerStopTime = "0.000000" GlobalIntervalComp = "AnalysisInterval" GlobalIntervalCompPath = "/Application/STK/Scenario/LinkBudgetScenario" GlobalStartOffset = "0.000000" GlobalStartTime = "17 Jun 2040 00:00:00.000" GlobalStopOffset = "0.000000" GlobalStopTime = "17 Jul 2040 00:00:00.000" MaxFullViewTime = "0.000000" MinFullViewTime = "0.000000" Name = "Scenario Analysis Period" ViewportStartTime = "0.000000" ViewportStopTime = "0.000000" />
+    </Views>
+</TimelineLine_Prefs>

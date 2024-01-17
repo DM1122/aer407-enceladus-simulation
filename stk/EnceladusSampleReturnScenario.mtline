@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MovieTimeline>
+  <Info>
+    <SavedBy>Movie Timeline v12.6</SavedBy>
+    <FileFormatVersion>2</FileFormatVersion>
+  </Info>
+  <Project>
+    <FullInterval>
+      <StartTime>0</StartTime>
+      <EndTime>2592000</EndTime>
+    </FullInterval>
+    <ZoomInterval>
+      <StartTime>48341</StartTime>
+      <EndTime>49228.311</EndTime>
+    </ZoomInterval>
+    <LastTrackNum>1</LastTrackNum>
+  </Project>
+  <Tracks>
+    <Track>
+      <Shot>
+        <Format>PNG</Format>
+        <PathFileName>C:\Users\DMara\OneDrive\Desktop\anim\hop</PathFileName>
+        <StartFrame>0</StartFrame>
+        <NumDigits>4</NumDigits>
+        <Bitrate>10000</Bitrate>
+        <Interval>
+          <StartTime>48341</StartTime>
+          <EndTime>49228.311</EndTime>
+        </Interval>
+      </Shot>
+      <Collapsed>true</Collapsed>
+      <Selected>false</Selected>
+      <is2D>false</is2D>
+      <WindowID>1</WindowID>
+      <WindowCustomName />
+      <WindowWidth>600</WindowWidth>
+      <WindowHeight>600</WindowHeight>
+      <PixelAspect>1</PixelAspect>
+      <PreviewWidth>0</PreviewWidth>
+      <WindowSizeName>Custom size - 600x600</WindowSizeName>
+      <LensFlare>false</LensFlare>
+      <Vignette>false</Vignette>
+      <VignetteStrength>1</VignetteStrength>
+      <AntiAliasing>4</AntiAliasing>
+      <MotionBlur>false</MotionBlur>
+      <OffScreenRender>true</OffScreenRender>
+      <LastSubTrackNum>0</LastSubTrackNum>
+      <SubTracks>
+        <SubtrackTimeStep>
+          <Name>Time step</Name>
+          <Selected>false</Selected>
+          <Keyframes>
+            <Key>
+              <Time>48341</Time>
+              <Selected>false</Selected>
+              <Value>5.91540666666668</Value>
+            </Key>
+          </Keyframes>
+        </SubtrackTimeStep>
+        <SubtrackCamera>
+          <Name>Camera</Name>
+          <Selected>false</Selected>
+          <Keyframes />
+        </SubtrackCamera>
+      </SubTracks>
+    </Track>
+  </Tracks>
+</MovieTimeline>

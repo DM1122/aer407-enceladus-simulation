@@ -1,11 +1,44 @@
+# Mission Timeline
 ```mermaid
+
 gantt
-    title A Gantt Diagram
     dateFormat YYYY-MM-DD
-    section Section
-        A task          :a1, 2014-01-01, 30d
-        Another task    :after a1, 20d
-    section Another
-        Task in Another :2014-01-12, 12d
-        another task    :24d
+    section Transit to Enceladus 
+        Launch :milestone, launch, 2033-09-14, 0d
+        LEOP: 7d
+        Transit to Venus :8952h
+        Venus Gravity Assist :milestone,
+        Transit to Earth :9384h
+        Earth Gravity Assist :milestone,
+        Transit to Venus:1104h
+        Venus Gravity Assist :milestone,
+        Transit to Earth :20136h
+        Earth Gravity Assist :milestone,
+        Transit to Saturn:34992h
+        Saturn Orbit Insertion :milestone,
+        <!-- Moon Tour:30672h -->
+        Enceladus Orbit Insertion :milestone,
+```
+
+```mermaid
+
+gantt
+    dateFormat YYYY-MM-DD
+    section Enceladus Operations
+        Enceladus Orbit Insertion :milestone, (unknown date),
+        Reconnaissance :504h
+        Lander Deployment :milestone,
+        Sample collection & traversal: 1792h
+        Lander Rendevouz: milestone,
+```
+
+```mermaid
+
+gantt
+    dateFormat YYYY-MM-DD
+    section Return Journey
+        Lander Rendevouz: milestone, 2045-12-27,
+        Transit to Earth:61323.5h
+        Earth orbit injection & return capsule deployment: milestone,
+
 ```

@@ -23,19 +23,21 @@ BEGIN Scenario
     BEGIN Interval
 
         Start		 17 Jun 2040 00:00:00.000000000
-        Stop		 1 Jul 2040 00:00:00.000000000
+        Stop		 17 Jul 2040 00:00:00.000000000
         SmartInterval		
         BEGIN EVENTINTERVAL
-            BEGIN Interval
-                Start		 17 Jun 2040 00:00:00.000000000
-                Stop		 1 Jul 2040 00:00:00.000000000
-            END Interval
-            IntervalState		 Explicit
+            StartEvent		
+            BEGIN EVENT
+                Epoch		 17 Jun 2040 00:00:00.000000000
+                EpochState		 Explicit
+            END EVENT
+            Duration		 +30 day
+            IntervalState		 StartDuration
         END EVENTINTERVAL
 
         EpochUsesAnalStart		 No
-        AnimStartUsesAnalStart		 Yes
-        AnimStopUsesAnalStop		 Yes
+        AnimStartUsesAnalStart		 No
+        AnimStopUsesAnalStop		 No
 
     END Interval
 
@@ -121,8 +123,8 @@ BEGIN Scenario
             LaunchWindowUseEntireTraj		 Yes
             LaunchWindowTrajMETStart		 0
             LaunchWindowTrajMETStop		 900
-            LaunchWindowStart		 -527328000
-            LaunchWindowStop		 -527241600
+            LaunchWindowStart		 -512812800
+            LaunchWindowStop		 -512726400
             LaunchMETOffset		 0
             LaunchWindowUseSecEphem		 No 
             LaunchWindowUseScenFolderForSecEphem		 Yes
@@ -326,24 +328,14 @@ BEGIN Scenario
             BEGIN Class
                 Name		 FigureOfMerit
                 BEGIN Favorite
-                    Type		 Report
-                    BaseDir		 Install
-                    Style		 Percent Satisfied
+                    Type		 Graph
+                    BaseDir		 User
+                    Style		 Accum Satisfied by Time
                 END Favorite
                 BEGIN Favorite
                     Type		 Graph
                     BaseDir		 Install
-                    Style		 Satisfied By Time
-                END Favorite
-                BEGIN Favorite
-                    Type		 Graph
-                    BaseDir		 Install
-                    Style		 Grid Stats Over Time
-                END Favorite
-                BEGIN Favorite
-                    Type		 Graph
-                    BaseDir		 Install
-                    Style		 GI All DOP
+                    Style		 GI Region FOM
                 END Favorite
                 BEGIN Favorite
                     Type		 Graph
@@ -353,23 +345,33 @@ BEGIN Scenario
                 BEGIN Favorite
                     Type		 Graph
                     BaseDir		 Install
-                    Style		 GI Region FOM
+                    Style		 GI All DOP
                 END Favorite
                 BEGIN Favorite
                     Type		 Graph
-                    BaseDir		 User
-                    Style		 Accum Satisfied by Time
+                    BaseDir		 Install
+                    Style		 Grid Stats Over Time
+                END Favorite
+                BEGIN Favorite
+                    Type		 Graph
+                    BaseDir		 Install
+                    Style		 Satisfied By Time
+                END Favorite
+                BEGIN Favorite
+                    Type		 Report
+                    BaseDir		 Install
+                    Style		 Percent Satisfied
                 END Favorite
             END Class
             BEGIN Class
                 Name		 Satellite
                 BEGIN Favorite
-                    Type		 Report
+                    Type		 Graph
                     BaseDir		 Install
                     Style		 Classical Orbit Elements
                 END Favorite
                 BEGIN Favorite
-                    Type		 Graph
+                    Type		 Report
                     BaseDir		 Install
                     Style		 Classical Orbit Elements
                 END Favorite
@@ -593,6 +595,12 @@ BEGIN Scenario
         END ExportDataFile
 
         BEGIN Desc
+            BEGIN ShortText
+
+            END ShortText
+            BEGIN LongText
+
+            END LongText
         END Desc
 
         BEGIN RfEnv
@@ -1584,13 +1592,14 @@ BEGIN Scenario
 
             BEGIN Animation
 
-                StartTime		 17 Jun 2040 00:00:00.000000000
-                EndTime		 1 Jul 2040 00:00:00.000000000
-                CurrentTime		 30 Jun 2040 23:07:27.260000000
-                Direction		 Reverse
-                UpdateDelta		 3
-                RefreshDelta		 0.010000
-                XRealTimeMult		 1
+                StartTime		 17 Jun 2040 13:25:41.000000000
+                EndTime		 17 Jun 2040 13:40:28.311000001
+                CurrentTime		 17 Jun 2040 00:00:00.000000000
+                Mode		 Stop
+                Direction		 Forward
+                UpdateDelta		 5.915406666666676
+                RefreshDelta		 HighSpeed
+                XRealTimeMult		 177.4622000000003
                 RealTimeOffset		 0
                 XRtStartFromPause		                Yes		
                 TimeArrayIncrement		 1
@@ -2270,6 +2279,12 @@ BEGIN Scenario
 
         END Class
 
+        Class Missile
+
+            Lander		
+
+        END Class
+
         Class Place
 
             Earth		
@@ -2367,6 +2382,7 @@ BEGIN Scenario
             Geyser_92		
             Geyser_93		
             Lander		
+            Place1		
             Sun		
 
         END Class
@@ -2393,6 +2409,9 @@ BEGIN Scenario
             CoverageDefinition/CoverageDefinition1/FigureOfMerit/FigureOfMerit1		
         END Instance
         Instance CoverageDefinition/CoverageDefinition1/FigureOfMerit/FigureOfMerit1
+        END Instance
+        Instance Missile/Lander
+            Missile/Lander		
         END Instance
         Instance Place/Earth
             Place/Earth		
@@ -2678,6 +2697,9 @@ BEGIN Scenario
         END Instance
         Instance Place/Lander
             Place/Lander		
+        END Instance
+        Instance Place/Place1
+            Place/Place1		
         END Instance
         Instance Place/Sun
             Place/Sun		

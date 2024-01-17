@@ -58,7 +58,7 @@ BEGIN CoverageDefinition
     BEGIN Interval
 
         AccStart		 17 Jun 2040 00:00:00.000000000
-        AccStop		 1 Jul 2040 00:00:00.000000000
+        AccStop		 17 Jul 2040 00:00:00.000000000
         UseScenarioInterval		 No
         AccIntervalPtr		
         BEGIN EVENTINTERVAL
@@ -74,10 +74,6 @@ BEGIN CoverageDefinition
 
     END Interval
 
-    BEGIN SavedAccesses
-        FileName		 CoverageDefinition1.cva
-    END SavedAccesses
-
     BEGIN Extensions
 
         BEGIN ExternData
@@ -87,12 +83,6 @@ BEGIN CoverageDefinition
         END ADFFileData
 
         BEGIN Desc
-            BEGIN ShortText
-
-            END ShortText
-            BEGIN LongText
-
-            END LongText
         END Desc
 
         BEGIN Crdn
@@ -113,7 +103,7 @@ BEGIN CoverageDefinition
 
             BEGIN Graphics
 
-                Show		 Yes
+                Show		 No
                 ShowGrid		 Yes
                 ShowRegions		 No
                 ShowRegionsText		 No

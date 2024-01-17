@@ -5090,7 +5090,7 @@ BEGIN Satellite
             ScenarioEpoch		 17 Jun 2040 00:00:00.000000
             Periods
                 Rev		 1 0 0 0 0 0 0 1 0 1 0
-                 4.5892800000000000e+08  4.5892864416368288e+08  4.5892800000000000e+08  4.5892864416368288e+08
+                 4.5892800000000000e+08  4.5892864416368294e+08  4.5892800000000000e+08  4.5892864416368294e+08
             END Periods
         END PassDefn
 
@@ -5115,7 +5115,7 @@ BEGIN Satellite
         BEGIN Profile
             Name		 ECIVVLH
             UserNamed		 No
-            StartTime		  0.0000000000000000e+00
+            StartTime		 -1.4515200000000000e+07
             BEGIN ECIVVLH
                 Azimuth		  0.0000000000000000e+00
             END ECIVVLH
@@ -5530,7 +5530,7 @@ BEGIN Satellite
                     END DefaultAttributes
                     BEGIN GraphicsInterval
                         StartTime		  4.5892800000000000e+08
-                        StopTime		  4.5892864416368288e+08
+                        StopTime		  4.5892864416368294e+08
                         BEGIN Attributes
                             AllColors		 #00ff00
                             PickString		 Propagate

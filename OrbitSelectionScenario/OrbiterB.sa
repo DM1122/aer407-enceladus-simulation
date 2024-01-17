@@ -40,7 +40,7 @@ BEGIN Satellite
             EphemEpoch		 17 Jun 2040 00:00:00.000000000
 
             StartTime		 17 Jun 2040 00:00:00.000000000
-            StopTime		 17 Jun 2041 00:00:00.000000000
+            StopTime		 1 Jul 2040 00:00:00.000000000
             X		 -4.8224729176066275e+05
             Y		 -1.4903992968534949e+05
             Z		 -1.8047832376023646e+01
@@ -208,22 +208,6 @@ BEGIN Satellite
             RangeLastPass		 2147483647
             DisplayScheme		 AllEphemeris
             ScenarioEpoch		 17 Jun 2040 00:00:00.000000
-            Periods
-                Rev		 1 1 1 0 0 0 0 0 1 0 0
-                 0.0000000000000000e+00  2.3555756351768621e+04  6.2056453945677931e+03  1.7446106267940533e+04
-                Rev		 2 1 1 0 0 0 0 0 1 0 1
-                 2.3555756351768621e+04  4.7230769496568952e+04  3.1007796430578328e+04  4.1266050416973718e+04
-                Rev		 3 1 1 0 0 0 0 0 1 0 0
-                 4.7230769496568952e+04  7.0898657125469181e+04  5.4557858166721024e+04  6.6360466139748329e+04
-                Rev		 4 1 1 0 0 0 0 0 1 0 1
-                 7.0898657125469181e+04  9.5072618215001814e+04  7.8877745557840026e+04  8.9155938558770707e+04
-                Rev		 5 1 1 0 0 0 0 0 1 0 0
-                 9.5072618215001814e+04  1.1816684170694029e+05  1.0383340884568573e+05  1.1529323712978346e+05
-                Rev		 6 1 1 0 0 0 0 0 1 0 1
-                 1.1816684170694029e+05  1.4285399886935664e+05  1.2644672260403380e+05  1.3756654857168961e+05
-                Rev		 7 1 0 0 0 1 1 0 1 1 0
-                 1.4285399886935664e+05  1.6260000000000000e+05  1.5267120872649146e+05  0.0000000000000000e+00
-            END Periods
         END PassDefn
 
     END VehiclePath
@@ -1128,12 +1112,6 @@ BEGIN Satellite
         END ObjectCoverage
 
         BEGIN Desc
-            BEGIN ShortText
-
-            END ShortText
-            BEGIN LongText
-
-            END LongText
         END Desc
 
         BEGIN RadarCrossSection
@@ -1257,9 +1235,6 @@ BEGIN Satellite
                 END CONVERGE
                 SaveDataType		 Yes
                 Attached		
-                BEGIN ComputedData
-                    ReferenceEpoch		 18 Jun 2040 18:24:31.258735420
-                END ComputedData
             END EVENT
         END Crdn
 

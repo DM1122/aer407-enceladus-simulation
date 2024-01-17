@@ -22,10 +22,6 @@ BEGIN FigureOfMerit
 
     END FomDefinition
 
-    BEGIN SavedValues
-        FileName		 FigureOfMerit1.fmv
-    END SavedValues
-
     BEGIN Extensions
 
         BEGIN ExternData

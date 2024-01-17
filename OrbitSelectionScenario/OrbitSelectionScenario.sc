@@ -23,7 +23,7 @@ BEGIN Scenario
     BEGIN Interval
 
         Start		 17 Jun 2040 00:00:00.000000000
-        Stop		 17 Jun 2041 00:00:00.000000000
+        Stop		 1 Jul 2040 00:00:00.000000000
         SmartInterval		
         BEGIN EVENTINTERVAL
             StartEvent		
@@ -31,13 +31,13 @@ BEGIN Scenario
                 Epoch		 17 Jun 2040 00:00:00.000000000
                 EpochState		 Explicit
             END EVENT
-            Duration		 +1 year
+            Duration		 +14 day
             IntervalState		 StartDuration
         END EVENTINTERVAL
 
         EpochUsesAnalStart		 No
-        AnimStartUsesAnalStart		 Yes
-        AnimStopUsesAnalStop		 Yes
+        AnimStartUsesAnalStart		 No
+        AnimStopUsesAnalStop		 No
 
     END Interval
 
@@ -103,7 +103,7 @@ BEGIN Scenario
             BaseDir		 User
             Style		 Orbit.Spherical.Radius
             AGIViewer		 Yes
-            Instance		 Satellite/OrbiterA
+            Instance		 Satellite/Orbiter
             BEGIN TimeData
                 BEGIN Section
                     SectionNumber		 1
@@ -587,6 +587,12 @@ BEGIN Scenario
         END ExportDataFile
 
         BEGIN Desc
+            BEGIN ShortText
+
+            END ShortText
+            BEGIN LongText
+
+            END LongText
         END Desc
 
         BEGIN RfEnv
@@ -1579,12 +1585,13 @@ BEGIN Scenario
             BEGIN Animation
 
                 StartTime		 17 Jun 2040 00:00:00.000000000
-                EndTime		 17 Jun 2041 00:00:00.000000000
+                EndTime		 1 Jul 2040 00:00:00.000000000
                 CurrentTime		 17 Jun 2040 00:00:00.000000000
+                Mode		 Stop
                 Direction		 Forward
-                UpdateDelta		 10
-                RefreshDelta		 0.010000
-                XRealTimeMult		 1
+                UpdateDelta		 336
+                RefreshDelta		 HighSpeed
+                XRealTimeMult		 10080
                 RealTimeOffset		 0
                 XRtStartFromPause		                Yes		
                 TimeArrayIncrement		 1
@@ -2254,7 +2261,7 @@ BEGIN Scenario
 
         Class Satellite
 
-            OrbiterA		
+            Orbiter		
             OrbiterB		
             OrbiterC		
             OrbiterD		
@@ -2270,8 +2277,8 @@ BEGIN Scenario
         Instance *
             *		
         END Instance
-        Instance Satellite/OrbiterA
-            Satellite/OrbiterA		
+        Instance Satellite/Orbiter
+            Satellite/Orbiter		
         END Instance
         Instance Satellite/OrbiterB
             Satellite/OrbiterB		
